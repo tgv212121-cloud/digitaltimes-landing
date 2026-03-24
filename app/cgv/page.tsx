@@ -50,7 +50,7 @@ export default function CGV() {
             <section>
               <h2 className="display-font text-2xl tracking-[-0.03em] text-graphite">3. Commande et formation du contrat</h2>
               <p className="mt-4">
-                Toute prestation débute par un appel de cadrage permettant de définir le périmètre, les livrables et le tarif. Un devis écrit est ensuite adressé au client. La commande est confirmée à réception du devis signé et, le cas échéant, du règlement de l'acompte convenu. DigitalTimes se réserve le droit de refuser toute commande ne correspondant pas à son domaine d'activité.
+                Toute prestation débute par un appel de cadrage permettant de définir le périmètre, les livrables et le tarif. Un devis écrit est ensuite adressé au client. La commande est confirmée à réception du devis signé. DigitalTimes se réserve le droit de refuser toute commande ne correspondant pas à son domaine d'activité.
               </p>
             </section>
 
@@ -65,9 +65,9 @@ export default function CGV() {
               <h2 className="display-font text-2xl tracking-[-0.03em] text-graphite">5. Modalités de paiement</h2>
               <p className="mt-4">Les paiements s'effectuent par virement bancaire ou via les moyens convenus dans le devis. Sauf accord contraire :</p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
-                <li>Un acompte de 50 % est requis à la validation de la commande</li>
-                <li>Le solde de 50 % est dû à la livraison de la V1</li>
-                <li>Les abonnements mensuels sont facturés en début de mois</li>
+                <li>Le paiement est dû à la livraison de la V1, une fois le résultat escompté obtenu par le client</li>
+                <li>Aucun acompte n'est exigé — le client ne paie qu'à la réception du livrable</li>
+                <li>Les abonnements mensuels sont facturés tous les mois à compter de la date de la première facture (facturation à l'anniversaire, non en début de mois calendaire)</li>
               </ul>
               <p className="mt-4">
                 Tout retard de paiement entraîne l'application de pénalités de retard au taux légal en vigueur, ainsi qu'une indemnité forfaitaire de recouvrement de 40 €.
@@ -92,9 +92,15 @@ export default function CGV() {
             </section>
 
             <section>
-              <h2 className="display-font text-2xl tracking-[-0.03em] text-graphite">8. Propriété intellectuelle</h2>
+              <h2 className="display-font text-2xl tracking-[-0.03em] text-graphite">8. Propriété intellectuelle et hébergement des outils</h2>
               <p className="mt-4">
-                Les livrables produits par DigitalTimes restent la propriété de Thomas Gildas jusqu'au paiement intégral de la prestation. À compter du règlement complet, le client dispose d'un droit d'usage plein et entier sur les livrables. DigitalTimes conserve le droit de mentionner la réalisation dans ses références commerciales, sauf accord contraire du client.
+                Les outils, automatisations, workflows et interfaces développés par DigitalTimes restent hébergés sur les serveurs et l'infrastructure de DigitalTimes. Le client n'acquiert pas le code source, la base de données ni l'accès technique à l'outil : il bénéficie d'un droit d'usage de l'outil tant que l'abonnement mensuel est actif.
+              </p>
+              <p className="mt-4">
+                En cas de résiliation de l'abonnement, l'accès à l'outil est suspendu. DigitalTimes reste propriétaire de l'ensemble des composants techniques, logiques et visuels développés. Le client ne peut en aucun cas reproduire, revendre ou transférer l'outil à un tiers.
+              </p>
+              <p className="mt-4">
+                DigitalTimes conserve le droit de mentionner la réalisation dans ses références commerciales, sauf accord contraire exprès du client.
               </p>
             </section>
 
@@ -108,7 +114,7 @@ export default function CGV() {
             <section>
               <h2 className="display-font text-2xl tracking-[-0.03em] text-graphite">10. Résiliation</h2>
               <p className="mt-4">
-                En cas de résiliation à l'initiative du client après validation de la commande, l'acompte versé reste acquis à DigitalTimes en compensation du travail déjà engagé. En cas de résiliation à l'initiative de DigitalTimes (cas de force majeure ou manquement grave du client), les sommes déjà réglées correspondant aux livrables fournis seront conservées.
+                En cas de résiliation à l'initiative du client après validation de la commande et démarrage des travaux, une indemnité correspondant au temps de travail déjà engagé pourra être facturée, sur la base d'un tarif journalier communiqué dans le devis. En cas de résiliation à l'initiative de DigitalTimes (cas de force majeure ou manquement grave du client), aucune somme ne sera due si le livrable n'a pas encore été remis.
               </p>
             </section>
 
