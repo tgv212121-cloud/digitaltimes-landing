@@ -237,12 +237,12 @@ export default function Home() {
 
           <div className="mt-10 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
             <Reveal className="dark-surface rounded-[2.2rem] p-6 text-ivory sm:p-8">
-              <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Positionnement</p>
+              <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Mon histoire</p>
               <h3 className="display-font mt-5 text-4xl leading-tight tracking-[-0.045em] text-ivory">
-                J'aide les agences a transformer une <span className="accent-script text-saffron">bonne idee</span> en systeme utile, vendable ou automatisable.
+                J'ai commence a <span className="accent-script text-saffron">gagner ma vie</span> bien avant de connaitre le mot entrepreneuriat.
               </h3>
               <p className="mt-5 text-base leading-8 text-ivory/72">
-                Cette zone reste volontairement premium et lisible. Des que tu me donnes plus d'elements personnels, je peux la transformer en une section beaucoup plus forte avec preuve, posture et credibilite.
+                A 14 ans, je faisais une tombola de village en allant frapper aux portes. A 16 ans, je tondais les pelouses du quartier. Pas parce que j'y etais oblige — parce que j'ai toujours voulu construire quelque chose par mes propres moyens. Cette debrouillardise, je l'ai transformee en methode. Aujourd'hui, j'automatise pour les agences ce que j'ai toujours optimise pour moi.
               </p>
               <div className="mt-8">
                 <AboutVisual />
@@ -284,8 +284,8 @@ export default function Home() {
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.longLabel} className="bg-ivory text-graphite hover:bg-white" />
-                <CTAButton href="#abonnement" label="Comprendre l'abonnement mensuel" variant="secondary" className="border-white/16 bg-white/8 text-ivory hover:bg-white/12" />
+                <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.longLabel} className="bg-white text-graphite hover:bg-white/90" />
+                <CTAButton href="#abonnement" label="Comprendre l'abonnement mensuel" variant="secondary" className="border-white/40 bg-white/20 text-white hover:bg-white/30" />
               </div>
             </div>
           </Reveal>

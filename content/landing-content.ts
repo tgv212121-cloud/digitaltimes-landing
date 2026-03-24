@@ -195,21 +195,21 @@
   },
   about: {
     eyebrow: "Qui je suis",
-    title: "Un profil execution, produit et automatisation au service des agences digitales.",
+    title: "Entrepreneur depuis 16 ans, obsede par l'optimisation depuis avant que ca s'appelle comme ca.",
     intro:
-      "Je construis des solutions concretes pour des agences qui ont des idees et des besoins business clairs. Des resultats mesurables, pas des promesses vagues.",
+      "Avant DigitalTimes, il y avait une tonte de pelouse chez les voisins, une tombola dans un village a 14 ans, et un patron de supermarche qui ne comprenait pas comment son employe pensait comme un fondateur.",
     cards: [
       {
-        title: "Resultat mesure — Clickway",
-        text: "Mise en place d'un workflow d'analyse automatique qui a permis de reduire le temps de traitement client de 30%, liberant du temps equipe sur les taches a valeur.",
+        title: "Entrepreneur a 16 ans",
+        text: "Tonte de pelouse chez les voisins, tombola dans un village a 14 ans, petits boulots pour m'en sortir. Pas par obligation — par gout de construire quelque chose par mes propres moyens.",
       },
       {
-        title: "Resultat mesure — Scrollab",
-        text: "Creation d'un outil d'analyse de site qui identifie les frictions de conversion. Gain moyen constate : +1% de taux de conversion sur les sites passes dans l'outil.",
+        title: "Maniaque de l'optimisation",
+        text: "Que ce soit mon temps, mon argent ou mes processus : si ca peut etre optimise, je le fais. C'est cette obsession qui m'a naturellement amene a l'IA et a l'automatisation a 20 ans.",
       },
       {
-        title: "Ce que ca change pour une agence",
-        text: "Moins de temps perdu sur l'execution, plus de valeur percue aupres des clients, et un avantage concurrentiel visible des le premier appel.",
+        title: "La vision avant le metier",
+        text: "Mon patron de Leclerc m'a dit un jour : 'Je ne comprends pas comment tu fais ce metier alors que tu as la vision d'un mec qui ne le fait pas.' J'ai pris ca comme un signal.",
       },
     ],
   },
