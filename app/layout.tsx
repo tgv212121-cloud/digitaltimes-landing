@@ -2,6 +2,7 @@
 import { Cormorant_Garamond, Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/content/site-config";
+import { Footer } from "@/components/footer";
 
 const sans = Manrope({
   subsets: ["latin"],
@@ -48,6 +49,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${sans.variable} ${display.variable} ${accent.variable} bg-ivory text-graphite antialiased`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
