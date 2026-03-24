@@ -223,6 +223,12 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <div className="section-shell mt-8">
+          <Reveal>
+            <AboutVisual />
+          </Reveal>
+        </div>
       </section>
 
       <section id="about" className="pb-10 pt-10 sm:pb-16">
@@ -244,9 +250,6 @@ export default function Home() {
               <p className="mt-5 text-base leading-8 text-ivory/72">
                 A 14 ans, je faisais une tombola de village en allant frapper aux portes. A 16 ans, je tondais les pelouses du quartier. Pas parce que j'y etais oblige — parce que j'ai toujours voulu construire quelque chose par mes propres moyens. Cette debrouillardise, je l'ai transformee en methode. Aujourd'hui, j'automatise pour les agences ce que j'ai toujours optimise pour moi.
               </p>
-              <div className="mt-8">
-                <AboutVisual />
-              </div>
             </Reveal>
 
             <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-1">
@@ -284,8 +287,18 @@ export default function Home() {
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.longLabel} className="bg-white text-graphite hover:bg-white/90" />
-                <CTAButton href="#abonnement" label="Comprendre l'abonnement mensuel" variant="secondary" className="border-white/40 bg-white/20 text-white hover:bg-white/30" />
+                <a
+                  href={siteConfig.cta.bookingUrl}
+                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-graphite shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-white/90"
+                >
+                  {siteConfig.cta.longLabel}
+                </a>
+                <a
+                  href="#abonnement"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/10"
+                >
+                  Comprendre l&apos;abonnement mensuel
+                </a>
               </div>
             </div>
           </Reveal>
