@@ -45,16 +45,16 @@
     ],
     signalCards: [
       {
-        value: "−30%",
-        label: "de temps de traitement gagne pour les clients",
+        value: "7j",
+        label: "pour livrer une premiere V1 utile",
       },
       {
-        value: "+1%",
-        label: "de taux de conversion sur les sites analyses",
+        value: "1",
+        label: "appel pour cadrer le bon use case",
       },
       {
-        value: "7 j",
-        label: "pour livrer une V1 testable et montrable",
+        value: "∞",
+        label: "suivi mensuel si l'outil doit tourner",
       },
     ],
     outcomes: [
@@ -197,7 +197,7 @@
     eyebrow: "Qui je suis",
     title: "Entrepreneur depuis 16 ans, obsede par l'optimisation depuis avant que ca s'appelle comme ca.",
     intro:
-      "Avant DigitalTimes, il y avait une tonte de pelouse chez les voisins, une tombola dans un village a 14 ans, et un patron de supermarche qui ne comprenait pas comment son employe pensait comme un fondateur.",
+      "A 14 ans, je faisais une tombola de village. A 16 ans, je tondais les pelouses des voisins pour gagner de l'argent. Bien plus tard, mon directeur de chez Leclerc m'a dit qu'il ne comprenait pas comment j'avais la vision d'un fondateur en faisant son metier.",
     cards: [
       {
         title: "Entrepreneur a 16 ans",
@@ -209,7 +209,7 @@
       },
       {
         title: "La vision avant le metier",
-        text: "Mon patron de Leclerc m'a dit un jour : 'Je ne comprends pas comment tu fais ce metier alors que tu as la vision d'un mec qui ne le fait pas.' J'ai pris ca comme un signal.",
+        text: "Mon directeur de chez Leclerc m'a dit un jour : 'Je ne comprends pas comment tu fais ce metier alors que tu as la vision d'un mec qui ne le fait pas.' J'ai pris ca comme un signal.",
       },
     ],
   },
