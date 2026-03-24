@@ -54,12 +54,13 @@ export function Hero() {
       <div className="section-shell relative z-10">
         <header className="glass-panel flex items-center justify-between rounded-full px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-graphite text-sm font-bold tracking-[0.28em] text-ivory shadow-[0_10px_30px_rgba(12,27,51,0.18)]">
-              DT
-            </div>
-            <div>
-              <p className="accent-font text-[11px] uppercase tracking-[0.28em] text-graphite/56">DigitalTimes</p>
-              <p className="text-sm text-graphite/72">{siteConfig.tagline}</p>
+            <div className="flex select-none items-baseline gap-0">
+              <span className="display-font text-[22px] font-[500] leading-none tracking-[-0.02em] text-graphite">
+                Digital
+              </span>
+              <span className="display-font text-[22px] font-bold italic leading-none tracking-[-0.02em] text-petrol">
+                Times
+              </span>
             </div>
           </div>
 
