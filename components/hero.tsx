@@ -102,15 +102,15 @@ export function Hero() {
 
           <div className="relative lg:pl-10">
             <motion.div
-              className="floating-badge absolute -left-2 top-5 z-10 hidden rounded-full border border-white/16 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/78 backdrop-blur lg:block"
-              animate={reduceMotion ? undefined : { y: [0, -10, 0] }}
+              className="absolute -left-4 -top-5 z-10 hidden rounded-full border border-petrol/20 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-petrol shadow-[0_8px_24px_rgba(12,27,51,0.10)] lg:block"
+              animate={reduceMotion ? undefined : { y: [0, -7, 0] }}
               transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             >
               Lead magnet interactif
             </motion.div>
             <motion.div
-              className="floating-badge absolute right-0 top-28 z-10 hidden rounded-full border border-white/16 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/78 backdrop-blur xl:block"
-              animate={reduceMotion ? undefined : { y: [0, 9, 0] }}
+              className="absolute -right-2 bottom-10 z-10 hidden rounded-full border border-saffron/20 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-saffron shadow-[0_8px_24px_rgba(12,27,51,0.10)] xl:block"
+              animate={reduceMotion ? undefined : { y: [0, 7, 0] }}
               transition={{ duration: 9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             >
               n8n + IA + API
