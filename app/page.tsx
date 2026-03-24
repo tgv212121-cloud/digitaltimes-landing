@@ -37,7 +37,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="Preuve sociale"
               title="Des marques m'ont deja confie des missions et des projets."
-              description="Je n'invente pas ce positionnement dans le vide. DigitalTimes a deja travaille avec plusieurs marques et agences, et cette preuve sociale doit maintenant remonter plus fort dans la page."
+              description="Clickway, Scrollab, Visunyx — des collaborations concretes sur des projets reels avec des resultats mesurables."
             />
           </Reveal>
 
@@ -66,7 +66,7 @@ export default function Home() {
             <SectionHeading
               eyebrow={landingContent.comparison.eyebrow}
               title={landingContent.comparison.title}
-              description="Le point n'est pas seulement de gagner du temps. Le point est surtout d'avoir un actif digital qui augmente la valeur percue de l'agence et rend son execution plus nette."
+              description="Moins de bricolage, plus d'impact. Les agences qui ont le bon outil signent mieux, delivrent plus vite et se differencient naturellement."
               inverse
             />
 
@@ -105,7 +105,7 @@ export default function Home() {
             <SectionHeading
               eyebrow={landingContent.services.eyebrow}
               title={landingContent.services.title}
-              description="Chaque bloc ci-dessous correspond a un vrai type de besoin que peut avoir une agence digitale. L'idee est de montrer rapidement que tu ne vends pas une technologie vague mais des solutions tres concretes."
+              description="Pas de technologie vague. Trois types de solutions concretes pour capter, executer et delivrer mieux."
             />
           </Reveal>
 
@@ -195,7 +195,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow={landingContent.timeline.eyebrow}
                 title={landingContent.timeline.title}
-                description="Le bon angle ici n'est pas de vendre une promesse abstraite. C'est de montrer que tu sais cadrer vite, produire vite et sortir quelque chose de suffisamment net pour etre teste ou vendu rapidement."
+                description="Cadrage rapide, V1 en 7 jours. Pas de spec de 30 pages — juste quelque chose d'utile et de montrable le plus vite possible."
               />
             </div>
           </Reveal>

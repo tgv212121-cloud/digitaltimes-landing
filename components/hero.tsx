@@ -97,21 +97,6 @@ export function Hero() {
               <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.longLabel} />
               <CTAButton href="#abonnement" label="Voir le modele mensuel" variant="secondary" />
             </div>
-
-            <div className="mt-6 max-w-2xl text-sm leading-7 text-graphite/64">
-              Cet appel n'est pas la pour brainstormer dans le vide. Il sert a voir si ton idee merite de devenir un vrai actif digital pour ton agence.
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-3">
-              {landingContent.hero.trustPills.map((pill) => (
-                <span
-                  key={pill}
-                  className="rounded-full border border-[var(--line)] bg-white/72 px-4 py-2 text-sm text-graphite/74 shadow-[0_10px_30px_rgba(12,27,51,0.04)]"
-                >
-                  {pill}
-                </span>
-              ))}
-            </div>
           </div>
 
           <div className="relative lg:pl-10">

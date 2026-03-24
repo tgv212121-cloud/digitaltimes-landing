@@ -2,14 +2,10 @@
   hero: {
     eyebrow: "Mini-outils, n8n et IA pour agences digitales",
     description:
-      "Si ton agence a une idee de lead magnet, d'outil interne, de workflow n8n ou d'interface IA, je la transforme en actif digital qui aide a signer plus proprement, faire gagner du temps a l'equipe et faire monter la valeur percue de l'agence. Puis je peux le faire vivre dans la duree.",
+      "Ton agence a une idee de lead magnet, d'outil interne ou de workflow IA ? Je la transforme en actif digital utile, montrable en 7 jours, et maintenable dans la duree.",
     promise: "V1 utile en 7 jours, puis accompagnement mensuel si le produit doit tourner.",
     rotatingWords: ["qualifient", "convertissent", "fluidifient", "travaillent"],
-    trustPills: [
-      "Lead magnets interactifs et mini-outils de vente",
-      "Build initial puis abonnement mensuel possible",
-      "Automatisations n8n, IA, APIs et interfaces sur mesure",
-    ],
+    trustPills: [],
     brands: [
       {
         name: "Clickway",
@@ -49,16 +45,16 @@
     ],
     signalCards: [
       {
+        value: "−30%",
+        label: "de temps de traitement gagne pour les clients",
+      },
+      {
+        value: "+1%",
+        label: "de taux de conversion sur les sites analyses",
+      },
+      {
         value: "7 j",
-        label: "pour cadrer et sortir une premiere V1 utile",
-      },
-      {
-        value: "mensuel",
-        label: "maintenance continue et ajustements mineurs possibles",
-      },
-      {
-        value: "1 levier",
-        label: "qui peut continuer a generer de la valeur chaque mois",
+        label: "pour livrer une V1 testable et montrable",
       },
     ],
     outcomes: [
@@ -201,19 +197,19 @@
     eyebrow: "Qui je suis",
     title: "Un profil execution, produit et automatisation au service des agences digitales.",
     intro:
-      "Je construis des solutions utiles pour des agences qui ont des idees, des besoins business clairs et peu de temps pour produire elles-memes les bons outils.",
+      "Je construis des solutions concretes pour des agences qui ont des idees et des besoins business clairs. Des resultats mesurables, pas des promesses vagues.",
     cards: [
       {
-        title: "Ce que je peux deja dire",
-        text: "Je cree des mini-outils, des automatisations n8n et des solutions IA sur mesure pour aider les agences a vendre mieux et a delivrer plus proprement.",
+        title: "Resultat mesure — Clickway",
+        text: "Mise en place d'un workflow d'analyse automatique qui a permis de reduire le temps de traitement client de 30%, liberant du temps equipe sur les taches a valeur.",
       },
       {
-        title: "Ajouter vos idees a cet endroit",
-        text: "Ajoute ici ton parcours, tes annees d'experience, tes references ou les projets qui te rendent credible en un coup d'oeil.",
+        title: "Resultat mesure — Scrollab",
+        text: "Creation d'un outil d'analyse de site qui identifie les frictions de conversion. Gain moyen constate : +1% de taux de conversion sur les sites passes dans l'outil.",
       },
       {
-        title: "Ajouter vos idees a cet endroit",
-        text: "Ajoute ici ta philosophie de travail, ta facon de collaborer et ce que tes clients apprecient quand ils bossent avec toi.",
+        title: "Ce que ca change pour une agence",
+        text: "Moins de temps perdu sur l'execution, plus de valeur percue aupres des clients, et un avantage concurrentiel visible des le premier appel.",
       },
     ],
   },
