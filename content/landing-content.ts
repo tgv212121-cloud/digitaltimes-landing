@@ -1,8 +1,8 @@
-﻿export const landingContent = {
+export const landingContent = {
   hero: {
     eyebrow: "Mini-outils, n8n et IA pour agences digitales",
     description:
-      "Ton agence a une idee de lead magnet, d'outil interne ou de workflow IA ? Je la transforme en actif digital utile, montrable en 7 jours, et maintenable dans la duree.",
+      "Ton agence a une idée de lead magnet, d'outil interne ou de workflow IA ? Je la transforme en actif digital utile, montrable en 7 jours, et maintenable dans la durée.",
     promise: "V1 utile en 7 jours, puis accompagnement mensuel si le produit doit tourner.",
     rotatingWords: ["qualifient", "convertissent", "fluidifient", "travaillent"],
     trustPills: [],
@@ -10,24 +10,24 @@
       {
         name: "Clickway",
         url: "https://clickway.fr/",
-        note: "Collaboration realisee pour l'agence",
+        note: "Collaboration réalisée pour l'agence",
       },
       {
         name: "Scrollab",
         url: "https://scrollab.fr/",
-        note: "Collaboration realisee pour la marque",
+        note: "Collaboration réalisée pour la marque",
       },
       {
         name: "Visunyx",
         url: "https://visunyx.com/",
-        note: "Collaboration realisee pour la marque",
+        note: "Collaboration réalisée pour la marque",
       },
     ],
     workflow: [
       {
         title: "Mini-outil qui attire, qualifie et donne envie d'appeler",
         description:
-          "Exemple: un analyseur de landing page pour un prospect, pense comme lead magnet premium et non comme gadget gratuit.",
+          "Exemple : un analyseur de landing page pour un prospect, pensé comme lead magnet premium et non comme gadget gratuit.",
         tag: "Lead Gen",
       },
       {
@@ -37,16 +37,16 @@
         tag: "Automation",
       },
       {
-        title: "Outil ou interface sur mesure pour l'equipe ou le client",
+        title: "Outil ou interface sur mesure pour l'équipe ou le client",
         description:
-          "Quand il faut une vraie experience, un vrai parcours ou un vrai outil interne, je construis quelque chose d'utile, montrable vite et maintenable ensuite.",
+          "Quand il faut une vraie expérience, un vrai parcours ou un vrai outil interne, je construis quelque chose d'utile, montrable vite et maintenable ensuite.",
         tag: "Tooling",
       },
     ],
     signalCards: [
       {
         value: "7j",
-        label: "pour livrer une premiere V1 utile",
+        label: "pour livrer une première V1 utile",
       },
       {
         value: "1",
@@ -60,52 +60,52 @@
     outcomes: [
       {
         title: "Vous captez plus de bons leads",
-        description: "Avec des experiences plus fortes qu'un PDF statique ou qu'un audit qui ne laisse aucune trace.",
+        description: "Avec des expériences plus fortes qu'un PDF statique ou qu'un audit qui ne laisse aucune trace.",
       },
       {
-        title: "Vous protegez votre marge",
+        title: "Vous protégez votre marge",
         description: "Avec des automatisations qui sortent les manipulations manuelles et les oublis du processus.",
       },
       {
         title: "Vous prenez un autre niveau",
-        description: "Avec des actifs digitaux qui rendent l'agence plus serieuse, plus differenciante et plus designee pour scaler.",
+        description: "Avec des actifs digitaux qui rendent l'agence plus sérieuse, plus différenciante et mieux conçue pour scaler.",
       },
     ],
   },
   comparison: {
-    eyebrow: "Avant / Apres",
+    eyebrow: "Avant / Après",
     title: "Quand une agence s'appuie sur des bricolages, elle perd du temps. Quand elle a le bon outil, elle gagne en impact.",
     rows: [
       {
         label: "Prospection",
-        before: "Audit manuel, PDF statique ou proposition trop generale qui ne cree pas de vraie valeur avant l'appel.",
-        after: "Mini-outil interactif qui montre votre expertise, engage le prospect et qualifie mieux l'opportunite.",
+        before: "Audit manuel, PDF statique ou proposition trop générale qui ne crée pas de vraie valeur avant l'appel.",
+        after: "Mini-outil interactif qui montre votre expertise, engage le prospect et qualifie mieux l'opportunité.",
       },
       {
-        label: "Execution",
-        before: "Infos eparpillees, doubles saisies, oublis entre outils et dependance au suivi manuel de l'equipe.",
-        after: "Workflow n8n + IA qui distribue, structure et fait circuler l'information la ou elle doit aller.",
+        label: "Exécution",
+        before: "Infos éparpillées, doubles saisies, oublis entre outils et dépendance au suivi manuel de l'équipe.",
+        after: "Workflow n8n + IA qui distribue, structure et fait circuler l'information là où elle doit aller.",
       },
       {
-        label: "Experience client",
-        before: "Suivi artisanal, relances aleatoires et impression de flou sur l'avancement ou les prochaines etapes.",
-        after: "Parcours plus lisible, statuts plus clairs et sensation d'une agence mieux equipee et mieux pilotee.",
+        label: "Expérience client",
+        before: "Suivi artisanal, relances aléatoires et impression de flou sur l'avancement ou les prochaines étapes.",
+        after: "Parcours plus lisible, statuts plus clairs et sensation d'une agence mieux équipée et mieux pilotée.",
       },
     ],
   },
   services: {
     eyebrow: "Ce que je construis",
-    title: "Des solutions concretes pour faire gagner du temps, de la clarte et de la valeur percue.",
+    title: "Des solutions concrètes pour faire gagner du temps, de la clarté et de la valeur perçue.",
     cards: [
       {
         kicker: "01",
         title: "Mini-outils de vente et lead magnets",
         description:
-          "Je construis des experiences web utiles qui attirent le prospect, montrent votre expertise et ouvrent naturellement vers un call qualifie.",
+          "Je construis des expériences web utiles qui attirent le prospect, montrent votre expertise et ouvrent naturellement vers un call qualifié.",
         bullets: [
           "Analyseurs, estimateurs, configurateurs et audits interactifs",
-          "Lead magnets a forte valeur percue",
-          "Interfaces alignees avec votre offre et votre tunnel",
+          "Lead magnets à forte valeur perçue",
+          "Interfaces alignées avec votre offre et votre tunnel",
         ],
       },
       {
@@ -116,31 +116,31 @@
         bullets: [
           "Tri, enrichissement, routing, reporting et relances",
           "Agents IA, workflows n8n et connecteurs API",
-          "Moins de copier-coller, plus de continuite operationnelle",
+          "Moins de copier-coller, plus de continuité opérationnelle",
         ],
       },
       {
         kicker: "03",
         title: "Outils internes et interfaces sur mesure",
         description:
-          "Je cree des outils utiles a vos equipes ou a vos clients quand un simple assemblage no-code ne suffit plus.",
+          "Je crée des outils utiles à vos équipes ou à vos clients quand un simple assemblage no-code ne suffit plus.",
         bullets: [
           "Espaces internes, portails, outils de pilotage et dashboards",
-          "Interfaces orientees usage reel et gain de temps",
-          "Base propre pour iterer ensuite vers quelque chose de plus ambitieux",
+          "Interfaces orientées usage réel et gain de temps",
+          "Base propre pour itérer ensuite vers quelque chose de plus ambitieux",
         ],
       },
     ],
   },
   subscription: {
-    eyebrow: "Modele mensuel",
-    title: "Je peux construire la V1, puis la faire tourner dans la duree.",
+    eyebrow: "Modèle mensuel",
+    title: "Je peux construire la V1, puis la faire tourner dans la durée.",
     description:
-      "Tu ne payes pas seulement un build initial. Si le produit doit vivre, il peut ensuite entrer dans un abonnement mensuel pour la maintenance continue, le suivi et les petits ajustements utiles.",
+      "Tu ne paies pas seulement un build initial. Si le produit doit vivre, il peut ensuite entrer dans un abonnement mensuel pour la maintenance continue, le suivi et les petits ajustements utiles.",
     cards: [
       {
         title: "Build initial",
-        description: "On cadre le bon use case et on livre une premiere version exploitable plutot qu'une maquette qui dort.",
+        description: "On cadre le bon use case et on livre une première version exploitable plutôt qu'une maquette qui dort.",
         bullets: [
           "Cadrage du besoin et du bon format",
           "V1 utile, montrable et testable",
@@ -149,18 +149,18 @@
       },
       {
         title: "Abonnement mensuel",
-        description: "Si l'outil doit rester actif, je peux continuer a le maintenir, le surveiller et faire les ajustements mineurs utiles.",
+        description: "Si l'outil doit rester actif, je peux continuer à le maintenir, le surveiller et faire les ajustements mineurs utiles.",
         bullets: [
           "Maintenance continue du produit",
           "Corrections et petites modifications",
-          "Continuites des automatisations et du systeme",
+          "Continuité des automatisations et du système",
         ],
       },
       {
-        title: "Evolutions majeures",
-        description: "Quand il faut repenser un bloc important, ajouter une grosse fonctionnalite ou changer fortement le scope, on le recadre separement.",
+        title: "Évolutions majeures",
+        description: "Quand il faut repenser un bloc important, ajouter une grosse fonctionnalité ou changer fortement le scope, on le recadre séparément.",
         bullets: [
-          "Gros updates scopes a part",
+          "Gros updates scopés à part",
           "Chiffrage ou nouvelle capsule de build",
           "Pas de flou sur ce qui est inclus",
         ],
@@ -174,54 +174,54 @@
       {
         phase: "Jours 1-2",
         title: "Cadrage utile",
-        description: "On clarifie l'idee, la cible, la promesse et le format d'outil le plus pertinent pour le besoin.",
+        description: "On clarifie l'idée, la cible, la promesse et le format d'outil le plus pertinent pour le besoin.",
       },
       {
         phase: "Jours 3-4",
-        title: "Structure et experience",
+        title: "Structure et expérience",
         description: "Je pose le parcours, l'interface, la logique de valeur et les informations qui doivent vraiment circuler.",
       },
       {
         phase: "Jours 5-7",
         title: "Prototype ou V1 exploitable",
-        description: "Je livre une premiere version testable, montrable ou directement utilisable selon le niveau de maturite du projet.",
+        description: "Je livre une première version testable, montrable ou directement utilisable selon le niveau de maturité du projet.",
       },
       {
         phase: "Ensuite",
-        title: "Amelioration et maintenance continue",
-        description: "On ajoute ensuite les integrations, la profondeur produit et les optimisations utiles sans casser ce qui tourne deja.",
+        title: "Amélioration et maintenance continue",
+        description: "On ajoute ensuite les intégrations, la profondeur produit et les optimisations utiles sans casser ce qui tourne déjà.",
       },
     ],
   },
   about: {
     eyebrow: "Qui je suis",
-    title: "Entrepreneur depuis 16 ans, obsede par l'optimisation depuis avant que ca s'appelle comme ca.",
+    title: "Entrepreneur depuis 16 ans, obsédé par l'optimisation depuis avant que ça s'appelle comme ça.",
     intro:
-      "A 14 ans, je faisais une tombola de village. A 16 ans, je tondais les pelouses des voisins pour gagner de l'argent. Bien plus tard, mon directeur de chez Leclerc m'a dit qu'il ne comprenait pas comment j'avais la vision d'un fondateur en faisant son metier.",
+      "À 14 ans, je faisais une tombola de village. À 16 ans, je tondais les pelouses des voisins pour gagner de l'argent. Bien plus tard, mon directeur de chez Leclerc m'a dit qu'il ne comprenait pas comment j'avais la vision d'un fondateur en faisant son métier.",
     cards: [
       {
-        title: "Entrepreneur a 16 ans",
-        text: "Tonte de pelouse chez les voisins, tombola dans un village a 14 ans, petits boulots pour m'en sortir. Pas par obligation — par gout de construire quelque chose par mes propres moyens.",
+        title: "Entrepreneur à 16 ans",
+        text: "Tonte de pelouse chez les voisins, tombola dans un village à 14 ans, petits boulots pour m'en sortir. Pas par obligation — par goût de construire quelque chose par mes propres moyens.",
       },
       {
         title: "Maniaque de l'optimisation",
-        text: "Que ce soit mon temps, mon argent ou mes processus : si ca peut etre optimise, je le fais. C'est cette obsession qui m'a naturellement amene a l'IA et a l'automatisation a 20 ans.",
+        text: "Que ce soit mon temps, mon argent ou mes processus : si ça peut être optimisé, je le fais. C'est cette obsession qui m'a naturellement amené à l'IA et à l'automatisation à 20 ans.",
       },
       {
-        title: "La vision avant le metier",
-        text: "Mon directeur de chez Leclerc m'a dit un jour : 'Je ne comprends pas comment tu fais ce metier alors que tu as la vision d'un mec qui ne le fait pas.' J'ai pris ca comme un signal.",
+        title: "La vision avant le métier",
+        text: "Mon directeur de chez Leclerc m'a dit un jour : « Je ne comprends pas comment tu fais ce métier alors que tu as la vision d'un mec qui ne le fait pas. » J'ai pris ça comme un signal.",
       },
     ],
   },
   finalCta: {
-    eyebrow: "Si ton agence sent deja qu'il lui faut ca",
-    title: "Reserve l'appel. Le vrai cout, c'est de laisser ce levier dormir encore un mois.",
+    eyebrow: "Si ton agence sent déjà qu'il lui faut ça",
+    title: "Réserve l'appel. Le vrai coût, c'est de laisser ce levier dormir encore un mois.",
     description:
-      "En 30 minutes, on voit si ton besoin doit devenir un mini-outil, un workflow n8n ou une interface IA. Si oui, on cadre la V1 et le modele mensuel derriere.",
+      "En 30 minutes, on voit si ton besoin doit devenir un mini-outil, un workflow n8n ou une interface IA. Si oui, on cadre la V1 et le modèle mensuel derrière.",
     bullets: [
-      "Pour les agences qui veulent un actif digital qui continue a travailler chaque mois",
-      "Maintenance continue et ajustements mineurs possibles dans le modele mensuel",
-      "Gros changements recadres a part pour garder une relation claire",
+      "Pour les agences qui veulent un actif digital qui continue à travailler chaque mois",
+      "Maintenance continue et ajustements mineurs possibles dans le modèle mensuel",
+      "Gros changements recadrés à part pour garder une relation claire",
     ],
   },
 } as const;

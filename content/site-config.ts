@@ -5,11 +5,11 @@
   meta: {
     title: "DigitalTimes | Mini-outils et automatisations IA pour agences digitales",
     description:
-      "DigitalTimes conçoit des mini-outils, automatisations n8n et solutions IA sur mesure pour aider les agences digitales a vendre, automatiser et mieux delivrer.",
+      "DigitalTimes conçoit des mini-outils, automatisations n8n et solutions IA sur mesure pour aider les agences digitales à vendre, automatiser et mieux délivrer.",
   },
   cta: {
-    shortLabel: "Reserver un appel",
-    longLabel: "Reserver l'appel de cadrage",
+    shortLabel: "Réserver un appel",
+    longLabel: "Réserver l'appel de cadrage",
     bookingUrl: "https://calendly.com/thomas-digitaltimes/30min",
   },
   contact: {

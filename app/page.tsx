@@ -36,8 +36,8 @@ export default function Home() {
           <Reveal className="premium-panel rounded-[2.2rem] p-6 sm:p-8">
             <SectionHeading
               eyebrow="Preuve sociale"
-              title="Des marques m'ont deja confie des missions et des projets."
-              description="Clickway, Scrollab, Visunyx — des collaborations concretes sur des projets reels avec des resultats mesurables."
+              title="Des marques m'ont déjà confié des missions et des projets."
+              description="Clickway, Scrollab, Visunyx — des collaborations concrètes sur des projets réels avec des résultats mesurables."
             />
           </Reveal>
 
@@ -66,7 +66,7 @@ export default function Home() {
             <SectionHeading
               eyebrow={landingContent.comparison.eyebrow}
               title={landingContent.comparison.title}
-              description="Moins de bricolage, plus d'impact. Les agences qui ont le bon outil signent mieux, delivrent plus vite et se differencient naturellement."
+              description="Moins de bricolage, plus d'impact. Les agences qui ont le bon outil signent mieux, délivrent plus vite et se différencient naturellement."
               inverse
             />
 
@@ -105,7 +105,7 @@ export default function Home() {
             <SectionHeading
               eyebrow={landingContent.services.eyebrow}
               title={landingContent.services.title}
-              description="Pas de technologie vague. Trois types de solutions concretes pour capter, executer et delivrer mieux."
+              description="Pas de technologie vague. Trois types de solutions concrètes pour capter, exécuter et délivrer mieux."
             />
           </Reveal>
 
@@ -245,10 +245,10 @@ export default function Home() {
             <Reveal className="dark-surface rounded-[2.2rem] p-6 text-ivory sm:p-8">
               <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Mon histoire</p>
               <h3 className="display-font mt-5 text-4xl leading-tight tracking-[-0.045em] text-ivory">
-                J'ai commence a <span className="accent-script text-saffron">gagner ma vie</span> bien avant de connaitre le mot entrepreneuriat.
+                J'ai commencé à <span className="accent-script text-saffron">gagner ma vie</span> bien avant de connaître le mot entrepreneuriat.
               </h3>
               <p className="mt-5 text-base leading-8 text-ivory/72">
-                A 14 ans, je faisais une tombola de village en allant frapper aux portes. A 16 ans, je tondais les pelouses du quartier. Pas parce que j'y etais oblige — parce que j'ai toujours voulu construire quelque chose par mes propres moyens. Cette debrouillardise, je l'ai transformee en methode. Aujourd'hui, j'automatise pour les agences ce que j'ai toujours optimise pour moi.
+                À 14 ans, je faisais une tombola de village en allant frapper aux portes. À 16 ans, je tondais les pelouses du quartier. Pas parce que j'y étais obligé — parce que j'ai toujours voulu construire quelque chose par mes propres moyens. Cette débrouillardise, je l'ai transformée en méthode. Aujourd'hui, j'automatise pour les agences ce que j'ai toujours optimisé pour moi.
               </p>
             </Reveal>
 
