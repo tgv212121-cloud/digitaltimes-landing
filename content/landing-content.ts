@@ -17,13 +17,13 @@ export const landingContent = {
         name: "Scrollab",
         url: "https://scrollab.fr/",
         note: "Mise en place d'une automatisation interne",
-        logo: "/logos/scrollab-logo.svg",
+        logo: "/logos/scrollab-real.png",
       },
       {
         name: "Visunyx",
         url: "https://visunyx.com/",
         note: "Interface client automatisée",
-        logo: "/logos/visunyx-logo.svg",
+        logo: "/logos/visunyx-real.png",
       },
     ],
     workflow: [
