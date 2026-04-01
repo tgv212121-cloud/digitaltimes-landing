@@ -45,14 +45,20 @@ export default function Home() {
             {landingContent.hero.brands.map((brand, index) => (
               <Reveal key={brand.name} delay={index * 0.08}>
                 <a
-                  className="collab-card premium-panel block rounded-[1.8rem] p-5 transition duration-500 hover:-translate-y-2 hover:shadow-glow"
+                  className="collab-card premium-panel flex flex-col items-center rounded-[1.8rem] p-5 text-center transition duration-500 hover:-translate-y-2 hover:shadow-glow"
                   href={brand.url}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Collaboration</p>
-                  <h3 className="display-font mt-4 text-3xl tracking-[-0.04em] text-graphite">{brand.name}</h3>
-                  <p className="mt-4 text-sm leading-7 text-graphite/68">{brand.note}</p>
+                  <div className="flex h-16 w-full items-center justify-center">
+                    <img
+                      src={brand.logo}
+                      alt={`Logo ${brand.name}`}
+                      className="max-h-14 max-w-[140px] object-contain"
+                    />
+                  </div>
+                  <p className="accent-font mt-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Collaboration</p>
+                  <p className="mt-3 text-sm leading-7 text-graphite/68">{brand.note}</p>
                 </a>
               </Reveal>
             ))}

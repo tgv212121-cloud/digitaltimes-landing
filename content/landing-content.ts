@@ -10,17 +10,20 @@ export const landingContent = {
       {
         name: "Clickway",
         url: "https://clickway.fr/",
-        note: "Collaboration réalisée pour l'agence",
+        note: "Création d'un outil digital sur mesure pour l'agence",
+        logo: "/logos/clickway.png",
       },
       {
         name: "Scrollab",
         url: "https://scrollab.fr/",
-        note: "Collaboration réalisée pour la marque",
+        note: "Mise en place d'une automatisation interne",
+        logo: "/logos/scrollab-logo.svg",
       },
       {
         name: "Visunyx",
         url: "https://visunyx.com/",
-        note: "Collaboration réalisée pour la marque",
+        note: "Interface client automatisée",
+        logo: "/logos/visunyx-logo.svg",
       },
     ],
     workflow: [
