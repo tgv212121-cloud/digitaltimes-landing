@@ -109,7 +109,7 @@ export function Hero() {
               Lead magnet interactif
             </motion.div>
             <motion.div
-              className="absolute -right-2 bottom-10 z-10 hidden rounded-full border border-saffron/20 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-saffron shadow-[0_8px_24px_rgba(12,27,51,0.10)] xl:block"
+              className="absolute -bottom-5 right-6 z-10 hidden rounded-full border border-saffron/20 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-saffron shadow-[0_8px_24px_rgba(12,27,51,0.10)] xl:block"
               animate={reduceMotion ? undefined : { y: [0, 7, 0] }}
               transition={{ duration: 9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             >
