@@ -72,7 +72,7 @@ export function Hero() {
           </div>
         </header>
 
-        <div className="grid gap-10 pb-10 pt-12 lg:grid-cols-[1.04fr_0.96fr] lg:items-end lg:gap-14 lg:pb-16 lg:pt-20">
+        <div className="grid gap-10 pb-10 pt-6 lg:grid-cols-[1.04fr_0.96fr] lg:items-end lg:gap-14 lg:pb-16 lg:pt-10">
           <div className="max-w-3xl">
             <span className="eyebrow-tag">{landingContent.hero.eyebrow}</span>
 
