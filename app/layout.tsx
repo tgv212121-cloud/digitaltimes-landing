@@ -1,23 +1,19 @@
-﻿import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope, Space_Grotesk } from "next/font/google";
+import type { Metadata } from "next";
+import { Bricolage_Grotesque, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/content/site-config";
 import { Footer } from "@/components/footer";
 
-const sans = Manrope({
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const display = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "600", "800"],
   variable: "--font-display",
 });
 
-const accent = Space_Grotesk({
+const accent = Instrument_Serif({
   subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
   variable: "--font-accent",
 });
 
@@ -47,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${sans.variable} ${display.variable} ${accent.variable} bg-ivory text-graphite antialiased`}>
+      <body className={`${display.variable} ${accent.variable} bg-ivory text-graphite antialiased`}>
         {children}
         <Footer />
       </body>

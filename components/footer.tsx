@@ -81,7 +81,7 @@ export function Footer() {
                 target={s.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noreferrer"
                 aria-label={s.label}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/6 text-ivory/60 transition duration-300 hover:border-white/24 hover:bg-white/12 hover:text-ivory"
+                className="flex h-10 w-10 items-center justify-center border border-white/10 text-ivory/60 transition duration-300 hover:border-white/24 hover:text-ivory"
               >
                 {s.icon}
               </a>

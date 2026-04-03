@@ -52,7 +52,7 @@ export function Hero() {
       />
 
       <div className="section-shell relative z-10">
-        <header className="glass-panel flex items-center justify-between rounded-full px-4 py-3 sm:px-6">
+        <header className="glass-panel flex items-center justify-between px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3">
             <div className="flex select-none items-baseline gap-0">
               <span className="display-font text-[22px] font-[500] leading-none tracking-[-0.02em] text-graphite">
@@ -65,7 +65,7 @@ export function Hero() {
           </div>
 
           <div className="flex items-center gap-3">
-            <div className="hidden rounded-full border border-[var(--line)] bg-white/60 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-graphite/58 lg:inline-flex">
+            <div className="hidden border border-[var(--line)] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-graphite/58 lg:inline-flex">
               Build initial + mensuel
             </div>
             <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.shortLabel} />
@@ -86,10 +86,10 @@ export function Hero() {
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <div className="inline-flex rounded-full border border-petrol/14 bg-petrol/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">
+              <div className="inline-flex border-l-2 border-petrol pl-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">
                 {landingContent.hero.promise}
               </div>
-              <div className="inline-flex rounded-full border border-saffron/18 bg-saffron/12 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-saffron">
+              <div className="inline-flex border-l-2 border-saffron pl-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/60">
                 Si ton agence sent qu'il lui faut ça, l'appel sert à le cadrer vite
               </div>
             </div>
@@ -102,14 +102,14 @@ export function Hero() {
 
           <div className="relative lg:pl-10">
             <motion.div
-              className="absolute -left-4 -top-5 z-10 hidden rounded-full border border-petrol/20 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-petrol shadow-[0_8px_24px_rgba(12,27,51,0.10)] lg:block"
+              className="absolute -left-4 -top-5 z-10 hidden border border-[var(--line)] bg-ivory px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-petrol lg:block"
               animate={reduceMotion ? undefined : { y: [0, -7, 0] }}
               transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             >
               Lead magnet interactif
             </motion.div>
             <motion.div
-              className="absolute -bottom-5 right-6 z-10 hidden rounded-full border border-saffron/20 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-saffron shadow-[0_8px_24px_rgba(12,27,51,0.10)] xl:block"
+              className="absolute -bottom-5 right-6 z-10 hidden border border-[var(--line)] bg-ivory px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-graphite/60 xl:block"
               animate={reduceMotion ? undefined : { y: [0, 7, 0] }}
               transition={{ duration: 9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
             >
@@ -119,7 +119,7 @@ export function Hero() {
             <div className="outline-orb bottom-16 right-8 hidden h-32 w-32 lg:block" aria-hidden="true" />
 
             <motion.div
-              className="spotlight-card dark-surface section-sheen relative rounded-[2.25rem] p-5 text-ivory sm:p-7"
+              className="spotlight-card dark-surface section-sheen relative rounded p-5 text-ivory sm:p-7"
               style={spotlightStyle}
               onMouseMove={(event) => {
                 const bounds = event.currentTarget.getBoundingClientRect();
@@ -136,7 +136,7 @@ export function Hero() {
                   <p className="accent-font text-[11px] uppercase tracking-[0.28em] text-white/52">Ce que je peux livrer</p>
                   <p className="mt-2 text-lg font-semibold text-white">De l'idée à un actif digital utile</p>
                 </div>
-                <div className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-saffron">
+                <div className="border border-white/10 bg-white/6 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-saffron">
                   Build + suivi
                 </div>
               </div>
@@ -145,7 +145,7 @@ export function Hero() {
                 {landingContent.hero.workflow.map((step, index) => (
                   <motion.div
                     key={step.title}
-                    className="rounded-[1.55rem] border border-white/10 bg-white/6 p-4 backdrop-blur-sm"
+                    className="rounded-sm border border-white/10 bg-white/6 p-4 backdrop-blur-sm"
                     whileHover={reduceMotion ? undefined : { x: 4 }}
                     transition={{ duration: 0.24, ease: "easeOut" }}
                   >
@@ -156,7 +156,7 @@ export function Hero() {
                         </p>
                         <p className="mt-2 text-base font-semibold text-white">{step.title}</p>
                       </div>
-                      <div className="rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-[11px] uppercase tracking-[0.22em] text-white/82">
+                      <div className="border border-white/10 bg-white/6 px-2.5 py-1 text-[11px] uppercase tracking-[0.22em] text-white/82">
                         {step.tag}
                       </div>
                     </div>
@@ -169,7 +169,7 @@ export function Hero() {
                 {landingContent.hero.signalCards.map((card) => (
                   <div
                     key={card.label}
-                    className="rounded-[1.55rem] border border-white/10 bg-white/8 px-4 py-4 backdrop-blur-sm"
+                    className="rounded-sm border border-white/10 bg-white/8 px-4 py-4 backdrop-blur-sm"
                   >
                     <p className="display-font text-3xl leading-none tracking-[-0.05em] text-saffron">{card.value}</p>
                     <p className="mt-3 text-[11px] uppercase tracking-[0.18em] text-white/56">{card.label}</p>
@@ -181,7 +181,7 @@ export function Hero() {
         </div>
 
         <div id="hero-proof" className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
-          <div className="premium-panel rounded-[2rem] px-5 py-6 sm:px-7">
+          <div className="premium-panel rounded px-5 py-6 sm:px-7">
             <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-petrol">Ce que cela débloque</p>
             <h2 className="display-font mt-4 text-3xl leading-tight tracking-[-0.045em] text-graphite sm:text-4xl">
               Tu arrives avec une <span className="accent-script">idée</span>. Tu repars avec un <span className="gradient-text">outil utile</span> qui peut continuer à tourner.
@@ -195,7 +195,7 @@ export function Hero() {
             {landingContent.hero.outcomes.map((outcome) => (
               <motion.div
                 key={outcome.title}
-                className="premium-panel rounded-[1.75rem] p-5"
+                className="premium-panel rounded-sm p-5"
                 whileHover={reduceMotion ? undefined : { y: -5 }}
                 transition={{ duration: 0.22, ease: "easeOut" }}
               >

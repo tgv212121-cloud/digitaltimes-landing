@@ -1,35 +1,35 @@
-﻿"use client";
+"use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion, useInView } from "framer-motion";
+import { memo, useEffect, useRef, useState } from "react";
 
 type RotatingWordProps = {
   words: readonly string[];
   className?: string;
 };
 
-export function RotatingWord({ words, className }: RotatingWordProps) {
+export const RotatingWord = memo(function RotatingWord({ words, className }: RotatingWordProps) {
   const [index, setIndex] = useState(0);
   const reduceMotion = useReducedMotion();
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { amount: 0.3 });
 
   useEffect(() => {
-    if (words.length <= 1) {
-      return;
-    }
+    if (words.length <= 1 || !isInView) return;
 
     const timer = window.setInterval(() => {
       setIndex((current) => (current + 1) % words.length);
     }, 2200);
 
     return () => window.clearInterval(timer);
-  }, [words]);
+  }, [words, isInView]);
 
   if (reduceMotion) {
     return <span className={className}>{words[0]}</span>;
   }
 
   return (
-    <span className={`relative inline-flex min-w-[8.4ch] justify-start ${className ?? ""}`}>
+    <span ref={ref} className={`relative inline-flex min-w-[8.4ch] justify-start ${className ?? ""}`}>
       <AnimatePresence mode="wait">
         <motion.span
           key={words[index]}
@@ -44,4 +44,4 @@ export function RotatingWord({ words, className }: RotatingWordProps) {
       </AnimatePresence>
     </span>
   );
-}
+});

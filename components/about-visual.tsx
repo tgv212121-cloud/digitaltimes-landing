@@ -11,7 +11,8 @@ function TravelingDot({ delay = 0 }: { delay?: number }) {
       aria-hidden="true"
       className="pointer-events-none absolute top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-saffron"
       style={{ left: 0, boxShadow: "0 0 10px 4px rgba(251,176,64,0.5)" }}
-      animate={{ left: ["0%", "100%"] }}
+      whileInView={{ left: ["0%", "100%"] }}
+      viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 2, repeat: Infinity, ease: "linear", delay }}
     />
   );
@@ -25,7 +26,8 @@ function LiveDot() {
       {!reduced && (
         <motion.span
           className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
-          animate={{ scale: [1, 2.2, 1], opacity: [0.75, 0, 0.75] }}
+          whileInView={{ scale: [1, 2.2, 1], opacity: [0.75, 0, 0.75] }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeOut" }}
         />
       )}
@@ -48,8 +50,8 @@ const STAGES = [
 ];
 
 const FEED = [
-  { brand: "Clickway", action: "Workflow n8n déployé",    dot: "bg-emerald-400", time: "il y a 2j"  },
-  { brand: "Scrollab", action: "Outil d'analyse lancé",  dot: "bg-petrol",      time: "il y a 5j"  },
+  { brand: "Clickway", action: "Outil d'analyse lancé",   dot: "bg-emerald-400", time: "il y a 2j"  },
+  { brand: "Scrollab", action: "Workflow n8n déployé",   dot: "bg-petrol",      time: "il y a 5j"  },
   { brand: "Visunyx",  action: "Interface client livrée", dot: "bg-saffron",     time: "il y a 12j" },
 ];
 
@@ -59,7 +61,7 @@ export function AboutVisual() {
 
   return (
     <motion.div
-      className="dark-surface overflow-hidden rounded-[2.2rem] p-6 sm:p-8"
+      className="dark-surface overflow-hidden rounded p-6 sm:p-8"
       initial={reduced ? undefined : { opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.55, ease: "easeOut" }}
@@ -82,7 +84,7 @@ export function AboutVisual() {
         {METRICS.map((m, i) => (
           <motion.div
             key={m.label}
-            className="rounded-[1.5rem] border border-white/12 bg-white/8 px-3 py-5 text-center"
+            className="rounded-sm border border-white/12 bg-white/8 px-3 py-5 text-center"
             initial={reduced ? undefined : { opacity: 0, scale: 0.88 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.08 * i, duration: 0.4, ease: "easeOut" }}
@@ -98,11 +100,11 @@ export function AboutVisual() {
       </div>
 
       {/* ── Pipeline ── */}
-      <div className="mt-4 flex items-center gap-1.5 rounded-[1.6rem] border border-white/8 bg-white/4 px-5 py-5">
+      <div className="mt-4 flex items-center gap-1.5 rounded-sm border border-white/8 bg-white/4 px-5 py-5">
         {STAGES.map((stage, i) => (
           <div key={stage.label} className="flex flex-1 items-center gap-1.5">
             <motion.div
-              className="flex-shrink-0 rounded-[1.1rem] border border-white/12 bg-white/8 px-3 py-3 text-center"
+              className="flex-shrink-0 rounded-sm border border-white/12 bg-white/8 px-3 py-3 text-center"
               initial={reduced ? undefined : { opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 + i * 0.12, duration: 0.4 }}
@@ -130,7 +132,7 @@ export function AboutVisual() {
         {FEED.map((item, i) => (
           <motion.div
             key={item.brand}
-            className="flex items-center justify-between rounded-[1.2rem] border border-white/10 bg-white/6 px-4 py-3"
+            className="flex items-center justify-between rounded-sm border border-white/10 bg-white/6 px-4 py-3"
             initial={reduced ? undefined : { opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 + i * 0.1, duration: 0.38, ease: "easeOut" }}
