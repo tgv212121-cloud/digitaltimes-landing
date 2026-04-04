@@ -101,22 +101,6 @@ export function Hero() {
           </div>
 
           <div className="relative lg:pl-10">
-            <motion.div
-              className="absolute -left-4 -top-5 z-10 hidden border border-[var(--line)] bg-ivory px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-petrol lg:block"
-              animate={reduceMotion ? undefined : { y: [0, -7, 0] }}
-              transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-            >
-              Lead magnet interactif
-            </motion.div>
-            <motion.div
-              className="absolute -bottom-5 right-6 z-10 hidden border border-[var(--line)] bg-ivory px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-graphite/60 xl:block"
-              animate={reduceMotion ? undefined : { y: [0, 7, 0] }}
-              transition={{ duration: 9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-            >
-              n8n + IA + API
-            </motion.div>
-            <div className="outline-orb left-10 top-0 hidden h-24 w-24 lg:block" aria-hidden="true" />
-            <div className="outline-orb bottom-16 right-8 hidden h-32 w-32 lg:block" aria-hidden="true" />
 
             <motion.div
               className="spotlight-card dark-surface section-sheen relative rounded p-5 text-ivory sm:p-7"
