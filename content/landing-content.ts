@@ -2,7 +2,7 @@ export const landingContent = {
   hero: {
     eyebrow: "Mini-outils, n8n et IA pour agences digitales",
     description:
-      "Tu as une idée d'outil, de workflow ou de lead magnet ? Je la construis en 7 jours.",
+      "Outils, automatisations IA et systèmes qui vendent, qualifient et délivrent — sans toi dans la boucle.",
     promise: "V1 en 7 jours. Suivi mensuel possible.",
     rotatingWords: ["qualifient", "convertissent", "fluidifient", "travaillent"],
     trustPills: [],

@@ -75,7 +75,7 @@ export function Hero() {
         <div className="pb-10 pt-2 lg:pb-16 lg:pt-4">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="display-font mt-7 text-5xl leading-[0.88] tracking-[-0.055em] text-graphite sm:text-6xl xl:text-[5.3rem]">
-              Je transforme les idées de ton agence en <span className="accent-word">mini-outils</span>, <span className="gradient-text">automatisations IA</span> et systèmes qui <RotatingWord words={landingContent.hero.rotatingWords} className="accent-script text-petrol" />.
+              Je construis ce qui manque à ton agence pour atteindre les <RotatingWord words={["100K", "200K", "300K", "400K", "500K"]} className="accent-script text-petrol" />€/mois.
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-graphite/74 sm:text-lg">
