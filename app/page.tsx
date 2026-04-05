@@ -80,16 +80,18 @@ export default function Home() {
                   <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Clickway — Outil digital sur mesure</p>
                 </div>
                 <div className="grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
-                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
-                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Avant — photo à venir</p>
+                  <div className="overflow-hidden rounded border border-[var(--line)]">
+                    <img src="/clickway-avant.png.png" alt="Avant — Clickway" className="w-full object-cover" loading="lazy" />
                   </div>
                   <div className="flex flex-col items-center py-2">
                     <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
                     <p className="accent-font my-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-petrol">Avant / Après</p>
                     <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
                   </div>
-                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
-                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Après — vidéo à venir</p>
+                  <div className="overflow-hidden rounded border border-[var(--line)]">
+                    <video className="w-full" autoPlay muted loop playsInline>
+                      <source src="/clickway-apres.png.mp4" type="video/mp4" />
+                    </video>
                   </div>
                 </div>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
