@@ -74,8 +74,6 @@ export function Hero() {
 
         <div className="pb-10 pt-2 lg:pb-16 lg:pt-4">
           <div className="mx-auto max-w-4xl text-center">
-            <span className="eyebrow-tag">{landingContent.hero.eyebrow}</span>
-
             <h1 className="display-font mt-7 text-5xl leading-[0.88] tracking-[-0.055em] text-graphite sm:text-6xl xl:text-[5.3rem]">
               Je transforme les idées de ton agence en <span className="accent-word">mini-outils</span>, <span className="gradient-text">automatisations IA</span> et systèmes qui <RotatingWord words={landingContent.hero.rotatingWords} className="accent-script text-petrol" />.
             </h1>
