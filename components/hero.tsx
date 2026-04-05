@@ -64,12 +64,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="hidden border border-[var(--line)] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-graphite/58 lg:inline-flex">
-              Build initial + mensuel
-            </div>
-            <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.shortLabel} />
-          </div>
+          <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.shortLabel} />
         </header>
 
         <div className="pb-10 pt-16 lg:pb-16 lg:pt-28">

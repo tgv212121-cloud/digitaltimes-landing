@@ -164,16 +164,16 @@ export default function Home() {
                 <div>
                   <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-saffron">Et après ?</p>
                   <p className="display-font mt-3 text-3xl leading-tight tracking-[-0.04em] text-ivory">
-                    Maintenance mensuelle possible.
+                    La maintenance est incluse.
                   </p>
                   <p className="mt-3 text-base leading-8 text-ivory/60">
-                    Une fois la V1 livrée, l'outil peut entrer en abonnement mensuel. Je le maintiens, l'ajuste et le fais tourner.
+                    Ajustements mineurs, corrections, suivi des automatisations : c'est compris dans l'abonnement. Pas de frais en plus.
                   </p>
                 </div>
                 <div className="grid gap-2">
-                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Maintenance continue</div>
-                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Corrections et ajustements</div>
-                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Suivi des automatisations</div>
+                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Ajustements mineurs inclus</div>
+                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Corrections gratuites</div>
+                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Suivi continu des automatisations</div>
                 </div>
               </div>
             </div>
