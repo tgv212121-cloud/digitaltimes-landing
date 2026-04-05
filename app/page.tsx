@@ -251,37 +251,35 @@ export default function Home() {
           </Reveal>
 
           <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1fr]">
-            {/* Colonne gauche : histoire + photo */}
-            <div className="grid gap-8">
-              <Reveal className="dark-surface rounded p-6 text-ivory sm:p-8">
+            {/* Colonne gauche : photo recadrée */}
+            <Reveal>
+              <div className="overflow-hidden rounded" style={{ maxHeight: "520px" }}>
+                <img
+                  src="/thomas.jpg.jpg"
+                  alt="Thomas Gildas — fondateur de DigitalTimes"
+                  className="h-full w-full object-cover object-[center_60%]"
+                  loading="lazy"
+                />
+              </div>
+            </Reveal>
+
+            {/* Colonne droite : histoire + cards */}
+            <div className="grid gap-6 lg:content-start">
+              <Reveal className="dark-surface rounded p-6 text-ivory">
                 <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Mon histoire</p>
-                <h3 className="display-font mt-5 text-4xl leading-tight tracking-[-0.045em] text-ivory">
+                <h3 className="display-font mt-4 text-3xl leading-tight tracking-[-0.045em] text-ivory">
                   J'ai commencé à <span className="accent-script text-saffron">construire</span> bien avant de connaître le mot.
                 </h3>
-                <p className="mt-6 text-base leading-8 text-ivory/72">
+                <p className="mt-4 text-base leading-8 text-ivory/72">
                   Tombola à 14 ans. Pelouses à 16 ans. Automatisations à 20 ans. Toujours par choix.
                 </p>
               </Reveal>
 
-              <Reveal>
-                <div className="overflow-hidden rounded">
-                  <img
-                    src="/thomas.jpg.jpg"
-                    alt="Thomas Gildas — fondateur de DigitalTimes"
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </Reveal>
-            </div>
-
-            {/* Colonne droite : cards */}
-            <div className="grid gap-6 lg:content-start">
               {landingContent.about.cards.map((card, index) => (
                 <Reveal key={card.title + index} delay={index * 0.08}>
                   <div className="premium-panel rounded-sm p-6">
                     <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-graphite/48">{card.title}</p>
-                    <p className="mt-5 text-base leading-8 text-graphite/74">{card.text}</p>
+                    <p className="mt-4 text-base leading-8 text-graphite/74">{card.text}</p>
                   </div>
                 </Reveal>
               ))}
@@ -311,18 +309,12 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-10">
                 <a
                   href={siteConfig.cta.bookingUrl}
                   className="inline-flex items-center justify-center bg-ivory px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-graphite transition duration-300 hover:bg-white"
                 >
                   {siteConfig.cta.longLabel}
-                </a>
-                <a
-                  href="#abonnement"
-                  className="inline-flex items-center justify-center border border-white/40 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/80 transition duration-300 hover:border-white hover:text-white"
-                >
-                  Comprendre l&apos;abonnement mensuel
                 </a>
               </div>
             </div>
