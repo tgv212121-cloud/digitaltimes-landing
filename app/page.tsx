@@ -52,8 +52,8 @@ export default function Home() {
                   <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Visunyx — Interface client automatisée</p>
                 </div>
                 <div className="grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
-                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
-                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Avant — photo à venir</p>
+                  <div className="overflow-hidden rounded border border-[var(--line)]">
+                    <img src="/visunyx-avant.png.png" alt="Avant — outils éparpillés" className="w-full object-cover" loading="lazy" />
                   </div>
                   <div className="flex flex-col items-center py-2">
                     <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
