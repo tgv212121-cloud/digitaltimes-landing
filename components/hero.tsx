@@ -82,40 +82,12 @@ export function Hero() {
               {landingContent.hero.description}
             </p>
 
-            <div className="mt-7 flex flex-wrap justify-center gap-6">
-              <div className="inline-flex text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">
-                {landingContent.hero.promise}
-              </div>
-              <div className="inline-flex text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/60">
-                L'appel sert à cadrer, pas à brainstormer
-              </div>
-            </div>
-
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.longLabel} />
+            <div className="mt-8 flex justify-center">
               <CTAButton href="#abonnement" label="Voir le modèle mensuel" variant="secondary" />
             </div>
           </div>
         </div>
 
-        <div className="ticker-shell mt-6">
-          <div className="ticker-track">
-            {brandLoop.map((brand, index) => (
-              <a
-                key={`${brand.name}-${index}`}
-                className="ticker-item"
-                href={brand.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="accent-font text-[11px] uppercase tracking-[0.28em] text-petrol">Travail réalisé pour</span>
-                <span className="text-base font-semibold text-graphite">{brand.name}</span>
-                <span className="text-sm text-graphite/58">{brand.note}</span>
-                <span className="ticker-divider" aria-hidden="true" />
-              </a>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
