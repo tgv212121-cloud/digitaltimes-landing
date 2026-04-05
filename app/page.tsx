@@ -64,7 +64,7 @@ export default function Home() {
                     <video className="w-full" autoPlay muted loop playsInline>
                       <source src="/visunyx-demo.mp4" type="video/mp4" />
                     </video>
-                    <p className="absolute bottom-6 right-6 display-font text-3xl tracking-[-0.04em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-4xl" style={{ transform: "rotate(-6deg)" }}>
+                    <p className="absolute bottom-6 right-6 accent-script text-3xl tracking-[-0.02em] text-saffron drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] sm:text-4xl" style={{ transform: "rotate(-6deg)" }}>
                       +10 min/client
                     </p>
                   </div>
