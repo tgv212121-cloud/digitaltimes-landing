@@ -61,7 +61,7 @@ export function AboutVisual() {
 
   return (
     <motion.div
-      className="dark-surface overflow-hidden rounded p-6 sm:p-8"
+      className="dark-surface overflow-hidden rounded-none p-6 sm:p-10"
       initial={reduced ? undefined : { opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.55, ease: "easeOut" }}

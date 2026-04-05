@@ -1,4 +1,4 @@
-﻿import { CTAButton } from "@/components/cta-button";
+import { CTAButton } from "@/components/cta-button";
 import { Hero } from "@/components/hero";
 import { Reveal } from "@/components/reveal";
 import { AboutVisual } from "@/components/about-visual";
@@ -31,21 +31,21 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden bg-ivory text-graphite">
       <Hero />
 
-      <section id="collabs" className="pb-6 pt-2 sm:pb-10">
-        <div className="section-shell grid gap-5 lg:grid-cols-[0.44fr_0.56fr] lg:items-start">
+      {/* ── Collaborations ── */}
+      <section id="collabs" className="pb-12 pt-6 sm:pb-20">
+        <div className="section-shell grid gap-8 lg:grid-cols-[0.44fr_0.56fr] lg:items-start">
           <Reveal className="premium-panel rounded p-6 sm:p-8">
             <SectionHeading
               eyebrow="Preuve sociale"
               title="Des marques m'ont déjà confié des missions et des projets."
-              description="Clickway, Scrollab, Visunyx — des collaborations concrètes sur des projets réels avec des résultats mesurables."
             />
           </Reveal>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-3">
             {landingContent.hero.brands.map((brand, index) => (
               <Reveal key={brand.name} delay={index * 0.08}>
                 <a
-                  className="collab-card premium-panel flex flex-col items-center rounded-sm p-5 text-center transition duration-500 hover:translate-x-1 hover:border-petrol/30"
+                  className="collab-card premium-panel flex flex-col items-center rounded-sm p-6 text-center transition duration-500 hover:translate-x-1 hover:border-petrol/30"
                   href={brand.url}
                   target="_blank"
                   rel="noreferrer"
@@ -58,7 +58,7 @@ export default function Home() {
                       loading="lazy"
                     />
                   </div>
-                  <p className="accent-font mt-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Collaboration</p>
+                  <p className="accent-font mt-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Collaboration</p>
                   <p className="mt-3 text-sm leading-7 text-graphite/68">{brand.note}</p>
                 </a>
               </Reveal>
@@ -67,26 +67,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="avant-apres" className="pb-10 pt-6 sm:pb-16 sm:pt-10">
+      {/* ── Avant / Après ── */}
+      <section id="avant-apres" className="pb-16 pt-10 sm:pb-24 sm:pt-16">
         <div className="section-shell">
-          <Reveal className="dark-surface section-sheen rounded px-5 py-6 text-ivory sm:px-8 sm:py-8">
+          <Reveal className="dark-surface section-sheen rounded px-5 py-8 text-ivory sm:px-10 sm:py-12">
             <SectionHeading
               eyebrow={landingContent.comparison.eyebrow}
               title={landingContent.comparison.title}
-              description="Moins de bricolage, plus d'impact. Les agences qui ont le bon outil signent mieux, délivrent plus vite et se différencient naturellement."
               inverse
             />
 
-            <div className="mt-8 hidden rounded-sm border border-white/10 bg-white/6 px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/46 lg:grid lg:grid-cols-[0.24fr_0.38fr_0.38fr]">
+            <div className="mt-10 hidden rounded-sm border border-white/10 bg-white/6 px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/46 lg:grid lg:grid-cols-[0.24fr_0.38fr_0.38fr]">
               <span>Point de friction</span>
               <span>Sans l'outil</span>
               <span>Avec DigitalTimes</span>
             </div>
 
-            <div className="mt-4 space-y-4">
+            <div className="mt-5 space-y-5">
               {landingContent.comparison.rows.map((row, index) => (
                 <Reveal key={row.label} delay={index * 0.08}>
-                  <div className="grid gap-4 rounded-sm border border-white/10 bg-white/6 p-5 backdrop-blur-sm transition duration-500 hover:translate-x-0.5 hover:bg-white/10 lg:grid-cols-[0.24fr_0.38fr_0.38fr]">
+                  <div className="grid gap-4 rounded-sm border border-white/10 bg-white/6 p-6 backdrop-blur-sm transition duration-500 hover:translate-x-0.5 hover:bg-white/10 lg:grid-cols-[0.24fr_0.38fr_0.38fr]">
                     <div>
                       <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-saffron">{row.label}</p>
                     </div>
@@ -106,21 +106,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="solutions" className="pb-10 pt-10 sm:pb-16">
+      {/* ── Solutions ── */}
+      <section id="solutions" className="pb-16 pt-14 sm:pb-24">
         <div className="section-shell">
           <Reveal>
             <SectionHeading
               eyebrow={landingContent.services.eyebrow}
               title={landingContent.services.title}
-              description="Pas de technologie vague. Trois types de solutions concrètes pour capter, exécuter et délivrer mieux."
             />
           </Reveal>
 
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+          <div className="mt-14 grid gap-8 lg:grid-cols-3">
             {landingContent.services.cards.map((card, index) => (
               <Reveal key={card.title} delay={index * 0.08}>
                 <article
-                  className={`group relative overflow-hidden rounded border p-6 transition duration-500 hover:translate-x-1 hover:border-petrol/30 ${
+                  className={`group relative overflow-hidden rounded border p-8 transition duration-500 hover:translate-x-1 hover:border-petrol/30 ${
                     index === 1
                       ? "border-petrol/20 bg-[rgba(200,75,49,0.04)]"
                       : "premium-panel border-[var(--line)]"
@@ -131,11 +131,11 @@ export default function Home() {
                     {card.kicker}
                   </div>
                   <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-petrol">Solution</p>
-                  <h3 className="display-font mt-5 text-3xl leading-tight tracking-[-0.04em] text-graphite">
+                  <h3 className="display-font mt-6 text-3xl leading-tight tracking-[-0.04em] text-graphite">
                     {card.title}
                   </h3>
-                  <p className="mt-4 text-base leading-8 text-graphite/72">{card.description}</p>
-                  <div className="mt-6 space-y-3">
+                  <p className="mt-5 text-base leading-8 text-graphite/72">{card.description}</p>
+                  <div className="mt-8 space-y-3">
                     {card.bullets.map((bullet) => (
                       <div
                         key={bullet}
@@ -152,8 +152,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="abonnement" className="pb-10 pt-10 sm:pb-16">
-        <div className="section-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      {/* ── Abonnement ── */}
+      <section id="abonnement" className="pb-16 pt-14 sm:pb-24">
+        <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <Reveal>
             <div className="premium-panel rounded p-6 sm:p-8">
               <SectionHeading
@@ -164,17 +165,17 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="grid gap-5">
+          <div className="grid gap-6">
             {landingContent.subscription.cards.map((card, index) => (
               <Reveal key={card.title} delay={index * 0.08}>
-                <div className={`rounded border p-6 transition duration-500 hover:translate-x-0.5 ${index === 1 ? "dark-surface text-ivory" : "premium-panel"}`}>
+                <div className={`rounded border p-7 transition duration-500 hover:translate-x-0.5 ${index === 1 ? "dark-surface text-ivory" : "premium-panel"}`}>
                   <p className={`accent-font text-[11px] font-semibold uppercase tracking-[0.28em] ${index === 1 ? "text-saffron" : "text-petrol"}`}>
                     {card.title}
                   </p>
-                  <p className={`display-font mt-4 text-3xl leading-tight tracking-[-0.04em] ${index === 1 ? "text-ivory" : "text-graphite"}`}>
+                  <p className={`display-font mt-5 text-3xl leading-tight tracking-[-0.04em] ${index === 1 ? "text-ivory" : "text-graphite"}`}>
                     {card.description}
                   </p>
-                  <div className="mt-5 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+                  <div className="mt-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
                     {card.bullets.map((bullet) => (
                       <div
                         key={bullet}
@@ -195,22 +196,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="process" className="pb-10 pt-10 sm:pb-16">
-        <div className="section-shell grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+      {/* ── Process + Pipeline ── */}
+      <section id="process" className="pb-16 pt-14 sm:pb-24">
+        <div className="section-shell grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <Reveal>
             <div className="premium-panel rounded p-6 sm:p-8">
               <SectionHeading
                 eyebrow={landingContent.timeline.eyebrow}
                 title={landingContent.timeline.title}
-                description="Cadrage rapide, V1 en 7 jours. Pas de spec de 30 pages — juste quelque chose d'utile et de montrable le plus vite possible."
               />
             </div>
           </Reveal>
 
-          <div className="grid gap-4">
+          <div className="grid gap-5">
             {landingContent.timeline.steps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.08}>
-                <div className={`rounded border p-5 transition duration-500 hover:translate-x-0.5 ${index % 2 === 0 ? "premium-panel" : "dark-surface text-ivory"}`}>
+                <div className={`rounded border p-6 transition duration-500 hover:translate-x-0.5 ${index % 2 === 0 ? "premium-panel" : "dark-surface text-ivory"}`}>
                   <div className="grid gap-4 sm:grid-cols-[0.22fr_0.78fr] sm:items-start">
                     <div>
                       <p className={`display-font text-5xl leading-none tracking-[-0.06em] ${index % 2 === 0 ? "text-petrol/80" : "text-saffron"}`}>
@@ -231,40 +232,52 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="section-shell mt-8">
+        {/* Pipeline — pleine largeur */}
+        <div className="mt-12">
           <Reveal>
             <AboutVisual />
           </Reveal>
         </div>
       </section>
 
-      <section id="about" className="pb-10 pt-10 sm:pb-16">
+      {/* ── Qui je suis ── */}
+      <section id="about" className="pb-16 pt-14 sm:pb-24">
         <div className="section-shell">
           <Reveal>
             <SectionHeading
               eyebrow={landingContent.about.eyebrow}
               title={landingContent.about.title}
-              description={landingContent.about.intro}
             />
           </Reveal>
 
-          <div className="mt-10 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
-            <Reveal className="dark-surface rounded p-6 text-ivory sm:p-8">
-              <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Mon histoire</p>
-              <h3 className="display-font mt-5 text-4xl leading-tight tracking-[-0.045em] text-ivory">
-                J'ai commencé à <span className="accent-script text-saffron">gagner ma vie</span> bien avant de connaître le mot entrepreneuriat.
-              </h3>
-              <p className="mt-5 text-base leading-8 text-ivory/72">
-                À 14 ans, je faisais une tombola de village en allant frapper aux portes. À 16 ans, je tondais les pelouses du quartier. Pas parce que j'y étais obligé — parce que j'ai toujours voulu construire quelque chose par mes propres moyens. Cette débrouillardise, je l'ai transformée en méthode. Aujourd'hui, j'automatise pour les agences ce que j'ai toujours optimisé pour moi.
-              </p>
-            </Reveal>
+          <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1fr]">
+            {/* Colonne gauche : histoire + photo */}
+            <div className="grid gap-8">
+              <Reveal className="dark-surface rounded p-6 text-ivory sm:p-8">
+                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Mon histoire</p>
+                <h3 className="display-font mt-5 text-4xl leading-tight tracking-[-0.045em] text-ivory">
+                  J'ai commencé à <span className="accent-script text-saffron">gagner ma vie</span> bien avant de connaître le mot entrepreneuriat.
+                </h3>
+                <p className="mt-6 text-base leading-8 text-ivory/72">
+                  À 14 ans, je faisais une tombola de village en allant frapper aux portes. À 16 ans, je tondais les pelouses du quartier. Pas parce que j'y étais obligé — parce que j'ai toujours voulu construire quelque chose par mes propres moyens.
+                </p>
+              </Reveal>
 
-            <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-1">
+              {/* Espace photo — remplace par ta vraie photo */}
+              <Reveal>
+                <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
+                  <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Photo à venir</p>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* Colonne droite : cards */}
+            <div className="grid gap-6 lg:content-start">
               {landingContent.about.cards.map((card, index) => (
                 <Reveal key={card.title + index} delay={index * 0.08}>
-                  <div className="premium-panel rounded-sm p-5">
+                  <div className="premium-panel rounded-sm p-6">
                     <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-graphite/48">{card.title}</p>
-                    <p className="mt-4 text-base leading-8 text-graphite/74">{card.text}</p>
+                    <p className="mt-5 text-base leading-8 text-graphite/74">{card.text}</p>
                   </div>
                 </Reveal>
               ))}
@@ -273,27 +286,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="pb-20 pt-10 sm:pb-24">
+      {/* ── CTA final ── */}
+      <section id="contact" className="pb-24 pt-14 sm:pb-32">
         <div className="section-shell">
-          <Reveal className="dark-surface section-sheen rounded px-6 py-8 text-ivory sm:px-10 sm:py-10">
+          <Reveal className="dark-surface section-sheen rounded px-6 py-10 text-ivory sm:px-12 sm:py-14">
             <div className="relative z-10 max-w-4xl">
               <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.32em] text-saffron">{landingContent.finalCta.eyebrow}</p>
-              <h2 className="display-font mt-4 text-4xl leading-tight tracking-[-0.045em] text-ivory sm:text-5xl">
+              <h2 className="display-font mt-5 text-4xl leading-tight tracking-[-0.045em] text-ivory sm:text-5xl">
                 {landingContent.finalCta.title}
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-ivory/74">
+              <p className="mt-6 max-w-2xl text-base leading-8 text-ivory/74">
                 {landingContent.finalCta.description}
               </p>
 
-              <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
                 {landingContent.finalCta.bullets.map((bullet) => (
-                  <div key={bullet} className="rounded-sm border border-white/10 bg-white/8 px-4 py-4 text-sm leading-6 text-white/76">
+                  <div key={bullet} className="rounded-sm border border-white/10 bg-white/8 px-4 py-5 text-sm leading-6 text-white/76">
                     {bullet}
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
                   href={siteConfig.cta.bookingUrl}
                   className="inline-flex items-center justify-center bg-ivory px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-graphite transition duration-300 hover:bg-white"
