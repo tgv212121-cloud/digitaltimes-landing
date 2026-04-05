@@ -60,13 +60,10 @@ export default function Home() {
                     <p className="accent-font my-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-petrol">Avant / Après</p>
                     <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
                   </div>
-                  <div className="relative overflow-hidden rounded border border-[var(--line)]">
+                  <div className="overflow-hidden rounded border border-[var(--line)]">
                     <video className="w-full" autoPlay muted loop playsInline>
                       <source src="/visunyx-demo.mp4" type="video/mp4" />
                     </video>
-                    <p className="absolute bottom-6 right-6 accent-script text-3xl tracking-[-0.02em] text-saffron drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] sm:text-4xl" style={{ transform: "rotate(-6deg)" }}>
-                      +10 min/client
-                    </p>
                   </div>
                 </div>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
