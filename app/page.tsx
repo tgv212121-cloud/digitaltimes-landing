@@ -129,90 +129,56 @@ export default function Home() {
       </section>
 
 
-      {/* ── Abonnement ── */}
-      <section id="abonnement" className="pb-12 pt-10 sm:pb-18">
-        <div className="section-shell grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      {/* ── Comment ça marche ── */}
+      <section id="abonnement" className="pb-16 pt-14 sm:pb-24">
+        <div className="section-shell">
           <Reveal>
-            <div className="premium-panel rounded p-6 sm:p-8">
-              <SectionHeading
-                eyebrow={landingContent.subscription.eyebrow}
-                title={landingContent.subscription.title}
-                description={landingContent.subscription.description}
-              />
-            </div>
+            <SectionHeading
+              eyebrow="Comment ça marche"
+              title="Vite. Mais pas dans le flou."
+            />
           </Reveal>
 
-          <Reveal>
-            <div className="overflow-hidden rounded border border-[var(--line)]">
-              <Accordion
-                defaultOpen={1}
-                items={landingContent.subscription.cards.map((card, index) => ({
-                  title: card.title,
-                  dark: index === 1,
-                  content: (
-                    <>
-                      <p className={`display-font text-2xl leading-tight tracking-[-0.04em] ${index === 1 ? "text-ivory" : "text-graphite"}`}>
-                        {card.description}
-                      </p>
-                      <div className="mt-4 space-y-2">
-                        {card.bullets.map((bullet) => (
-                          <div
-                            key={bullet}
-                            className={`rounded-sm border px-4 py-2.5 text-sm leading-6 ${
-                              index === 1
-                                ? "border-white/10 bg-white/8 text-white/76"
-                                : "border-[var(--line)] bg-white/50 text-graphite/74"
-                            }`}
-                          >
-                            {bullet}
-                          </div>
-                        ))}
-                      </div>
-                    </>
-                  ),
-                }))}
-              />
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ── Process + Pipeline ── */}
-      <section id="process" className="pb-16 pt-14 sm:pb-24">
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
-          <Reveal>
-            <div className="premium-panel rounded p-6 sm:p-8">
-              <SectionHeading
-                eyebrow={landingContent.timeline.eyebrow}
-                title={landingContent.timeline.title}
-              />
-            </div>
-          </Reveal>
-
-          <div className="grid gap-5">
+          {/* Les 4 étapes */}
+          <div className="mt-14 grid gap-px border border-[var(--line)] sm:grid-cols-2 lg:grid-cols-4">
             {landingContent.timeline.steps.map((step, index) => (
-              <Reveal key={step.title} delay={index * 0.08}>
-                <div className={`rounded border p-6 transition duration-500 hover:translate-x-0.5 ${index % 2 === 0 ? "premium-panel" : "dark-surface text-ivory"}`}>
-                  <div className="grid gap-4 sm:grid-cols-[0.22fr_0.78fr] sm:items-start">
-                    <div>
-                      <p className={`display-font text-5xl leading-none tracking-[-0.06em] ${index % 2 === 0 ? "text-petrol/80" : "text-saffron"}`}>
-                        0{index + 1}
-                      </p>
-                      <p className={`accent-font mt-3 text-[11px] font-semibold uppercase tracking-[0.28em] ${index % 2 === 0 ? "text-petrol" : "text-saffron"}`}>
-                        {step.phase}
-                      </p>
-                    </div>
-                    <div>
-                      <p className={`text-lg font-semibold ${index % 2 === 0 ? "text-graphite" : "text-white"}`}>{step.title}</p>
-                      <p className={`mt-2 text-sm leading-7 ${index % 2 === 0 ? "text-graphite/70" : "text-white/70"}`}>{step.description}</p>
-                    </div>
-                  </div>
+              <Reveal key={step.title} delay={index * 0.06}>
+                <div className="flex h-full flex-col bg-ivory p-6">
+                  <p className="display-font text-4xl leading-none tracking-[-0.06em] text-petrol">
+                    0{index + 1}
+                  </p>
+                  <p className="accent-font mt-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-graphite/40">
+                    {step.phase}
+                  </p>
+                  <p className="mt-4 text-lg font-semibold text-graphite">{step.title}</p>
+                  <p className="mt-2 text-sm leading-7 text-graphite/60">{step.description}</p>
                 </div>
               </Reveal>
             ))}
           </div>
-        </div>
 
+          {/* Maintenance mensuelle */}
+          <Reveal>
+            <div className="mt-6 dark-surface rounded p-6 text-ivory sm:p-8">
+              <div className="grid gap-6 sm:grid-cols-[1fr_1fr] sm:items-center">
+                <div>
+                  <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-saffron">Et après ?</p>
+                  <p className="display-font mt-3 text-3xl leading-tight tracking-[-0.04em] text-ivory">
+                    Maintenance mensuelle possible.
+                  </p>
+                  <p className="mt-3 text-base leading-8 text-ivory/60">
+                    Une fois la V1 livrée, l'outil peut entrer en abonnement mensuel. Je le maintiens, l'ajuste et le fais tourner.
+                  </p>
+                </div>
+                <div className="grid gap-2">
+                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Maintenance continue</div>
+                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Corrections et ajustements</div>
+                  <div className="rounded-sm border border-white/10 bg-white/6 px-4 py-3 text-sm text-white/70">Suivi des automatisations</div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* ── CTA final ── */}
