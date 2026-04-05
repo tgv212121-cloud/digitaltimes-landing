@@ -215,54 +215,6 @@ export default function Home() {
 
       </section>
 
-      {/* ── Qui je suis ── */}
-      <section id="about" className="pb-16 pt-14 sm:pb-24">
-        <div className="section-shell">
-          <Reveal>
-            <SectionHeading
-              eyebrow={landingContent.about.eyebrow}
-              title={landingContent.about.title}
-            />
-          </Reveal>
-
-          <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1fr]">
-            {/* Colonne gauche : photo recadrée */}
-            <Reveal>
-              <div className="overflow-hidden rounded" style={{ height: "520px" }}>
-                <img
-                  src="/thomas.jpg.jpg"
-                  alt="Thomas Gildas — fondateur de DigitalTimes"
-                  className="h-full w-full object-cover object-[center_75%]"
-                  loading="lazy"
-                />
-              </div>
-            </Reveal>
-
-            {/* Colonne droite : histoire + cards */}
-            <div className="grid gap-6 lg:content-start">
-              <Reveal className="dark-surface rounded p-6 text-ivory">
-                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Mon histoire</p>
-                <h3 className="display-font mt-4 text-3xl leading-tight tracking-[-0.045em] text-ivory">
-                  J'ai commencé à <span className="accent-script text-saffron">construire</span> bien avant de connaître le mot.
-                </h3>
-                <p className="mt-4 text-base leading-8 text-ivory/72">
-                  Tombola à 14 ans. Pelouses à 16 ans. Automatisations à 20 ans. Toujours par choix.
-                </p>
-              </Reveal>
-
-              {landingContent.about.cards.map((card, index) => (
-                <Reveal key={card.title + index} delay={index * 0.08}>
-                  <div className="premium-panel rounded-sm p-6">
-                    <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-graphite/48">{card.title}</p>
-                    <p className="mt-4 text-base leading-8 text-graphite/74">{card.text}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── CTA final ── */}
       <section id="contact" className="pb-24 pt-14 sm:pb-32">
         <div className="section-shell">
@@ -294,6 +246,52 @@ export default function Home() {
               </div>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ── Qui je suis ── */}
+      <section id="about" className="pb-16 pt-14 sm:pb-24">
+        <div className="section-shell">
+          <Reveal>
+            <SectionHeading
+              eyebrow={landingContent.about.eyebrow}
+              title={landingContent.about.title}
+            />
+          </Reveal>
+
+          <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1fr]">
+            <Reveal>
+              <div className="overflow-hidden rounded" style={{ height: "520px" }}>
+                <img
+                  src="/thomas.jpg.jpg"
+                  alt="Thomas Gildas — fondateur de DigitalTimes"
+                  className="h-full w-full object-cover object-[center_75%]"
+                  loading="lazy"
+                />
+              </div>
+            </Reveal>
+
+            <div className="grid gap-6 lg:content-start">
+              <Reveal className="dark-surface rounded p-6 text-ivory">
+                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Mon histoire</p>
+                <h3 className="display-font mt-4 text-3xl leading-tight tracking-[-0.045em] text-ivory">
+                  J'ai commencé à <span className="accent-script text-saffron">construire</span> bien avant de connaître le mot.
+                </h3>
+                <p className="mt-4 text-base leading-8 text-ivory/72">
+                  Tombola à 14 ans. Pelouses à 16 ans. Automatisations à 20 ans. Toujours par choix.
+                </p>
+              </Reveal>
+
+              {landingContent.about.cards.map((card, index) => (
+                <Reveal key={card.title + index} delay={index * 0.08}>
+                  <div className="premium-panel rounded-sm p-6">
+                    <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-graphite/48">{card.title}</p>
+                    <p className="mt-4 text-base leading-8 text-graphite/74">{card.text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </main>
