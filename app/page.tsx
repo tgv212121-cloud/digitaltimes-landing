@@ -32,99 +32,99 @@ export default function Home() {
     <main className="relative min-h-screen overflow-x-hidden bg-ivory text-graphite">
       <Hero />
 
-      {/* ── Collaborations ── */}
-      <section id="collabs" className="pb-12 pt-6 sm:pb-20">
-        <div className="section-shell grid gap-8 lg:grid-cols-[0.44fr_0.56fr] lg:items-start">
-          <Reveal className="premium-panel rounded p-6 sm:p-8">
+      {/* ── Cas clients — Avant / Après ── */}
+      <section id="cas-clients" className="pb-16 pt-10 sm:pb-24">
+        <div className="section-shell">
+          <Reveal>
             <SectionHeading
-              eyebrow="Preuve sociale"
-              title="Des marques m'ont déjà confié des missions et des projets."
+              eyebrow="Cas clients"
+              title="Ce qu'ils avaient avant. Ce qu'ils ont maintenant."
             />
           </Reveal>
 
-          <div className="grid gap-5">
-            <div className="grid gap-5 sm:grid-cols-3">
-              {landingContent.hero.brands.map((brand, index) => (
-                <Reveal key={brand.name} delay={index * 0.08}>
-                  <a
-                    className="collab-card premium-panel flex flex-col items-center rounded-sm p-6 text-center transition duration-500 hover:translate-x-1 hover:border-petrol/30"
-                    href={brand.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <div className="flex h-16 w-full items-center justify-center">
-                      <img
-                        src={brand.logo}
-                        alt={`Logo ${brand.name}`}
-                        className="max-h-14 max-w-[140px] object-contain"
-                        loading="lazy"
-                      />
-                    </div>
-                    <p className="accent-font mt-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Collaboration</p>
-                    <p className="mt-3 text-sm leading-7 text-graphite/68">{brand.note}</p>
-                  </a>
-                </Reveal>
-              ))}
-            </div>
+          <div className="mt-14 space-y-20">
 
-            <Reveal delay={0.2}>
-              <div className="premium-panel overflow-hidden rounded-sm border border-[var(--line)]">
-                <p className="accent-font px-5 pt-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">
-                  Visunyx — Interface client automatisée
-                </p>
-                <div className="mt-3">
-                  <video
-                    className="w-full"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                  >
-                    <source src="/visunyx-demo.mp4" type="video/mp4" />
-                  </video>
+            {/* ── Cas 1 : Visunyx ── */}
+            <Reveal>
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <img src="/logos/visunyx-real.png" alt="Visunyx" className="h-8 w-8 object-contain" />
+                  <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Visunyx — Interface client automatisée</p>
                 </div>
+                <div className="grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
+                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Avant — photo à venir</p>
+                  </div>
+                  <div className="flex flex-col items-center py-2">
+                    <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
+                    <p className="accent-font my-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-petrol">Avant / Après</p>
+                    <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
+                  </div>
+                  <div className="overflow-hidden rounded border border-[var(--line)]">
+                    <video className="w-full" autoPlay muted loop playsInline>
+                      <source src="/visunyx-demo.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+                <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
+                  Description à venir.
+                </p>
               </div>
             </Reveal>
-          </div>
-        </div>
-      </section>
 
-      {/* ── Avant / Après ── */}
-      <section id="avant-apres" className="pb-16 pt-10 sm:pb-24 sm:pt-16">
-        <div className="section-shell">
-          <Reveal className="dark-surface section-sheen rounded px-5 py-8 text-ivory sm:px-10 sm:py-12">
-            <SectionHeading
-              eyebrow={landingContent.comparison.eyebrow}
-              title={landingContent.comparison.title}
-              inverse
-            />
-
-            <div className="mt-10 hidden rounded-sm border border-white/10 bg-white/6 px-5 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/46 lg:grid lg:grid-cols-[0.24fr_0.38fr_0.38fr]">
-              <span>Point de friction</span>
-              <span>Sans l'outil</span>
-              <span>Avec DigitalTimes</span>
-            </div>
-
-            <div className="mt-5 space-y-5">
-              {landingContent.comparison.rows.map((row, index) => (
-                <Reveal key={row.label} delay={index * 0.08}>
-                  <div className="grid gap-4 rounded-sm border border-white/10 bg-white/6 p-6 backdrop-blur-sm transition duration-500 hover:translate-x-0.5 hover:bg-white/10 lg:grid-cols-[0.24fr_0.38fr_0.38fr]">
-                    <div>
-                      <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-saffron">{row.label}</p>
-                    </div>
-                    <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/42 lg:hidden">Sans l'outil</p>
-                      <p className="mt-2 text-base leading-7 text-white/62 lg:mt-0">{row.before}</p>
-                    </div>
-                    <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/42 lg:hidden">Avec DigitalTimes</p>
-                      <p className="mt-2 text-base leading-7 text-white/78 lg:mt-0">{row.after}</p>
-                    </div>
+            {/* ── Cas 2 : Clickway ── */}
+            <Reveal>
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <img src="/logos/clickway.png" alt="Clickway" className="h-8 w-8 object-contain" />
+                  <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Clickway — Outil digital sur mesure</p>
+                </div>
+                <div className="grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
+                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Avant — photo à venir</p>
                   </div>
-                </Reveal>
-              ))}
-            </div>
-          </Reveal>
+                  <div className="flex flex-col items-center py-2">
+                    <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
+                    <p className="accent-font my-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-petrol">Avant / Après</p>
+                    <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
+                  </div>
+                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
+                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Après — vidéo à venir</p>
+                  </div>
+                </div>
+                <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
+                  Description à venir.
+                </p>
+              </div>
+            </Reveal>
+
+            {/* ── Cas 3 : Scrollab ── */}
+            <Reveal>
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <img src="/logos/scrollab-real.png" alt="Scrollab" className="h-8 w-8 object-contain" />
+                  <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Scrollab — Automatisation interne</p>
+                </div>
+                <div className="grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
+                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
+                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Avant — photo à venir</p>
+                  </div>
+                  <div className="flex flex-col items-center py-2">
+                    <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
+                    <p className="accent-font my-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-petrol">Avant / Après</p>
+                    <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
+                  </div>
+                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
+                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Après — vidéo à venir</p>
+                  </div>
+                </div>
+                <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
+                  Description à venir.
+                </p>
+              </div>
+            </Reveal>
+
+          </div>
         </div>
       </section>
 
