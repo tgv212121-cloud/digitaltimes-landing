@@ -9,7 +9,7 @@
   },
   cta: {
     shortLabel: "Réserver un appel",
-    longLabel: "Réserver l'appel de cadrage",
+    longLabel: "Réserver un appel de cadrage",
     bookingUrl: "https://calendly.com/thomas-digitaltimes/30min",
   },
   contact: {
