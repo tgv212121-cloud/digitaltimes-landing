@@ -99,28 +99,21 @@ export function AboutVisual() {
         ))}
       </div>
 
-      {/* ── Pipeline ── */}
-      <div className="mt-4 flex items-center gap-1.5 rounded-sm border border-white/8 bg-white/4 px-5 py-5">
+      {/* ── Pipeline — aligned under metrics ── */}
+      <div className="mt-4 grid grid-cols-3 gap-3 rounded-sm border border-white/8 bg-white/4 px-3 py-5">
         {STAGES.map((stage, i) => (
-          <div key={stage.label} className="flex flex-1 items-center gap-1.5">
-            <motion.div
-              className="flex-shrink-0 rounded-sm border border-white/12 bg-white/8 px-3 py-3 text-center"
-              initial={reduced ? undefined : { opacity: 0, y: 6 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15 + i * 0.12, duration: 0.4 }}
-            >
-              <p className="text-[12px] font-semibold leading-tight text-white">{stage.label}</p>
-              <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/80">
-                {stage.sub}
-              </p>
-            </motion.div>
-
-            {i < STAGES.length - 1 && (
-              <div className="relative h-px flex-1 bg-gradient-to-r from-white/20 via-saffron/50 to-white/10">
-                <TravelingDot delay={i * 0.8} />
-              </div>
-            )}
-          </div>
+          <motion.div
+            key={stage.label}
+            className="rounded-sm border border-white/12 bg-white/8 px-3 py-3 text-center"
+            initial={reduced ? undefined : { opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 + i * 0.12, duration: 0.4 }}
+          >
+            <p className="text-[12px] font-semibold leading-tight text-white">{stage.label}</p>
+            <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/80">
+              {stage.sub}
+            </p>
+          </motion.div>
         ))}
       </div>
 

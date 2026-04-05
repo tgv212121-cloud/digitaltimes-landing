@@ -153,8 +153,8 @@ export default function Home() {
       </section>
 
       {/* ── Abonnement ── */}
-      <section id="abonnement" className="pb-16 pt-14 sm:pb-24">
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section id="abonnement" className="pb-12 pt-10 sm:pb-18">
+        <div className="section-shell grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <Reveal>
             <div className="premium-panel rounded p-6 sm:p-8">
               <SectionHeading
@@ -165,17 +165,17 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="grid gap-6">
+          <div className="grid gap-4">
             {landingContent.subscription.cards.map((card, index) => (
               <Reveal key={card.title} delay={index * 0.08}>
-                <div className={`rounded border p-7 transition duration-500 hover:translate-x-0.5 ${index === 1 ? "dark-surface text-ivory" : "premium-panel"}`}>
+                <div className={`rounded border p-5 transition duration-500 hover:translate-x-0.5 ${index === 1 ? "dark-surface text-ivory" : "premium-panel"}`}>
                   <p className={`accent-font text-[11px] font-semibold uppercase tracking-[0.28em] ${index === 1 ? "text-saffron" : "text-petrol"}`}>
                     {card.title}
                   </p>
-                  <p className={`display-font mt-5 text-3xl leading-tight tracking-[-0.04em] ${index === 1 ? "text-ivory" : "text-graphite"}`}>
+                  <p className={`display-font mt-3 text-2xl leading-tight tracking-[-0.04em] ${index === 1 ? "text-ivory" : "text-graphite"}`}>
                     {card.description}
                   </p>
-                  <div className="mt-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+                  <div className="mt-4 grid gap-2 sm:grid-cols-3 lg:grid-cols-1">
                     {card.bullets.map((bullet) => (
                       <div
                         key={bullet}
