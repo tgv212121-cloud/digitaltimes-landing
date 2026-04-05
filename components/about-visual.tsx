@@ -99,21 +99,28 @@ export function AboutVisual() {
         ))}
       </div>
 
-      {/* ── Pipeline — aligned under metrics ── */}
-      <div className="mt-4 grid grid-cols-3 gap-3 rounded-sm border border-white/8 bg-white/4 px-3 py-5">
+      {/* ── Pipeline — aligned under metrics with traveling dots ── */}
+      <div className="mt-4 flex items-center gap-0 rounded-sm border border-white/8 bg-white/4 px-3 py-5">
         {STAGES.map((stage, i) => (
-          <motion.div
-            key={stage.label}
-            className="rounded-sm border border-white/12 bg-white/8 px-3 py-3 text-center"
-            initial={reduced ? undefined : { opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 + i * 0.12, duration: 0.4 }}
-          >
-            <p className="text-[12px] font-semibold leading-tight text-white">{stage.label}</p>
-            <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/80">
-              {stage.sub}
-            </p>
-          </motion.div>
+          <div key={stage.label} className="flex flex-1 items-center">
+            <motion.div
+              className="w-full rounded-sm border border-white/12 bg-white/8 px-3 py-3 text-center"
+              initial={reduced ? undefined : { opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 + i * 0.12, duration: 0.4 }}
+            >
+              <p className="text-[12px] font-semibold leading-tight text-white">{stage.label}</p>
+              <p className="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/80">
+                {stage.sub}
+              </p>
+            </motion.div>
+
+            {i < STAGES.length - 1 && (
+              <div className="relative mx-1 h-px w-full min-w-[40px] bg-gradient-to-r from-white/20 via-saffron/50 to-white/10">
+                <TravelingDot delay={i * 0.8} />
+              </div>
+            )}
+          </div>
         ))}
       </div>
 
