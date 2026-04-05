@@ -128,42 +128,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Solutions ── */}
-      <section id="solutions" className="pb-16 pt-14 sm:pb-24">
-        <div className="section-shell grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <Reveal>
-            <div className="premium-panel rounded p-6 sm:p-8">
-              <SectionHeading
-                eyebrow={landingContent.services.eyebrow}
-                title={landingContent.services.title}
-              />
-            </div>
-          </Reveal>
-
-          <Reveal>
-            <div className="overflow-hidden rounded border border-[var(--line)]">
-              <Accordion
-                items={landingContent.services.cards.map((card) => ({
-                  title: card.title,
-                  tag: card.kicker,
-                  content: (
-                    <>
-                      <p className="text-base leading-8 text-graphite/72">{card.description}</p>
-                      <div className="mt-4 space-y-2">
-                        {card.bullets.map((bullet) => (
-                          <div key={bullet} className="rounded-sm border border-[var(--line)] bg-white/50 px-4 py-2.5 text-sm leading-6 text-graphite/74">
-                            {bullet}
-                          </div>
-                        ))}
-                      </div>
-                    </>
-                  ),
-                }))}
-              />
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
       {/* ── Abonnement ── */}
       <section id="abonnement" className="pb-12 pt-10 sm:pb-18">
