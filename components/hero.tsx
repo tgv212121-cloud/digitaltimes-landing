@@ -98,32 +98,6 @@ export function Hero() {
           </div>
         </div>
 
-        <div id="hero-proof" className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
-          <div className="premium-panel rounded px-5 py-6 sm:px-7">
-            <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-petrol">Ce que ça débloque</p>
-            <h2 className="display-font mt-4 text-3xl leading-tight tracking-[-0.045em] text-graphite sm:text-4xl">
-              Une <span className="accent-script">idée</span> rentre. Un <span className="gradient-text">outil</span> sort.
-            </h2>
-            <p className="mt-4 text-base leading-8 text-graphite/68">
-              Un levier concret pour capter, exécuter ou vendre mieux. Chaque mois.
-            </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-3">
-            {landingContent.hero.outcomes.map((outcome) => (
-              <motion.div
-                key={outcome.title}
-                className="premium-panel rounded-sm p-5"
-                whileHover={reduceMotion ? undefined : { y: -5 }}
-                transition={{ duration: 0.22, ease: "easeOut" }}
-              >
-                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.24em] text-graphite/44">{outcome.title}</p>
-                <p className="mt-4 text-base leading-7 text-graphite/74">{outcome.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
         <div className="ticker-shell mt-6">
           <div className="ticker-track">
             {brandLoop.map((brand, index) => (
