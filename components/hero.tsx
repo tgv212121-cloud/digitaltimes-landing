@@ -100,67 +100,12 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative lg:pl-10">
-
-            <motion.div
-              className="spotlight-card dark-surface section-sheen relative rounded p-5 text-ivory sm:p-7"
-              style={spotlightStyle}
-              onMouseMove={(event) => {
-                const bounds = event.currentTarget.getBoundingClientRect();
-                pointerX.set(event.clientX - bounds.left);
-                pointerY.set(event.clientY - bounds.top);
-              }}
-              whileHover={reduceMotion ? undefined : { y: -6 }}
-              transition={{ duration: 0.35, ease: "easeOut" }}
-            >
-              <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent" aria-hidden="true" />
-
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className="accent-font text-[11px] uppercase tracking-[0.28em] text-white/52">Ce que je peux livrer</p>
-                  <p className="mt-2 text-lg font-semibold text-white">De l'idée à l'outil</p>
-                </div>
-                <div className="border border-white/10 bg-white/6 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-saffron">
-                  Build + suivi
-                </div>
-              </div>
-
-              <div className="mt-8 space-y-4">
-                {landingContent.hero.workflow.map((step, index) => (
-                  <motion.div
-                    key={step.title}
-                    className="rounded-sm border border-white/10 bg-white/6 p-4 backdrop-blur-sm"
-                    whileHover={reduceMotion ? undefined : { x: 4 }}
-                    transition={{ duration: 0.24, ease: "easeOut" }}
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <p className="accent-font text-[11px] uppercase tracking-[0.26em] text-white/44">
-                          Use case {String(index + 1).padStart(2, "0")}
-                        </p>
-                        <p className="mt-2 text-base font-semibold text-white">{step.title}</p>
-                      </div>
-                      <div className="border border-white/10 bg-white/6 px-2.5 py-1 text-[11px] uppercase tracking-[0.22em] text-white/82">
-                        {step.tag}
-                      </div>
-                    </div>
-                    <p className="mt-3 text-sm leading-7 text-white/68">{step.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div className="mt-6 grid gap-4 sm:grid-cols-3">
-                {landingContent.hero.signalCards.map((card) => (
-                  <div
-                    key={card.label}
-                    className="rounded-sm border border-white/10 bg-white/8 px-4 py-4 backdrop-blur-sm"
-                  >
-                    <p className="display-font text-3xl leading-none tracking-[-0.05em] text-saffron">{card.value}</p>
-                    <p className="mt-3 text-[11px] uppercase tracking-[0.18em] text-white/56">{card.label}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+          <div className="flex items-center justify-center lg:pl-10">
+            <div className="dark-surface flex aspect-square w-full max-w-md items-center justify-center rounded p-10">
+              <h2 className="display-font text-center text-4xl leading-[0.92] tracking-[-0.05em] text-ivory sm:text-5xl">
+                De l'idée<br />à l'outil.
+              </h2>
+            </div>
           </div>
         </div>
 
