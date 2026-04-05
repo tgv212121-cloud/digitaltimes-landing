@@ -75,18 +75,18 @@ export function Hero() {
         <div className="pb-10 pt-2 lg:pb-16 lg:pt-4">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="display-font mt-7 text-5xl leading-[0.88] tracking-[-0.055em] text-graphite sm:text-6xl xl:text-[5.3rem]">
-              Je construis ce qui manque à ton agence pour atteindre les <RotatingWord words={["100K", "200K", "300K", "400K", "500K"]} className="accent-script text-petrol" />€/mois.
+              Je construis ce qui <span className="text-petrol">manque</span> à ton agence pour <span className="text-petrol">atteindre</span> les <RotatingWord words={["100K€", "200K€", "300K€", "400K€", "500K€"]} className="accent-script text-petrol" />/mois.
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-graphite/74 sm:text-lg">
               {landingContent.hero.description}
             </p>
 
-            <div className="mt-7 flex flex-wrap justify-center gap-3">
-              <div className="inline-flex border-l-2 border-petrol pl-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">
+            <div className="mt-7 flex flex-wrap justify-center gap-6">
+              <div className="inline-flex text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">
                 {landingContent.hero.promise}
               </div>
-              <div className="inline-flex border-l-2 border-saffron pl-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/60">
+              <div className="inline-flex text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/60">
                 L'appel sert à cadrer, pas à brainstormer
               </div>
             </div>

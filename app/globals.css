@@ -185,11 +185,7 @@ a {
 }
 
 .eyebrow-tag::before {
-  content: "";
-  width: 20px;
-  height: 2px;
-  background: var(--petrol);
-  flex-shrink: 0;
+  display: none;
 }
 
 .floating-badge {
