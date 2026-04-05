@@ -263,10 +263,14 @@ export default function Home() {
                 </p>
               </Reveal>
 
-              {/* Espace photo — remplace par ta vraie photo */}
               <Reveal>
-                <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
-                  <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Photo à venir</p>
+                <div className="overflow-hidden rounded">
+                  <img
+                    src="/thomas.jpg.jpg"
+                    alt="Thomas Gildas — fondateur de DigitalTimes"
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
               </Reveal>
             </div>
