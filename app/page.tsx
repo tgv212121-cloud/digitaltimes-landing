@@ -213,12 +213,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Pipeline — pleine largeur */}
-        <div className="mt-12">
-          <Reveal>
-            <AboutVisual />
-          </Reveal>
-        </div>
       </section>
 
       {/* ── Qui je suis ── */}
