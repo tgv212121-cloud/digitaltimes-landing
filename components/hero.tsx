@@ -74,8 +74,8 @@ export function Hero() {
 
         <div className="pb-10 pt-2 lg:pb-16 lg:pt-4">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="display-font mt-7 text-5xl leading-[0.88] tracking-[-0.055em] text-graphite sm:text-6xl xl:text-[5.3rem]">
-              Je construis ce qui <span className="text-petrol">manque</span> à ton agence pour <span className="text-petrol">atteindre</span> les <RotatingWord words={["100K€", "200K€", "300K€", "400K€", "500K€"]} className="accent-script text-petrol" />/mois.
+            <h1 className="display-font mt-7 text-5xl leading-[0.92] tracking-[-0.06em] text-graphite sm:text-6xl xl:text-[5.3rem]">
+              Je construis ce qui <span className="accent-script text-petrol">manque</span> à ton agence pour <span className="accent-script text-petrol">atteindre</span> les <RotatingWord words={["100K€/mois", "200K€/mois", "300K€/mois", "400K€/mois", "500K€/mois"]} className="display-font font-[800] text-graphite" />.
             </h1>
 
             <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-graphite/74 sm:text-lg">

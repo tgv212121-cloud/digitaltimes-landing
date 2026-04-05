@@ -29,7 +29,7 @@ export const RotatingWord = memo(function RotatingWord({ words, className }: Rot
   }
 
   return (
-    <span ref={ref} className={`relative inline-flex min-w-[8.4ch] justify-start ${className ?? ""}`}>
+    <span ref={ref} className={`relative inline-flex justify-start ${className ?? ""}`} style={{ minWidth: "max-content" }}>
       <AnimatePresence mode="wait">
         <motion.span
           key={words[index]}
