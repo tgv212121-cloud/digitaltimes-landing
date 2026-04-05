@@ -67,7 +67,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
-                  Description à venir.
+                  Créer un Drive, rédiger un brief, chercher un prompt, remplir un tableau. Ça prenait 30 minutes par client. Maintenant c'est zéro. Formulaire brandé → brief auto → interface client → dashboard designer. L'agence a l'air d'une boîte à 500K.
                 </p>
               </div>
             </Reveal>
@@ -95,7 +95,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
-                  Description à venir.
+                  Audit de landing page automatisé. Avant : fait à la main, client par client. Maintenant : l'outil analyse en autonome. Utilisable en interne ou offert aux prospects comme lead magnet.
                 </p>
               </div>
             </Reveal>
@@ -107,21 +107,8 @@ export default function Home() {
                   <img src="/logos/scrollab-real.png" alt="Scrollab" className="h-8 w-8 object-contain" />
                   <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Scrollab — Automatisation interne</p>
                 </div>
-                <div className="grid gap-4 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
-                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
-                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Avant — photo à venir</p>
-                  </div>
-                  <div className="flex flex-col items-center py-2">
-                    <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
-                    <p className="accent-font my-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-petrol">Avant / Après</p>
-                    <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
-                  </div>
-                  <div className="flex aspect-video items-center justify-center overflow-hidden rounded border border-[var(--line)] bg-mist">
-                    <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-graphite/30">Après — vidéo à venir</p>
-                  </div>
-                </div>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
-                  Description à venir.
+                <p className="max-w-2xl text-base leading-8 text-graphite/60">
+                  Automatisation interne : onboarding, brief et suivi projet générés sans intervention. Pas d'interface client ici, juste du temps récupéré en coulisses.
                 </p>
               </div>
             </Reveal>
