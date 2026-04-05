@@ -42,28 +42,49 @@ export default function Home() {
             />
           </Reveal>
 
-          <div className="grid gap-5 sm:grid-cols-3">
-            {landingContent.hero.brands.map((brand, index) => (
-              <Reveal key={brand.name} delay={index * 0.08}>
-                <a
-                  className="collab-card premium-panel flex flex-col items-center rounded-sm p-6 text-center transition duration-500 hover:translate-x-1 hover:border-petrol/30"
-                  href={brand.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div className="flex h-16 w-full items-center justify-center">
-                    <img
-                      src={brand.logo}
-                      alt={`Logo ${brand.name}`}
-                      className="max-h-14 max-w-[140px] object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="accent-font mt-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Collaboration</p>
-                  <p className="mt-3 text-sm leading-7 text-graphite/68">{brand.note}</p>
-                </a>
-              </Reveal>
-            ))}
+          <div className="grid gap-5">
+            <div className="grid gap-5 sm:grid-cols-3">
+              {landingContent.hero.brands.map((brand, index) => (
+                <Reveal key={brand.name} delay={index * 0.08}>
+                  <a
+                    className="collab-card premium-panel flex flex-col items-center rounded-sm p-6 text-center transition duration-500 hover:translate-x-1 hover:border-petrol/30"
+                    href={brand.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="flex h-16 w-full items-center justify-center">
+                      <img
+                        src={brand.logo}
+                        alt={`Logo ${brand.name}`}
+                        className="max-h-14 max-w-[140px] object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p className="accent-font mt-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Collaboration</p>
+                    <p className="mt-3 text-sm leading-7 text-graphite/68">{brand.note}</p>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal delay={0.2}>
+              <div className="premium-panel overflow-hidden rounded-sm border border-[var(--line)]">
+                <p className="accent-font px-5 pt-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">
+                  Visunyx — Interface client automatisée
+                </p>
+                <div className="mt-3">
+                  <video
+                    className="w-full"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source src="/visunyx-demo.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
