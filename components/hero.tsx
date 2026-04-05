@@ -72,7 +72,7 @@ export function Hero() {
           </div>
         </header>
 
-        <div className="pb-10 pt-8 lg:pb-16 lg:pt-14">
+        <div className="pb-10 pt-14 lg:pb-16 lg:pt-24">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="display-font mt-7 text-5xl leading-[0.92] tracking-[-0.06em] text-graphite sm:text-6xl xl:text-[5.3rem]">
               Je construis ce qui <span className="accent-script text-petrol">manque</span> à ton agence pour atteindre les <RotatingWord words={["100K€/mois", "200K€/mois", "300K€/mois", "400K€/mois", "500K€/mois"]} className="display-font font-[800] text-graphite" />.
