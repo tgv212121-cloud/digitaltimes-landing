@@ -99,12 +99,12 @@ export function AboutVisual() {
         ))}
       </div>
 
-      {/* ── Pipeline — aligned under metrics with traveling dots ── */}
-      <div className="mt-4 flex items-center gap-0 rounded-sm border border-white/8 bg-white/4 px-3 py-5">
+      {/* ── Pipeline — small centered boxes with traveling dots ── */}
+      <div className="mt-4 flex items-center justify-between rounded-sm border border-white/8 bg-white/4 px-5 py-5">
         {STAGES.map((stage, i) => (
-          <div key={stage.label} className="flex flex-1 items-center">
+          <div key={stage.label} className="flex items-center">
             <motion.div
-              className="w-full rounded-sm border border-white/12 bg-white/8 px-3 py-3 text-center"
+              className="shrink-0 rounded-sm border border-white/12 bg-white/8 px-4 py-2.5 text-center"
               initial={reduced ? undefined : { opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 + i * 0.12, duration: 0.4 }}
@@ -116,7 +116,7 @@ export function AboutVisual() {
             </motion.div>
 
             {i < STAGES.length - 1 && (
-              <div className="relative mx-1 h-px w-full min-w-[40px] bg-gradient-to-r from-white/20 via-saffron/50 to-white/10">
+              <div className="relative mx-3 h-px w-24 sm:w-40 lg:w-56 bg-gradient-to-r from-white/20 via-saffron/50 to-white/10">
                 <TravelingDot delay={i * 0.8} />
               </div>
             )}
@@ -124,29 +124,29 @@ export function AboutVisual() {
         ))}
       </div>
 
-      {/* ── Activity feed ── */}
-      <div className="mt-4 space-y-2">
+      {/* ── Activity feed — horizontal row ── */}
+      <div className="mt-4">
         <p className="accent-font mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">
           Activité récente
         </p>
-        {FEED.map((item, i) => (
-          <motion.div
-            key={item.brand}
-            className="flex items-center justify-between rounded-sm border border-white/10 bg-white/6 px-4 py-3"
-            initial={reduced ? undefined : { opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 + i * 0.1, duration: 0.38, ease: "easeOut" }}
-          >
-            <div className="flex items-center gap-3 min-w-0">
-              <span className={`h-2 w-2 shrink-0 rounded-full ${item.dot}`} />
-              <div className="min-w-0">
+        <div className="grid grid-cols-3 gap-3">
+          {FEED.map((item, i) => (
+            <motion.div
+              key={item.brand}
+              className="rounded-sm border border-white/10 bg-white/6 px-4 py-3"
+              initial={reduced ? undefined : { opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 + i * 0.1, duration: 0.38, ease: "easeOut" }}
+            >
+              <div className="flex items-center gap-2">
+                <span className={`h-2 w-2 shrink-0 rounded-full ${item.dot}`} />
                 <p className="text-[12px] font-semibold leading-none text-white/90">{item.brand}</p>
-                <p className="mt-1 truncate text-[10px] text-white/60">{item.action}</p>
               </div>
-            </div>
-            <p className="ml-4 shrink-0 text-[10px] text-white/60">{item.time}</p>
-          </motion.div>
-        ))}
+              <p className="mt-1.5 text-[10px] text-white/60">{item.action}</p>
+              <p className="mt-1 text-[10px] text-white/40">{item.time}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
