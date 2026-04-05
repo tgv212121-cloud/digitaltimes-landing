@@ -257,7 +257,7 @@ export default function Home() {
                 <img
                   src="/thomas.jpg.jpg"
                   alt="Thomas Gildas — fondateur de DigitalTimes"
-                  className="h-full w-full object-cover object-bottom"
+                  className="h-full w-full object-cover object-top"
                   loading="lazy"
                 />
               </div>
