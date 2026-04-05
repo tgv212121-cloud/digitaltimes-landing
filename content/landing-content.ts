@@ -98,7 +98,7 @@ export const landingContent = {
   },
   services: {
     eyebrow: "Ce que je construis",
-    title: "Trois types de solutions. Zéro flou.",
+    title: "3 exemples de ce que je peux construire.",
     cards: [
       {
         kicker: "01",
