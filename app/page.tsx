@@ -253,11 +253,11 @@ export default function Home() {
           <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1fr]">
             {/* Colonne gauche : photo recadrée */}
             <Reveal>
-              <div className="overflow-hidden rounded" style={{ maxHeight: "520px" }}>
+              <div className="overflow-hidden rounded" style={{ height: "520px" }}>
                 <img
                   src="/thomas.jpg.jpg"
                   alt="Thomas Gildas — fondateur de DigitalTimes"
-                  className="h-full w-full object-cover object-top"
+                  className="h-full w-full object-cover object-[center_75%]"
                   loading="lazy"
                 />
               </div>
