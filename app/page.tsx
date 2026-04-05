@@ -60,10 +60,18 @@ export default function Home() {
                     <p className="accent-font my-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-petrol">Avant / Après</p>
                     <div className="h-8 w-px bg-[var(--line)] lg:h-px lg:w-8" />
                   </div>
-                  <div className="overflow-hidden rounded border border-[var(--line)]">
+                  <div className="relative overflow-hidden rounded border border-[var(--line)]">
                     <video className="w-full" autoPlay muted loop playsInline>
                       <source src="/visunyx-demo.mp4" type="video/mp4" />
                     </video>
+                    <div className="absolute bottom-4 right-4 dark-surface rounded px-5 py-3">
+                      <p className="display-font text-2xl leading-none tracking-[-0.04em] text-ivory sm:text-3xl">
+                        +10 min
+                      </p>
+                      <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-ivory/50">
+                        gagnées par client
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
