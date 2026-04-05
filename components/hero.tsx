@@ -90,7 +90,7 @@ export function Hero() {
                 {landingContent.hero.promise}
               </div>
               <div className="inline-flex border-l-2 border-saffron pl-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/60">
-                Si ton agence sent qu'il lui faut ça, l'appel sert à le cadrer vite
+                L'appel sert à cadrer, pas à brainstormer
               </div>
             </div>
 
@@ -118,7 +118,7 @@ export function Hero() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="accent-font text-[11px] uppercase tracking-[0.28em] text-white/52">Ce que je peux livrer</p>
-                  <p className="mt-2 text-lg font-semibold text-white">De l'idée à un actif digital utile</p>
+                  <p className="mt-2 text-lg font-semibold text-white">De l'idée à l'outil</p>
                 </div>
                 <div className="border border-white/10 bg-white/6 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-saffron">
                   Build + suivi
@@ -166,12 +166,12 @@ export function Hero() {
 
         <div id="hero-proof" className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
           <div className="premium-panel rounded px-5 py-6 sm:px-7">
-            <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-petrol">Ce que cela débloque</p>
+            <p className="accent-font text-[11px] uppercase tracking-[0.3em] text-petrol">Ce que ça débloque</p>
             <h2 className="display-font mt-4 text-3xl leading-tight tracking-[-0.045em] text-graphite sm:text-4xl">
-              Tu arrives avec une <span className="accent-script">idée</span>. Tu repars avec un <span className="gradient-text">outil utile</span> qui peut continuer à tourner.
+              Une <span className="accent-script">idée</span> rentre. Un <span className="gradient-text">outil</span> sort.
             </h2>
             <p className="mt-4 text-base leading-8 text-graphite/68">
-              L'objectif n'est pas juste de faire joli. L'objectif est de construire un levier que ton agence peut utiliser pour capter, exécuter ou vendre mieux chaque mois.
+              Un levier concret pour capter, exécuter ou vendre mieux. Chaque mois.
             </p>
           </div>
 

@@ -256,10 +256,10 @@ export default function Home() {
               <Reveal className="dark-surface rounded p-6 text-ivory sm:p-8">
                 <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-saffron">Mon histoire</p>
                 <h3 className="display-font mt-5 text-4xl leading-tight tracking-[-0.045em] text-ivory">
-                  J'ai commencé à <span className="accent-script text-saffron">gagner ma vie</span> bien avant de connaître le mot entrepreneuriat.
+                  J'ai commencé à <span className="accent-script text-saffron">construire</span> bien avant de connaître le mot.
                 </h3>
                 <p className="mt-6 text-base leading-8 text-ivory/72">
-                  À 14 ans, je faisais une tombola de village en allant frapper aux portes. À 16 ans, je tondais les pelouses du quartier. Pas parce que j'y étais obligé — parce que j'ai toujours voulu construire quelque chose par mes propres moyens.
+                  Tombola à 14 ans. Pelouses à 16 ans. Automatisations à 20 ans. Toujours par choix.
                 </p>
               </Reveal>
 
