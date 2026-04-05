@@ -100,9 +100,9 @@ export function AboutVisual() {
       </div>
 
       {/* ── Pipeline — small centered boxes with traveling dots ── */}
-      <div className="mt-4 flex items-center justify-between rounded-sm border border-white/8 bg-white/4 px-5 py-5">
+      <div className="mt-4 flex items-center gap-0 rounded-sm border border-white/8 bg-white/4 px-5 py-5">
         {STAGES.map((stage, i) => (
-          <div key={stage.label} className="flex items-center">
+          <div key={stage.label} className={`flex items-center ${i < STAGES.length - 1 ? "flex-1" : ""}`}>
             <motion.div
               className="shrink-0 rounded-sm border border-white/12 bg-white/8 px-4 py-2.5 text-center"
               initial={reduced ? undefined : { opacity: 0, y: 6 }}
@@ -116,7 +116,7 @@ export function AboutVisual() {
             </motion.div>
 
             {i < STAGES.length - 1 && (
-              <div className="relative mx-3 h-px w-24 sm:w-40 lg:w-56 bg-gradient-to-r from-white/20 via-saffron/50 to-white/10">
+              <div className="relative mx-2 h-px flex-1 bg-gradient-to-r from-white/20 via-saffron/50 to-white/10">
                 <TravelingDot delay={i * 0.8} />
               </div>
             )}
