@@ -1,6 +1,7 @@
 import { CTAButton } from "@/components/cta-button";
 import { Hero } from "@/components/hero";
 import { Reveal } from "@/components/reveal";
+import { Accordion } from "@/components/accordion";
 import { AboutVisual } from "@/components/about-visual";
 import { landingContent } from "@/content/landing-content";
 import { siteConfig } from "@/content/site-config";
@@ -108,47 +109,38 @@ export default function Home() {
 
       {/* ── Solutions ── */}
       <section id="solutions" className="pb-16 pt-14 sm:pb-24">
-        <div className="section-shell">
+        <div className="section-shell grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <Reveal>
-            <SectionHeading
-              eyebrow={landingContent.services.eyebrow}
-              title={landingContent.services.title}
-            />
+            <div className="premium-panel rounded p-6 sm:p-8">
+              <SectionHeading
+                eyebrow={landingContent.services.eyebrow}
+                title={landingContent.services.title}
+              />
+            </div>
           </Reveal>
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-3">
-            {landingContent.services.cards.map((card, index) => (
-              <Reveal key={card.title} delay={index * 0.08}>
-                <article
-                  className={`group relative overflow-hidden rounded border p-8 transition duration-500 hover:translate-x-1 hover:border-petrol/30 ${
-                    index === 1
-                      ? "border-petrol/20 bg-[rgba(200,75,49,0.04)]"
-                      : "premium-panel border-[var(--line)]"
-                  }`}
-                >
-                  <div className="absolute inset-x-0 top-0 h-px bg-[var(--line)]" aria-hidden="true" />
-                  <div className="absolute right-5 top-5 border border-[var(--line)] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-graphite/56">
-                    {card.kicker}
-                  </div>
-                  <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.3em] text-petrol">Solution</p>
-                  <h3 className="display-font mt-6 text-3xl leading-tight tracking-[-0.04em] text-graphite">
-                    {card.title}
-                  </h3>
-                  <p className="mt-5 text-base leading-8 text-graphite/72">{card.description}</p>
-                  <div className="mt-8 space-y-3">
-                    {card.bullets.map((bullet) => (
-                      <div
-                        key={bullet}
-                        className="rounded-sm border border-[var(--line)] bg-white/62 px-4 py-3 text-sm leading-6 text-graphite/74 transition duration-300 group-hover:bg-white/82"
-                      >
-                        {bullet}
+          <Reveal>
+            <div className="overflow-hidden rounded border border-[var(--line)]">
+              <Accordion
+                items={landingContent.services.cards.map((card) => ({
+                  title: card.title,
+                  tag: card.kicker,
+                  content: (
+                    <>
+                      <p className="text-base leading-8 text-graphite/72">{card.description}</p>
+                      <div className="mt-4 space-y-2">
+                        {card.bullets.map((bullet) => (
+                          <div key={bullet} className="rounded-sm border border-[var(--line)] bg-white/50 px-4 py-2.5 text-sm leading-6 text-graphite/74">
+                            {bullet}
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+                    </>
+                  ),
+                }))}
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -165,34 +157,38 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="grid gap-4">
-            {landingContent.subscription.cards.map((card, index) => (
-              <Reveal key={card.title} delay={index * 0.08}>
-                <div className={`rounded border p-5 transition duration-500 hover:translate-x-0.5 ${index === 1 ? "dark-surface text-ivory" : "premium-panel"}`}>
-                  <p className={`accent-font text-[11px] font-semibold uppercase tracking-[0.28em] ${index === 1 ? "text-saffron" : "text-petrol"}`}>
-                    {card.title}
-                  </p>
-                  <p className={`display-font mt-3 text-2xl leading-tight tracking-[-0.04em] ${index === 1 ? "text-ivory" : "text-graphite"}`}>
-                    {card.description}
-                  </p>
-                  <div className="mt-4 grid gap-2 sm:grid-cols-3 lg:grid-cols-1">
-                    {card.bullets.map((bullet) => (
-                      <div
-                        key={bullet}
-                        className={`rounded-sm border px-4 py-3 text-sm leading-6 ${
-                          index === 1
-                            ? "border-white/10 bg-white/8 text-white/76"
-                            : "border-[var(--line)] bg-white/60 text-graphite/74"
-                        }`}
-                      >
-                        {bullet}
+          <Reveal>
+            <div className="overflow-hidden rounded border border-[var(--line)]">
+              <Accordion
+                defaultOpen={1}
+                items={landingContent.subscription.cards.map((card, index) => ({
+                  title: card.title,
+                  dark: index === 1,
+                  content: (
+                    <>
+                      <p className={`display-font text-2xl leading-tight tracking-[-0.04em] ${index === 1 ? "text-ivory" : "text-graphite"}`}>
+                        {card.description}
+                      </p>
+                      <div className="mt-4 space-y-2">
+                        {card.bullets.map((bullet) => (
+                          <div
+                            key={bullet}
+                            className={`rounded-sm border px-4 py-2.5 text-sm leading-6 ${
+                              index === 1
+                                ? "border-white/10 bg-white/8 text-white/76"
+                                : "border-[var(--line)] bg-white/50 text-graphite/74"
+                            }`}
+                          >
+                            {bullet}
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+                    </>
+                  ),
+                }))}
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
