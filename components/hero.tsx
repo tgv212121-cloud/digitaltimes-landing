@@ -72,20 +72,19 @@ export function Hero() {
           </div>
         </header>
 
-        <div className="grid gap-10 pb-10 pt-2 lg:grid-cols-[1.04fr_0.96fr] lg:items-end lg:gap-14 lg:pb-16 lg:pt-4">
-          <div className="max-w-3xl">
+        <div className="pb-10 pt-2 lg:pb-16 lg:pt-4">
+          <div className="mx-auto max-w-4xl text-center">
             <span className="eyebrow-tag">{landingContent.hero.eyebrow}</span>
 
-            <h1 className="display-font mt-7 max-w-5xl text-5xl leading-[0.88] tracking-[-0.055em] text-graphite sm:text-6xl xl:text-[5.3rem]">
-              Je transforme les idées de ton agence en <span className="accent-word">mini-outils</span>, <span className="gradient-text">automatisations IA</span>
-              <br className="hidden sm:block" /> et systèmes qui <RotatingWord words={landingContent.hero.rotatingWords} className="accent-script text-petrol" />.
+            <h1 className="display-font mt-7 text-5xl leading-[0.88] tracking-[-0.055em] text-graphite sm:text-6xl xl:text-[5.3rem]">
+              Je transforme les idées de ton agence en <span className="accent-word">mini-outils</span>, <span className="gradient-text">automatisations IA</span> et systèmes qui <RotatingWord words={landingContent.hero.rotatingWords} className="accent-script text-petrol" />.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/74 sm:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-graphite/74 sm:text-lg">
               {landingContent.hero.description}
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap justify-center gap-3">
               <div className="inline-flex border-l-2 border-petrol pl-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">
                 {landingContent.hero.promise}
               </div>
@@ -94,17 +93,9 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.longLabel} />
               <CTAButton href="#abonnement" label="Voir le modèle mensuel" variant="secondary" />
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center lg:pl-10">
-            <div className="dark-surface flex aspect-square w-full max-w-md items-center justify-center rounded p-10">
-              <h2 className="display-font text-center text-4xl leading-[0.92] tracking-[-0.05em] text-ivory sm:text-5xl">
-                De l'idée<br />à l'outil.
-              </h2>
             </div>
           </div>
         </div>
