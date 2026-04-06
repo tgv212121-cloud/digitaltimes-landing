@@ -66,9 +66,14 @@ export default function Home() {
                     </video>
                   </div>
                 </div>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
-                  Créer un Drive, rédiger un brief, chercher un prompt, remplir un tableau. Ça prenait 30 minutes par client. Maintenant c'est zéro. Formulaire brandé → brief auto → interface client → dashboard designer. L'agence a l'air d'une boîte à 500K.
-                </p>
+                <div className="mt-8 max-w-2xl border-l-2 border-petrol pl-5">
+                  <p className="text-lg font-semibold leading-snug tracking-[-0.02em] text-graphite">
+                    30 minutes par client. Maintenant zéro.
+                  </p>
+                  <p className="mt-3 text-[15px] leading-7 text-graphite/80">
+                    Créer un Drive, rédiger un brief, chercher un prompt, remplir un tableau. Tout ça, supprimé. Formulaire brandé → brief auto → interface client → dashboard designer.
+                  </p>
+                </div>
               </div>
             </Reveal>
 
@@ -94,9 +99,14 @@ export default function Home() {
                     </video>
                   </div>
                 </div>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-graphite/60">
-                  Audit de landing page automatisé. Avant : fait à la main, client par client. Maintenant : l'outil analyse en autonome. Utilisable en interne ou offert aux prospects comme lead magnet.
-                </p>
+                <div className="mt-8 max-w-2xl border-l-2 border-petrol pl-5">
+                  <p className="text-lg font-semibold leading-snug tracking-[-0.02em] text-graphite">
+                    Audit de landing page automatisé.
+                  </p>
+                  <p className="mt-3 text-[15px] leading-7 text-graphite/80">
+                    Avant : fait à la main, client par client. Maintenant : l'outil analyse en autonome. Utilisable en interne ou offert aux prospects comme lead magnet.
+                  </p>
+                </div>
               </div>
             </Reveal>
 
@@ -107,9 +117,14 @@ export default function Home() {
                   <img src="/logos/scrollab-real.png" alt="Scrollab" className="h-8 w-8 object-contain" />
                   <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.28em] text-petrol">Scrollab — Automatisation interne</p>
                 </div>
-                <p className="max-w-2xl text-base leading-8 text-graphite/60">
-                  Automatisation interne : onboarding, brief et suivi projet générés sans intervention. Pas d'interface client ici, juste du temps récupéré en coulisses.
-                </p>
+                <div className="max-w-2xl border-l-2 border-petrol pl-5">
+                  <p className="text-lg font-semibold leading-snug tracking-[-0.02em] text-graphite">
+                    Du temps récupéré en coulisses.
+                  </p>
+                  <p className="mt-3 text-[15px] leading-7 text-graphite/80">
+                    Onboarding, brief et suivi projet générés sans intervention. Pas d'interface client ici, juste de l'automatisation invisible.
+                  </p>
+                </div>
               </div>
             </Reveal>
 
