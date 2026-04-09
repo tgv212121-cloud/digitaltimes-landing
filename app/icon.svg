@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#1a1108"/>
+  <text
+    x="34"
+    y="56"
+    text-anchor="middle"
+    font-family="'Instrument Serif', Georgia, 'Times New Roman', serif"
+    font-size="70"
+    font-style="italic"
+    font-weight="400"
+    fill="#c84b31"
+  >T</text>
+</svg>
