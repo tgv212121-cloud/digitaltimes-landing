@@ -362,64 +362,116 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          AGENDA — Redirect vers booking system perso
+          AGENDA — Style dark comme /book/moi
       ══════════════════════════════════════════ */}
-      <section id="agenda" className="pb-20 pt-10 sm:pb-28">
+      <section id="agenda" className="bg-[#0e0c0a] py-20 text-ivory sm:py-28">
         <div className="section-shell">
           <Reveal>
-            <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
-              {/* Left: text */}
-              <div>
-                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-petrol">Agenda</p>
-                <h2 className="display-font mt-3 text-[clamp(2rem,5vw,3.2rem)] font-[800] leading-[0.9] tracking-[-0.05em] text-graphite">
-                  Choisis un créneau.<br />
-                  <span className="accent-script">30 minutes</span>, pas plus.
-                </h2>
-                <p className="mt-6 max-w-[45ch] text-[15px] leading-[1.8] text-graphite/65">
-                  On regarde ensemble si ton besoin se transforme en outil, workflow ou interface. Si oui, on cadre la V1 et le modèle mensuel derrière.
-                </p>
+            {/* Header centered */}
+            <div className="text-center">
+              <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-ivory/40">
+                — Rendez-vous —
+              </p>
+              <h2 className="display-font mt-5 text-[clamp(2rem,5vw,3.2rem)] font-[400] italic leading-[0.95] tracking-[-0.02em] text-ivory">
+                Prendre un <span className="text-saffron">rendez-vous</span>
+              </h2>
+              <p className="mt-4 text-[13px] text-ivory/55">
+                Choisissez un créneau qui vous convient.
+              </p>
+              <div className="mt-6 flex items-center justify-center gap-4 text-[12px] text-ivory/45">
+                <span className="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" strokeLinecap="round" />
+                  </svg>
+                  30 minutes
+                </span>
+                <span className="text-ivory/20">|</span>
+                <span className="flex items-center gap-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" />
+                  </svg>
+                  Europe/Paris
+                </span>
+              </div>
+            </div>
 
-                <div className="mt-10">
-                  <a
-                    href="https://interface-digitaltimes.vercel.app/book/moi"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center justify-center bg-graphite px-7 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-ivory transition-[letter-spacing,background-color] duration-500 hover:tracking-[0.24em] hover:bg-petrol"
-                  >
-                    Ouvrir l'agenda
-                  </a>
+            {/* Calendar card */}
+            <div className="mx-auto mt-10 max-w-2xl border border-white/8 bg-black/20 p-6 sm:p-8">
+              <div className="flex items-center justify-between">
+                <p className="accent-font text-[12px] font-semibold text-ivory">Avril 2026</p>
+                <div className="flex gap-1">
+                  <button className="flex h-7 w-7 items-center justify-center border border-white/10 text-ivory/40 hover:text-ivory" aria-label="Mois précédent">‹</button>
+                  <button className="flex h-7 w-7 items-center justify-center border border-white/10 text-ivory/40 hover:text-ivory" aria-label="Mois suivant">›</button>
                 </div>
               </div>
 
-              {/* Right: calendar preview */}
-              <div className="border border-[var(--line)] bg-ivory p-6 sm:p-8">
-                <div className="flex items-center justify-between border-b border-[var(--line)] pb-4">
-                  <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite/40">Créneaux disponibles</p>
-                  <p className="accent-font text-[10px] uppercase tracking-[0.18em] text-graphite/30">Cette semaine</p>
-                </div>
+              {/* Weekdays header */}
+              <div className="mt-6 grid grid-cols-7 gap-2 text-center">
+                {["L", "M", "M", "J", "V", "S", "D"].map((d, i) => (
+                  <div key={i} className="text-[10px] uppercase tracking-[0.18em] text-saffron/50">{d}</div>
+                ))}
+              </div>
 
-                <div className="mt-6 grid gap-px bg-[var(--line)]">
-                  {[
-                    { day: "Lun", date: "15 Avr", slot: "10:00 · 14:30 · 16:00" },
-                    { day: "Mar", date: "16 Avr", slot: "09:30 · 11:00 · 15:00" },
-                    { day: "Mer", date: "17 Avr", slot: "14:00 · 16:30" },
-                    { day: "Jeu", date: "18 Avr", slot: "10:00 · 11:30 · 15:30 · 17:00" },
-                    { day: "Ven", date: "19 Avr", slot: "09:00 · 10:30" },
-                  ].map((d) => (
-                    <div key={d.date} className="flex items-center gap-4 bg-ivory px-1 py-3">
-                      <div className="w-12 shrink-0">
-                        <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.18em] text-graphite/40">{d.day}</p>
-                        <p className="mt-0.5 text-[13px] font-semibold text-graphite">{d.date}</p>
-                      </div>
-                      <p className="text-[12px] text-graphite/55">{d.slot}</p>
+              {/* Calendar grid — April 2026 starts on Wednesday */}
+              <div className="mt-3 grid grid-cols-7 gap-2 text-center">
+                {/* Empty cells for days before April 1 (Mon, Tue) */}
+                <div /><div />
+                {/* Days 1-30 */}
+                {Array.from({ length: 30 }, (_, i) => i + 1).map((day) => {
+                  const available = [17, 22, 23, 24, 29, 30].includes(day);
+                  const isSelected = day === 17;
+                  return (
+                    <div key={day} className="aspect-square">
+                      {isSelected ? (
+                        <div className="flex h-full items-center justify-center border border-saffron bg-saffron/10 text-[13px] font-semibold text-saffron">
+                          {day}
+                        </div>
+                      ) : available ? (
+                        <button className="flex h-full w-full items-center justify-center text-[13px] font-semibold text-saffron transition-colors hover:bg-saffron/5">
+                          {day}
+                        </button>
+                      ) : (
+                        <div className="flex h-full items-center justify-center text-[13px] text-ivory/20">
+                          {day}
+                        </div>
+                      )}
                     </div>
-                  ))}
-                </div>
-
-                <p className="mt-6 text-[11px] text-graphite/35">
-                  Aperçu indicatif. Créneaux réels disponibles sur l'agenda.
-                </p>
+                  );
+                })}
               </div>
+            </div>
+
+            {/* Selected date card */}
+            <div className="mx-auto mt-4 max-w-2xl border border-white/8 bg-black/20 p-10 text-center sm:p-14">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-saffron/30">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-saffron">
+                  <rect x="3" y="4" width="18" height="18" rx="1" />
+                  <path d="M16 2v4M8 2v4M3 10h18" strokeLinecap="round" />
+                </svg>
+              </div>
+              <p className="display-font mt-5 text-[18px] font-[400] italic tracking-[-0.02em] text-saffron">
+                Choisis ta date
+              </p>
+              <p className="mt-2 text-[12px] text-ivory/40">dans le calendrier à gauche</p>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-10 text-center">
+              <a
+                href="https://interface-digitaltimes.vercel.app/book/moi"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center bg-saffron px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.24em]"
+              >
+                Ouvrir l'agenda complet
+              </a>
+            </div>
+
+            {/* Footer */}
+            <div className="mt-16 text-center text-[10px] uppercase tracking-[0.28em] text-ivory/20">
+              Digital Times
             </div>
           </Reveal>
         </div>
