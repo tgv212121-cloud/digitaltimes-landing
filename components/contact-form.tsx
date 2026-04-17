@@ -23,6 +23,7 @@ const BUDGET_OPTIONS = [
 ];
 
 const DELAI_OPTIONS = [
+  "Moins de 3 jours",
   "Moins d'une semaine",
   "1 à 4 semaines",
   "1 à 3 mois",
