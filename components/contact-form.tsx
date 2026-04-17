@@ -14,10 +14,11 @@ const TYPE_AGENCE_OPTIONS = [
 ];
 
 const BUDGET_OPTIONS = [
-  "Moins de 3 000 €",
+  "Moins de 500 €",
+  "500 € – 1 500 €",
+  "1 500 € – 3 000 €",
   "3 000 € – 7 000 €",
-  "7 000 € – 15 000 €",
-  "Plus de 15 000 €",
+  "Plus de 7 000 €",
   "Pas encore défini",
 ];
 
