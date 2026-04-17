@@ -318,72 +318,87 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          CTA FINAL — Formulaire primaire + Agenda mustard secondaire
+          CTA FINAL — Formulaire gauche + Agenda droite
       ══════════════════════════════════════════ */}
-      <section id="contact">
-        {/* Dark header + Form CTA (primary) */}
-        <div className="bg-[#0e0c0a] py-20 text-ivory sm:py-24">
-          <div className="section-shell">
-            <Reveal>
-              <div className="mx-auto max-w-3xl text-center">
-                <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-saffron">
-                  — {landingContent.finalCta.eyebrow} —
-                </p>
-                <h2 className="display-font mt-5 text-[clamp(2rem,5vw,3.4rem)] font-[800] leading-[0.92] tracking-[-0.05em] text-ivory">
-                  {landingContent.finalCta.title}
-                </h2>
-                <p className="mx-auto mt-5 max-w-[52ch] text-[15px] leading-[1.8] text-ivory/55">
-                  {landingContent.finalCta.description}
-                </p>
-              </div>
-            </Reveal>
+      <section id="contact" className="bg-[#0e0c0a] py-20 text-ivory sm:py-24">
+        <div className="section-shell">
+          {/* Header */}
+          <Reveal>
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-saffron">
+                — {landingContent.finalCta.eyebrow} —
+              </p>
+              <h2 className="display-font mt-5 text-[clamp(2rem,5vw,3.4rem)] font-[800] leading-[0.92] tracking-[-0.05em] text-ivory">
+                {landingContent.finalCta.title}
+              </h2>
+              <p className="mx-auto mt-5 max-w-[52ch] text-[15px] leading-[1.8] text-ivory/55">
+                {landingContent.finalCta.description}
+              </p>
+            </div>
+          </Reveal>
 
-            <Reveal delay={0.08}>
-              <div className="mx-auto mt-12 max-w-xl border border-saffron/30 bg-black/30 p-8 sm:p-10">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-saffron/40 text-saffron">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" strokeLinejoin="round" />
-                      <path d="M14 2v6h6M8 13h8M8 17h8" strokeLinecap="round" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.2em] text-saffron">Étape 1 · Recommandé</p>
-                    <p className="display-font mt-2 text-[22px] font-[800] leading-[1.1] tracking-[-0.03em] text-ivory">
-                      Remplis le formulaire.
-                    </p>
-                    <p className="mt-2 text-[14px] leading-[1.7] text-ivory/60">
-                      Quelques questions pour comprendre ton besoin. Je te réponds avec une proposition concrète sous 24h.
-                    </p>
-                    <a
-                      href="/contact"
-                      className="mt-6 inline-flex items-center justify-center bg-saffron px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.24em]"
-                    >
-                      Remplir le formulaire
-                    </a>
-                  </div>
+          {/* Grid 2 colonnes : Formulaire gauche, Agenda droite */}
+          <div className="mt-14 grid gap-0 lg:grid-cols-2">
+            {/* Left : Form */}
+            <Reveal>
+              <div className="flex h-full flex-col border border-saffron/30 bg-black/30 p-8 sm:p-10">
+                <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.2em] text-saffron">
+                  Étape 1 · Recommandé
+                </p>
+                <p className="display-font mt-3 text-[clamp(1.6rem,3vw,2.2rem)] font-[800] leading-[1.05] tracking-[-0.04em] text-ivory">
+                  Remplis le<br />formulaire.
+                </p>
+                <p className="mt-4 max-w-[36ch] text-[14px] leading-[1.7] text-ivory/60">
+                  Quelques questions pour comprendre ton besoin. Je te réponds avec une proposition concrète sous 24h.
+                </p>
+
+                <ul className="mt-6 space-y-2 border-t border-white/8 pt-5">
+                  <li className="flex items-start gap-3 text-[13px] text-ivory/65">
+                    <span className="mt-0.5 text-saffron">→</span>
+                    Brief détaillé de ton besoin
+                  </li>
+                  <li className="flex items-start gap-3 text-[13px] text-ivory/65">
+                    <span className="mt-0.5 text-saffron">→</span>
+                    Proposition concrète sous 24h
+                  </li>
+                  <li className="flex items-start gap-3 text-[13px] text-ivory/65">
+                    <span className="mt-0.5 text-saffron">→</span>
+                    Pas de call inutile
+                  </li>
+                </ul>
+
+                <div className="mt-auto pt-8">
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center justify-center bg-saffron px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.24em]"
+                  >
+                    Remplir le formulaire
+                  </a>
                 </div>
               </div>
             </Reveal>
 
-            {/* Transition : "ou" */}
-            <Reveal delay={0.15}>
-              <div className="mt-12 text-center">
-                <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-ivory/35">
-                  — Ou, si tu préfères en parler d'abord —
-                </p>
-                <p className="display-font mt-4 text-[clamp(1.3rem,3vw,1.8rem)] font-[400] italic leading-[1.2] tracking-[-0.02em] text-ivory">
-                  Prends un rendez-vous. <span className="text-saffron">30 minutes</span>.
-                </p>
+            {/* Right : Agenda */}
+            <Reveal delay={0.1}>
+              <div className="flex h-full flex-col">
+                <div className="border border-white/10 border-b-0 bg-black/20 p-6 sm:p-8">
+                  <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.2em] text-ivory/40">
+                    Étape alternative
+                  </p>
+                  <p className="display-font mt-3 text-[clamp(1.3rem,2.5vw,1.8rem)] font-[400] italic leading-[1.2] tracking-[-0.02em] text-ivory">
+                    Ou prends un <span className="text-saffron">rendez-vous</span>.
+                  </p>
+                  <p className="mt-2 text-[13px] text-ivory/50">
+                    30 minutes. Europe/Paris.
+                  </p>
+                </div>
+                <div className="flex-1">
+                  <AgendaCalendar />
+                </div>
               </div>
             </Reveal>
           </div>
         </div>
-
-        {/* Agenda mustard (secondary) */}
-        <Reveal delay={0.2}>
-          <AgendaCalendar />
-        </Reveal>
       </section>
 
       {/* ══════════════════════════════════════════

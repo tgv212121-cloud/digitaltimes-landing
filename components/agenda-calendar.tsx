@@ -43,8 +43,8 @@ export function AgendaCalendar() {
   }
 
   return (
-    <div className="w-full bg-[#BC9A36] py-16 sm:py-24">
-      <div className="mx-auto max-w-md px-5 sm:px-6">
+    <div className="w-full bg-[#BC9A36] px-5 py-10 sm:p-12">
+      <div className="mx-auto max-w-md">
         {/* Calendar card */}
         <div className="bg-[#FEFBF2] p-5 sm:p-7">
           {/* Header */}
