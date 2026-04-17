@@ -4,6 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { OrbitingTools } from "@/components/orbiting-tools";
 import { PixelatedImage } from "@/components/pixelated-image";
 import { AgendaCalendar } from "@/components/agenda-calendar";
+import { ContactForm } from "@/components/contact-form";
 import { landingContent } from "@/content/landing-content";
 import { siteConfig } from "@/content/site-config";
 
@@ -348,33 +349,11 @@ export default function Home() {
                 <p className="display-font mt-3 text-[clamp(1.6rem,3vw,2.2rem)] font-[800] leading-[1.05] tracking-[-0.04em] text-ivory">
                   Remplis le<br />formulaire.
                 </p>
-                <p className="mt-4 max-w-[36ch] text-[14px] leading-[1.7] text-ivory/60">
-                  Quelques questions pour comprendre ton besoin. Je te réponds avec une proposition concrète sous 24h.
+                <p className="mt-4 mb-8 max-w-[36ch] text-[14px] leading-[1.7] text-ivory/60">
+                  Quelques questions pour comprendre ton besoin. Je te réponds avec une proposition concrète sous 24 h.
                 </p>
 
-                <ul className="mt-6 space-y-2 border-t border-white/8 pt-5">
-                  <li className="flex items-start gap-3 text-[13px] text-ivory/65">
-                    <span className="mt-0.5 text-saffron">→</span>
-                    Brief détaillé de ton besoin
-                  </li>
-                  <li className="flex items-start gap-3 text-[13px] text-ivory/65">
-                    <span className="mt-0.5 text-saffron">→</span>
-                    Proposition concrète sous 24h
-                  </li>
-                  <li className="flex items-start gap-3 text-[13px] text-ivory/65">
-                    <span className="mt-0.5 text-saffron">→</span>
-                    Pas de call inutile
-                  </li>
-                </ul>
-
-                <div className="mt-auto pt-8">
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center justify-center bg-saffron px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.24em]"
-                  >
-                    Remplir le formulaire
-                  </a>
-                </div>
+                <ContactForm />
               </div>
             </Reveal>
 
