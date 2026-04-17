@@ -23,9 +23,9 @@ const BUDGET_OPTIONS = [
 ];
 
 const DELAI_OPTIONS = [
-  "Urgent (moins d'un mois)",
-  "Moins de 3 mois",
-  "3 à 6 mois",
+  "Moins d'une semaine",
+  "1 à 4 semaines",
+  "1 à 3 mois",
   "Flexible",
 ];
 
