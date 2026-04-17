@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero";
 import { Reveal } from "@/components/reveal";
 import { OrbitingTools } from "@/components/orbiting-tools";
 import { PixelatedImage } from "@/components/pixelated-image";
-import { CalendlyEmbed } from "@/components/calendly-embed";
 import { landingContent } from "@/content/landing-content";
 import { siteConfig } from "@/content/site-config";
 
@@ -363,25 +362,64 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          AGENDA — Calendly inline
+          AGENDA — Redirect vers booking system perso
       ══════════════════════════════════════════ */}
       <section id="agenda" className="pb-20 pt-10 sm:pb-28">
         <div className="section-shell">
           <Reveal>
-            <div className="max-w-2xl">
-              <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-petrol">Agenda</p>
-              <h2 className="display-font mt-3 text-[clamp(1.8rem,4vw,2.6rem)] font-[800] leading-[0.95] tracking-[-0.04em] text-graphite">
-                Choisis un créneau qui t'arrange.
-              </h2>
-              <p className="mt-4 text-[14px] leading-[1.8] text-graphite/60">
-                30 minutes. On regarde ensemble si ton besoin se transforme en outil, workflow ou interface.
-              </p>
-            </div>
-          </Reveal>
+            <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+              {/* Left: text */}
+              <div>
+                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-petrol">Agenda</p>
+                <h2 className="display-font mt-3 text-[clamp(2rem,5vw,3.2rem)] font-[800] leading-[0.9] tracking-[-0.05em] text-graphite">
+                  Choisis un créneau.<br />
+                  <span className="accent-script">30 minutes</span>, pas plus.
+                </h2>
+                <p className="mt-6 max-w-[45ch] text-[15px] leading-[1.8] text-graphite/65">
+                  On regarde ensemble si ton besoin se transforme en outil, workflow ou interface. Si oui, on cadre la V1 et le modèle mensuel derrière.
+                </p>
 
-          <Reveal delay={0.1}>
-            <div className="mt-10 overflow-hidden border border-[var(--line)] bg-ivory">
-              <CalendlyEmbed url={siteConfig.cta.bookingUrl} height={720} />
+                <div className="mt-10">
+                  <a
+                    href="https://interface-digitaltimes.vercel.app/book/moi"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center bg-graphite px-7 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-ivory transition-[letter-spacing,background-color] duration-500 hover:tracking-[0.24em] hover:bg-petrol"
+                  >
+                    Ouvrir l'agenda
+                  </a>
+                </div>
+              </div>
+
+              {/* Right: calendar preview */}
+              <div className="border border-[var(--line)] bg-ivory p-6 sm:p-8">
+                <div className="flex items-center justify-between border-b border-[var(--line)] pb-4">
+                  <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite/40">Créneaux disponibles</p>
+                  <p className="accent-font text-[10px] uppercase tracking-[0.18em] text-graphite/30">Cette semaine</p>
+                </div>
+
+                <div className="mt-6 grid gap-px bg-[var(--line)]">
+                  {[
+                    { day: "Lun", date: "15 Avr", slot: "10:00 · 14:30 · 16:00" },
+                    { day: "Mar", date: "16 Avr", slot: "09:30 · 11:00 · 15:00" },
+                    { day: "Mer", date: "17 Avr", slot: "14:00 · 16:30" },
+                    { day: "Jeu", date: "18 Avr", slot: "10:00 · 11:30 · 15:30 · 17:00" },
+                    { day: "Ven", date: "19 Avr", slot: "09:00 · 10:30" },
+                  ].map((d) => (
+                    <div key={d.date} className="flex items-center gap-4 bg-ivory px-1 py-3">
+                      <div className="w-12 shrink-0">
+                        <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.18em] text-graphite/40">{d.day}</p>
+                        <p className="mt-0.5 text-[13px] font-semibold text-graphite">{d.date}</p>
+                      </div>
+                      <p className="text-[12px] text-graphite/55">{d.slot}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-6 text-[11px] text-graphite/35">
+                  Aperçu indicatif. Créneaux réels disponibles sur l'agenda.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
