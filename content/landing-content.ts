@@ -2,7 +2,7 @@ export const landingContent = {
   hero: {
     eyebrow: "Mini-outils, n8n et IA pour agences digitales",
     description:
-      "Outils, automatisations IA et systèmes qui vendent, qualifient et délivrent sans toi dans la boucle.",
+      "Une interface sur mesure pour ton agence. Clients, freelances, gestion, comptabilité. Au même endroit.",
     promise: "V1 en 7 jours. Suivi mensuel possible.",
     rotatingWords: ["qualifient", "convertissent", "fluidifient", "travaillent"],
     trustPills: [],

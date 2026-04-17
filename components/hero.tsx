@@ -1,14 +1,10 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
 import { CTAButton } from "@/components/cta-button";
-import { RotatingWord } from "@/components/rotating-word";
 import { landingContent } from "@/content/landing-content";
 import { siteConfig } from "@/content/site-config";
 
 export function Hero() {
-  const reduceMotion = useReducedMotion();
-
   return (
     <section className="relative overflow-hidden pb-20 pt-5 sm:pb-28 sm:pt-8">
       <div className="hero-grid absolute inset-0" aria-hidden="true" />
@@ -31,13 +27,8 @@ export function Hero() {
         <div className="pb-6 pt-20 sm:pt-28 lg:pt-32">
           <div className="max-w-5xl" style={{ marginLeft: "-0.04em" }}>
             <h1 className="display-font text-[clamp(2.8rem,8vw,6.5rem)] font-[800] leading-[0.86] tracking-[-0.07em] text-graphite">
-              Je construis ce qui{" "}
-              <span className="accent-script">manque</span>
-              {" "}à ton agence pour atteindre les{" "}
-              <RotatingWord
-                words={["100K€/mois", "200K€/mois", "300K€/mois", "400K€/mois", "500K€/mois"]}
-                className="display-font font-[800] text-graphite"
-              />.
+              Ton bordel d'outils.<br />
+              Rassemblé en <span className="accent-script">7 jours</span>.
             </h1>
           </div>
 
