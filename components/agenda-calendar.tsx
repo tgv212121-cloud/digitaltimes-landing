@@ -1,46 +1,136 @@
 "use client";
 
-import { useState } from "react";
-
-const AVAILABLE_DATES = [1, 2, 7, 8, 9, 10, 14, 15, 16, 17, 21, 22, 23, 24, 28, 29, 30];
-
-const SLOTS: Record<number, string[]> = {
-  1: ["09 h 30 → 10 h 15", "14 h 00 → 14 h 45"],
-  2: ["10 h 30 → 11 h 15", "15 h 00 → 15 h 45", "17 h 00 → 17 h 45"],
-  7: ["09 h 30 → 10 h 15", "14 h 00 → 14 h 45", "16 h 30 → 17 h 15"],
-  8: ["10 h 00 → 10 h 45", "14 h 30 → 15 h 15"],
-  9: ["09 h 30 → 10 h 15", "14 h 00 → 14 h 45", "16 h 30 → 17 h 15"],
-  10: ["11 h 00 → 11 h 45", "15 h 30 → 16 h 15"],
-  14: ["09 h 30 → 10 h 15", "14 h 00 → 14 h 45"],
-  15: ["10 h 00 → 10 h 45", "15 h 00 → 15 h 45"],
-  16: ["09 h 30 → 10 h 15", "14 h 00 → 14 h 45", "16 h 30 → 17 h 15"],
-  17: ["10 h 30 → 11 h 15", "15 h 30 → 16 h 15"],
-  21: ["09 h 30 → 10 h 15", "14 h 00 → 14 h 45"],
-  22: ["11 h 00 → 11 h 45", "15 h 00 → 15 h 45", "17 h 00 → 17 h 45"],
-  23: ["09 h 30 → 10 h 15", "14 h 00 → 14 h 45"],
-  24: ["10 h 00 → 10 h 45", "14 h 30 → 15 h 15", "16 h 30 → 17 h 15"],
-  28: ["09 h 30 → 10 h 15"],
-  29: ["10 h 30 → 11 h 15", "15 h 00 → 15 h 45"],
-  30: ["09 h 30 → 10 h 15", "14 h 00 → 14 h 45", "16 h 30 → 17 h 15"],
-};
+import { useEffect, useMemo, useState } from "react";
+import {
+  fetchBookingSettings,
+  fetchBookedSlots,
+  computeMonthAvailability,
+  type BookingSettings,
+  type BookedSlot,
+  type DayAvailability,
+} from "@/lib/availability";
 
 const DAYS_OF_WEEK = ["L", "M", "M", "J", "V", "S", "D"];
+const MONTH_NAMES = [
+  "Janvier",
+  "Février",
+  "Mars",
+  "Avril",
+  "Mai",
+  "Juin",
+  "Juillet",
+  "Août",
+  "Septembre",
+  "Octobre",
+  "Novembre",
+  "Décembre",
+];
 
-// April 2026 starts on Wednesday (index 2 in our L-M-M-J-V-S-D grid)
-const MONTH_START_OFFSET = 2;
-const DAYS_IN_MONTH = 30;
+function getWeekdayOffset(year: number, month: number) {
+  // Monday = 0, Sunday = 6 (L-M-M-J-V-S-D layout)
+  const firstDay = new Date(year, month - 1, 1).getDay();
+  return firstDay === 0 ? 6 : firstDay - 1;
+}
+
+function daysInMonth(year: number, month: number) {
+  return new Date(year, month, 0).getDate();
+}
 
 export function AgendaCalendar() {
-  const [selectedDate, setSelectedDate] = useState<number>(9);
-  const [selectedSlot, setSelectedSlot] = useState<string>("14 h 00 → 14 h 45");
+  const today = new Date();
+  const [year, setYear] = useState(today.getFullYear());
+  const [month, setMonth] = useState(today.getMonth() + 1); // 1-12
 
-  const slotsForDate = SLOTS[selectedDate] ?? [];
+  const [settings, setSettings] = useState<BookingSettings | null>(null);
+  const [bookings, setBookings] = useState<BookedSlot[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Ensure selectedSlot is valid for the current date
-  const validSlot = slotsForDate.includes(selectedSlot) ? selectedSlot : slotsForDate[0];
-  if (validSlot !== selectedSlot && validSlot) {
-    // Auto-correct silently on next render — avoid setState during render
-  }
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [selectedSlot, setSelectedSlot] = useState<{ start: string; end: string } | null>(null);
+
+  // Fetch settings once
+  useEffect(() => {
+    let mounted = true;
+    fetchBookingSettings("moi").then((s) => {
+      if (mounted) setSettings(s);
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  // Fetch bookings for the current month range
+  useEffect(() => {
+    let mounted = true;
+    setLoading(true);
+
+    const from = new Date(year, month - 1, 1);
+    const to = new Date(year, month, 0, 23, 59, 59);
+
+    fetchBookedSlots(from, to)
+      .then((b) => {
+        if (mounted) setBookings(b);
+      })
+      .finally(() => {
+        if (mounted) setLoading(false);
+      });
+
+    return () => {
+      mounted = false;
+    };
+  }, [year, month]);
+
+  // Compute availability
+  const availability: DayAvailability[] = useMemo(() => {
+    if (!settings) return [];
+    return computeMonthAvailability(settings, bookings, year, month);
+  }, [settings, bookings, year, month]);
+
+  const availableDates = useMemo(
+    () => new Set(availability.map((d) => d.date)),
+    [availability]
+  );
+
+  const slotsForSelected = useMemo(() => {
+    if (!selectedDate) return [];
+    return availability.find((d) => d.date === selectedDate)?.slots ?? [];
+  }, [availability, selectedDate]);
+
+  // Reset selection when month changes
+  useEffect(() => {
+    setSelectedDate(null);
+    setSelectedSlot(null);
+  }, [year, month]);
+
+  // Auto-select first available date when availability loads
+  useEffect(() => {
+    if (!selectedDate && availability.length > 0) {
+      setSelectedDate(availability[0].date);
+      setSelectedSlot(availability[0].slots[0] ?? null);
+    }
+  }, [availability, selectedDate]);
+
+  const weekdayOffset = getWeekdayOffset(year, month);
+  const totalDays = daysInMonth(year, month);
+
+  const goPrev = () => {
+    if (month === 1) {
+      setMonth(12);
+      setYear(year - 1);
+    } else {
+      setMonth(month - 1);
+    }
+  };
+  const goNext = () => {
+    if (month === 12) {
+      setMonth(1);
+      setYear(year + 1);
+    } else {
+      setMonth(month + 1);
+    }
+  };
+
+  const selectedDay = selectedDate ? Number(selectedDate.split("-")[2]) : null;
 
   return (
     <div className="w-full bg-[#BC9A36] px-5 py-10 sm:p-12">
@@ -50,20 +140,22 @@ export function AgendaCalendar() {
           {/* Header */}
           <div className="flex items-center justify-between">
             <p className="display-font text-[18px] font-[700] tracking-[-0.02em] text-[#1F1810]">
-              Avril 2026
+              {MONTH_NAMES[month - 1]} {year}
             </p>
             <div className="flex gap-1.5">
               <button
+                type="button"
+                onClick={goPrev}
                 className="flex h-7 w-7 items-center justify-center border border-[#1F1810]/15 text-[#1F1810]/50 transition-colors hover:text-[#1F1810]"
                 aria-label="Mois précédent"
-                type="button"
               >
                 ‹
               </button>
               <button
+                type="button"
+                onClick={goNext}
                 className="flex h-7 w-7 items-center justify-center border border-[#1F1810]/15 text-[#1F1810]/50 transition-colors hover:text-[#1F1810]"
                 aria-label="Mois suivant"
-                type="button"
               >
                 ›
               </button>
@@ -84,15 +176,14 @@ export function AgendaCalendar() {
 
           {/* Calendar grid */}
           <div className="mt-3 grid grid-cols-7 gap-1.5">
-            {/* Empty cells before start of month */}
-            {Array.from({ length: MONTH_START_OFFSET }, (_, i) => (
+            {Array.from({ length: weekdayOffset }, (_, i) => (
               <div key={`empty-${i}`} className="aspect-square" />
             ))}
 
-            {/* Days */}
-            {Array.from({ length: DAYS_IN_MONTH }, (_, i) => i + 1).map((day) => {
-              const available = AVAILABLE_DATES.includes(day);
-              const isSelected = day === selectedDate;
+            {Array.from({ length: totalDays }, (_, i) => i + 1).map((day) => {
+              const dateISO = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+              const available = availableDates.has(dateISO);
+              const isSelected = day === selectedDay;
 
               if (isSelected) {
                 return (
@@ -110,7 +201,11 @@ export function AgendaCalendar() {
                   <button
                     key={day}
                     type="button"
-                    onClick={() => setSelectedDate(day)}
+                    onClick={() => {
+                      setSelectedDate(dateISO);
+                      const first = availability.find((d) => d.date === dateISO)?.slots[0];
+                      setSelectedSlot(first ?? null);
+                    }}
                     className="flex aspect-square items-center justify-center bg-[#C4A139]/55 text-[13px] font-bold text-[#1F1810] transition-colors hover:bg-[#C4A139]"
                   >
                     {day}
@@ -129,22 +224,34 @@ export function AgendaCalendar() {
             })}
           </div>
 
-          {/* Divider */}
-          <div className="mt-6 border-t border-[#1F1810]/10" />
+          {/* Loading / Empty state */}
+          {loading && availability.length === 0 && (
+            <p className="mt-6 text-center text-[12px] text-[#1F1810]/40">
+              Chargement des dispos…
+            </p>
+          )}
 
-          {/* Time slots */}
-          {slotsForDate.length > 0 && (
+          {!loading && availability.length === 0 && (
+            <p className="mt-6 text-center text-[12px] text-[#1F1810]/40">
+              Aucun créneau disponible ce mois-ci.
+            </p>
+          )}
+
+          {/* Divider */}
+          {slotsForSelected.length > 0 && (
             <>
+              <div className="mt-6 border-t border-[#1F1810]/10" />
+
               <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#1F1810]/45">
-                Créneaux du {selectedDate} avril
+                Créneaux du {selectedDay} {MONTH_NAMES[month - 1].toLowerCase()}
               </p>
 
               <div className="mt-3 flex flex-col gap-2">
-                {slotsForDate.map((slot) => {
-                  const active = slot === validSlot;
+                {slotsForSelected.map((slot) => {
+                  const active = slot.start === selectedSlot?.start;
                   return (
                     <button
-                      key={slot}
+                      key={slot.start}
                       type="button"
                       onClick={() => setSelectedSlot(slot)}
                       className={`w-full border px-4 py-3 text-left text-[13px] font-mono transition-colors ${
@@ -153,24 +260,23 @@ export function AgendaCalendar() {
                           : "border-[#1F1810]/15 bg-transparent text-[#1F1810] hover:border-[#1F1810]/40"
                       }`}
                     >
-                      {slot}
+                      {slot.start.replace(":", " h ")} → {slot.end.replace(":", " h ")}
                     </button>
                   );
                 })}
               </div>
-            </>
-          )}
 
-          {/* Confirm */}
-          {validSlot && (
-            <a
-              href="https://app.digitaltimes.fr/book/moi"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-5 flex w-full items-center justify-center gap-2 bg-[#1F1810] px-4 py-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#BC9A36] transition-[letter-spacing] duration-500 hover:tracking-[0.18em]"
-            >
-              Confirmer {validSlot.split(" → ")[0]} →
-            </a>
+              {selectedSlot && (
+                <a
+                  href="https://app.digitaltimes.fr/book/moi"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 flex w-full items-center justify-center gap-2 bg-[#1F1810] px-4 py-4 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#BC9A36] transition-[letter-spacing] duration-500 hover:tracking-[0.18em]"
+                >
+                  Confirmer {selectedSlot.start.replace(":", " h ")} →
+                </a>
+              )}
+            </>
           )}
         </div>
       </div>
