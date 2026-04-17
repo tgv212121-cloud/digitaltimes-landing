@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { Reveal } from "@/components/reveal";
 import { OrbitingTools } from "@/components/orbiting-tools";
 import { PixelatedImage } from "@/components/pixelated-image";
+import { CalendlyEmbed } from "@/components/calendly-embed";
 import { landingContent } from "@/content/landing-content";
 import { siteConfig } from "@/content/site-config";
 
@@ -248,23 +249,13 @@ export default function Home() {
                 <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite/50">Visunyx</p>
               </div>
             </Reveal>
-            <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_40px_1fr] lg:items-start">
-              <Reveal>
-                <div className="overflow-hidden">
-                  <img src="/visunyx-avant.png.png" alt="Avant" className="w-full object-cover" loading="lazy" />
-                </div>
-              </Reveal>
-              <div className="hidden items-center justify-center lg:flex" style={{ height: "100%" }}>
-                <div className="h-full w-px bg-[var(--line)]" />
+            <Reveal delay={0.1}>
+              <div className="mt-6 overflow-hidden">
+                <video className="w-full" autoPlay muted loop playsInline>
+                  <source src="/visunyx-apres.mp4" type="video/mp4" />
+                </video>
               </div>
-              <Reveal delay={0.1}>
-                <div className="overflow-hidden">
-                  <video className="w-full" autoPlay muted loop playsInline>
-                    <source src="/visunyx-apres.mp4" type="video/mp4" />
-                  </video>
-                </div>
-              </Reveal>
-            </div>
+            </Reveal>
             <Reveal>
               <div className="pull-quote mt-8 max-w-[55ch]">
                 <p className="text-[17px] font-semibold leading-snug tracking-[-0.02em] text-graphite">
@@ -285,23 +276,13 @@ export default function Home() {
                 <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite/50">Clickway</p>
               </div>
             </Reveal>
-            <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_40px_1fr] lg:items-start">
-              <Reveal>
-                <div className="overflow-hidden">
-                  <img src="/clickway-avant.png.png" alt="Avant" className="w-full object-cover" loading="lazy" />
-                </div>
-              </Reveal>
-              <div className="hidden items-center justify-center lg:flex" style={{ height: "100%" }}>
-                <div className="h-full w-px bg-[var(--line)]" />
+            <Reveal delay={0.1}>
+              <div className="mt-6 overflow-hidden">
+                <video className="w-full" autoPlay muted loop playsInline>
+                  <source src="/clickway-apres.mp4" type="video/mp4" />
+                </video>
               </div>
-              <Reveal delay={0.1}>
-                <div className="overflow-hidden">
-                  <video className="w-full" autoPlay muted loop playsInline>
-                    <source src="/clickway-apres.mp4" type="video/mp4" />
-                  </video>
-                </div>
-              </Reveal>
-            </div>
+            </Reveal>
             <Reveal>
               <div className="pull-quote mt-8 max-w-[55ch]">
                 <p className="text-[17px] font-semibold leading-snug tracking-[-0.02em] text-graphite">
@@ -362,14 +343,45 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href={siteConfig.cta.bookingUrl}
+                  href="#agenda"
                   className="inline-flex items-center justify-center bg-ivory px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.24em]"
                 >
-                  {siteConfig.cta.longLabel}
+                  Réserver un appel de cadrage
+                </a>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center border border-white/40 px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-white transition-[letter-spacing,border-color] duration-500 hover:tracking-[0.24em] hover:border-white"
+                >
+                  Remplir le formulaire
                 </a>
               </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          AGENDA — Calendly inline
+      ══════════════════════════════════════════ */}
+      <section id="agenda" className="pb-20 pt-10 sm:pb-28">
+        <div className="section-shell">
+          <Reveal>
+            <div className="max-w-2xl">
+              <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-petrol">Agenda</p>
+              <h2 className="display-font mt-3 text-[clamp(1.8rem,4vw,2.6rem)] font-[800] leading-[0.95] tracking-[-0.04em] text-graphite">
+                Choisis un créneau qui t'arrange.
+              </h2>
+              <p className="mt-4 text-[14px] leading-[1.8] text-graphite/60">
+                30 minutes. On regarde ensemble si ton besoin se transforme en outil, workflow ou interface.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="mt-10 overflow-hidden border border-[var(--line)] bg-ivory">
+              <CalendlyEmbed url={siteConfig.cta.bookingUrl} height={720} />
             </div>
           </Reveal>
         </div>
