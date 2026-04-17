@@ -82,7 +82,7 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full border border-white/15 bg-black/40 px-4 py-3 text-[14px] text-ivory placeholder:text-ivory/30 focus:border-saffron focus:outline-none transition-colors";
+    "w-full border border-white/15 bg-black/40 px-4 py-3 text-[14px] text-ivory placeholder:text-ivory/30 focus:border-saffron focus:outline-none transition-colors [color-scheme:dark]";
   const labelClass =
     "accent-font block text-[10px] font-semibold uppercase tracking-[0.2em] text-ivory/55 mb-2";
 
