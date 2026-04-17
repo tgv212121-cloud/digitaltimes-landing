@@ -8,9 +8,9 @@
       "DigitalTimes conçoit des mini-outils, automatisations n8n et solutions IA sur mesure pour aider les agences digitales à vendre, automatiser et mieux délivrer.",
   },
   cta: {
-    shortLabel: "Réserver un appel",
-    longLabel: "Réserver un appel de cadrage",
-    bookingUrl: "https://calendly.com/thomas-digitaltimes/30min",
+    shortLabel: "Parler de ton projet",
+    longLabel: "Parler de ton projet",
+    bookingUrl: "#contact",
   },
   contact: {
     email: "hello@digitaltimes.fr",

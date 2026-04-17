@@ -20,7 +20,7 @@ export function Hero() {
               Times
             </span>
           </div>
-          <CTAButton href={siteConfig.cta.bookingUrl} label={siteConfig.cta.shortLabel} />
+          <CTAButton href="#contact" label={siteConfig.cta.shortLabel} />
         </header>
 
         {/* ── Headline — starts lower, bleeds left optically ── */}
