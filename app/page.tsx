@@ -269,52 +269,6 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* ── Clickway ── */}
-          <div className="mt-20 border-t border-[var(--line)] pt-8">
-            <Reveal>
-              <div className="flex items-center gap-3">
-                <img src="/logos/clickway.png" alt="Clickway" className="h-7 w-7 object-contain" />
-                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite/50">Clickway</p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="mt-6 overflow-hidden">
-                <video className="w-full" autoPlay muted loop playsInline>
-                  <source src="/clickway-apres.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </Reveal>
-            <Reveal>
-              <div className="pull-quote mt-8 max-w-[55ch]">
-                <p className="text-[17px] font-semibold leading-snug tracking-[-0.02em] text-graphite">
-                  Audit de landing page automatisé.
-                </p>
-                <p className="mt-3 text-[15px] leading-[1.8] text-graphite/70">
-                  Avant : fait à la main, client par client. Maintenant : l'outil analyse en autonome. Utilisable en interne ou offert aux prospects comme lead magnet.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* ── Scrollab ── */}
-          <div className="mt-20 border-t border-[var(--line)] pt-8">
-            <Reveal>
-              <div className="flex items-center gap-3">
-                <img src="/logos/scrollab-real.png" alt="Scrollab" className="h-7 w-7 object-contain" />
-                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite/50">Scrollab</p>
-              </div>
-            </Reveal>
-            <Reveal>
-              <div className="pull-quote mt-6 max-w-[55ch]">
-                <p className="text-[17px] font-semibold leading-snug tracking-[-0.02em] text-graphite">
-                  Du temps récupéré en coulisses.
-                </p>
-                <p className="mt-3 text-[15px] leading-[1.8] text-graphite/70">
-                  Onboarding, brief et suivi projet générés sans intervention. Pas d'interface client ici, juste de l'automatisation invisible.
-                </p>
-              </div>
-            </Reveal>
-          </div>
         </div>
       </section>
 
