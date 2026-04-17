@@ -25,7 +25,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t-[3px] border-graphite bg-ivory">
+    <footer className="bg-ivory">
       <div className="section-shell py-12 sm:py-16">
 
         {/* Top — brand + socials */}
