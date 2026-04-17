@@ -246,24 +246,29 @@ export function AgendaCalendar() {
                 Créneaux du {selectedDay} {MONTH_NAMES[month - 1].toLowerCase()}
               </p>
 
-              <div className="mt-3 flex flex-col gap-2">
-                {slotsForSelected.map((slot) => {
-                  const active = slot.start === selectedSlot?.start;
-                  return (
-                    <button
-                      key={slot.start}
-                      type="button"
-                      onClick={() => setSelectedSlot(slot)}
-                      className={`w-full border px-4 py-3 text-left text-[13px] font-mono transition-colors ${
-                        active
-                          ? "border-[#BC9A36] bg-[#1F1810] text-[#BC9A36]"
-                          : "border-[#1F1810]/15 bg-transparent text-[#1F1810] hover:border-[#1F1810]/40"
-                      }`}
-                    >
-                      {slot.start.replace(":", " h ")} → {slot.end.replace(":", " h ")}
-                    </button>
-                  );
-                })}
+              <div className="relative mt-3">
+                <div className="slots-scroll flex max-h-[180px] flex-col gap-2 overflow-y-auto pr-1">
+                  {slotsForSelected.map((slot) => {
+                    const active = slot.start === selectedSlot?.start;
+                    return (
+                      <button
+                        key={slot.start}
+                        type="button"
+                        onClick={() => setSelectedSlot(slot)}
+                        className={`w-full shrink-0 border px-4 py-3 text-left text-[13px] font-mono transition-colors ${
+                          active
+                            ? "border-[#BC9A36] bg-[#1F1810] text-[#BC9A36]"
+                            : "border-[#1F1810]/15 bg-transparent text-[#1F1810] hover:border-[#1F1810]/40"
+                        }`}
+                      >
+                        {slot.start.replace(":", " h ")} → {slot.end.replace(":", " h ")}
+                      </button>
+                    );
+                  })}
+                </div>
+                {slotsForSelected.length > 3 && (
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-[#FEFBF2] to-transparent" />
+                )}
               </div>
 
               {selectedSlot && (
