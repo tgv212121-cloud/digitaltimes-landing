@@ -42,7 +42,6 @@ export function Hero() {
         </div>
 
         {/* ── Horizontal rule as design element ── */}
-        <div className="hr-design-thick" />
       </div>
     </section>
   );

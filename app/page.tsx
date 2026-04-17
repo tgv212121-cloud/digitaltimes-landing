@@ -44,7 +44,6 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="py-20 sm:py-32">
         <div className="section-shell">
-          <div className="hr-design-thick" />
 
           <div className="mt-10 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
             <Reveal>
@@ -90,7 +89,6 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="py-20 sm:py-32">
         <div className="section-shell">
-          <div className="hr-design-thick" />
 
           <div className="mt-10">
             <Reveal>
@@ -161,7 +159,6 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section id="abonnement" className="py-20 sm:py-32">
         <div className="section-shell">
-          <div className="hr-design-thick" />
 
           <div className="mt-10">
             <Reveal>
@@ -368,7 +365,6 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section id="about" className="pb-20 sm:pb-32">
         <div className="section-shell">
-          <div className="hr-design-thick" />
 
           <div className="mt-10">
             <Reveal>
