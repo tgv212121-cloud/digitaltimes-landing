@@ -218,9 +218,9 @@ export const landingContent = {
   },
   finalCta: {
     eyebrow: "Prêt ?",
-    title: "Réserve l'appel. 30 minutes pour cadrer le bon use case.",
+    title: "Raconte-moi ton projet. Je te réponds sous 24\u00A0h.",
     description:
-      "On voit si ton besoin doit devenir un outil, un workflow ou une interface. Si oui, on lance.",
+      "On voit si ton besoin doit devenir une interface. Si oui, on lance.",
     bullets: [
       "Un actif digital qui travaille chaque mois",
       "Maintenance mensuelle incluse",
