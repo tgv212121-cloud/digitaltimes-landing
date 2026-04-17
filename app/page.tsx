@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { Reveal } from "@/components/reveal";
 import { OrbitingTools } from "@/components/orbiting-tools";
 import { PixelatedImage } from "@/components/pixelated-image";
+import { AgendaCalendar } from "@/components/agenda-calendar";
 import { landingContent } from "@/content/landing-content";
 import { siteConfig } from "@/content/site-config";
 
@@ -317,164 +318,72 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          CTA FINAL
-          Dark block, editorial
+          CTA FINAL — Formulaire primaire + Agenda mustard secondaire
       ══════════════════════════════════════════ */}
-      <section id="contact" className="pb-24 sm:pb-32">
-        <div className="section-shell">
-          <Reveal>
-            <div className="bg-[#0e0c0a] px-6 py-12 text-ivory sm:px-12 sm:py-16">
-              <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.2em] text-saffron">{landingContent.finalCta.eyebrow}</p>
-              <h2 className="display-font mt-4 max-w-3xl text-[clamp(1.8rem,4vw,3rem)] font-[800] leading-[0.92] tracking-[-0.05em] text-ivory">
-                {landingContent.finalCta.title}
-              </h2>
-              <p className="mt-5 max-w-[50ch] text-[15px] leading-[1.8] text-ivory/55">
-                {landingContent.finalCta.description}
-              </p>
+      <section id="contact">
+        {/* Dark header + Form CTA (primary) */}
+        <div className="bg-[#0e0c0a] py-20 text-ivory sm:py-24">
+          <div className="section-shell">
+            <Reveal>
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-saffron">
+                  — {landingContent.finalCta.eyebrow} —
+                </p>
+                <h2 className="display-font mt-5 text-[clamp(2rem,5vw,3.4rem)] font-[800] leading-[0.92] tracking-[-0.05em] text-ivory">
+                  {landingContent.finalCta.title}
+                </h2>
+                <p className="mx-auto mt-5 max-w-[52ch] text-[15px] leading-[1.8] text-ivory/55">
+                  {landingContent.finalCta.description}
+                </p>
+              </div>
+            </Reveal>
 
-              <div className="mt-8 border-t border-white/8 pt-6">
-                <div className="grid gap-1 sm:grid-cols-3">
-                  {landingContent.finalCta.bullets.map((bullet) => (
-                    <p key={bullet} className="py-2 text-[13px] text-white/50">
-                      {bullet}
+            <Reveal delay={0.08}>
+              <div className="mx-auto mt-12 max-w-xl border border-saffron/30 bg-black/30 p-8 sm:p-10">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-saffron/40 text-saffron">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" strokeLinejoin="round" />
+                      <path d="M14 2v6h6M8 13h8M8 17h8" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.2em] text-saffron">Étape 1 · Recommandé</p>
+                    <p className="display-font mt-2 text-[22px] font-[800] leading-[1.1] tracking-[-0.03em] text-ivory">
+                      Remplis le formulaire.
                     </p>
-                  ))}
+                    <p className="mt-2 text-[14px] leading-[1.7] text-ivory/60">
+                      Quelques questions pour comprendre ton besoin. Je te réponds avec une proposition concrète sous 24h.
+                    </p>
+                    <a
+                      href="/contact"
+                      className="mt-6 inline-flex items-center justify-center bg-saffron px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.24em]"
+                    >
+                      Remplir le formulaire
+                    </a>
+                  </div>
                 </div>
               </div>
+            </Reveal>
 
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="#agenda"
-                  className="inline-flex items-center justify-center bg-ivory px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.24em]"
-                >
-                  Réserver un appel de cadrage
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center border border-white/40 px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-white transition-[letter-spacing,border-color] duration-500 hover:tracking-[0.24em] hover:border-white"
-                >
-                  Remplir le formulaire
-                </a>
+            {/* Transition : "ou" */}
+            <Reveal delay={0.15}>
+              <div className="mt-12 text-center">
+                <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-ivory/35">
+                  — Ou, si tu préfères en parler d'abord —
+                </p>
+                <p className="display-font mt-4 text-[clamp(1.3rem,3vw,1.8rem)] font-[400] italic leading-[1.2] tracking-[-0.02em] text-ivory">
+                  Prends un rendez-vous. <span className="text-saffron">30 minutes</span>.
+                </p>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
-      </section>
 
-      {/* ══════════════════════════════════════════
-          AGENDA — Style dark comme /book/moi
-      ══════════════════════════════════════════ */}
-      <section id="agenda" className="bg-[#0e0c0a] py-20 text-ivory sm:py-28">
-        <div className="section-shell">
-          <Reveal>
-            {/* Header centered */}
-            <div className="text-center">
-              <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-ivory/40">
-                — Rendez-vous —
-              </p>
-              <h2 className="display-font mt-5 text-[clamp(2rem,5vw,3.2rem)] font-[400] italic leading-[0.95] tracking-[-0.02em] text-ivory">
-                Prendre un <span className="text-saffron">rendez-vous</span>
-              </h2>
-              <p className="mt-4 text-[13px] text-ivory/55">
-                Choisissez un créneau qui vous convient.
-              </p>
-              <div className="mt-6 flex items-center justify-center gap-4 text-[12px] text-ivory/45">
-                <span className="flex items-center gap-2">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 6v6l4 2" strokeLinecap="round" />
-                  </svg>
-                  30 minutes
-                </span>
-                <span className="text-ivory/20">|</span>
-                <span className="flex items-center gap-2">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" />
-                  </svg>
-                  Europe/Paris
-                </span>
-              </div>
-            </div>
-
-            {/* Calendar card */}
-            <div className="mx-auto mt-10 max-w-2xl border border-white/8 bg-black/20 p-6 sm:p-8">
-              <div className="flex items-center justify-between">
-                <p className="accent-font text-[12px] font-semibold text-ivory">Avril 2026</p>
-                <div className="flex gap-1">
-                  <button className="flex h-7 w-7 items-center justify-center border border-white/10 text-ivory/40 hover:text-ivory" aria-label="Mois précédent">‹</button>
-                  <button className="flex h-7 w-7 items-center justify-center border border-white/10 text-ivory/40 hover:text-ivory" aria-label="Mois suivant">›</button>
-                </div>
-              </div>
-
-              {/* Weekdays header */}
-              <div className="mt-6 grid grid-cols-7 gap-2 text-center">
-                {["L", "M", "M", "J", "V", "S", "D"].map((d, i) => (
-                  <div key={i} className="text-[10px] uppercase tracking-[0.18em] text-saffron/50">{d}</div>
-                ))}
-              </div>
-
-              {/* Calendar grid — April 2026 starts on Wednesday */}
-              <div className="mt-3 grid grid-cols-7 gap-2 text-center">
-                {/* Empty cells for days before April 1 (Mon, Tue) */}
-                <div /><div />
-                {/* Days 1-30 */}
-                {Array.from({ length: 30 }, (_, i) => i + 1).map((day) => {
-                  const available = [17, 22, 23, 24, 29, 30].includes(day);
-                  const isSelected = day === 17;
-                  return (
-                    <div key={day} className="aspect-square">
-                      {isSelected ? (
-                        <div className="flex h-full items-center justify-center border border-saffron bg-saffron/10 text-[13px] font-semibold text-saffron">
-                          {day}
-                        </div>
-                      ) : available ? (
-                        <button className="flex h-full w-full items-center justify-center text-[13px] font-semibold text-saffron transition-colors hover:bg-saffron/5">
-                          {day}
-                        </button>
-                      ) : (
-                        <div className="flex h-full items-center justify-center text-[13px] text-ivory/20">
-                          {day}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Selected date card */}
-            <div className="mx-auto mt-4 max-w-2xl border border-white/8 bg-black/20 p-10 text-center sm:p-14">
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-saffron/30">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-saffron">
-                  <rect x="3" y="4" width="18" height="18" rx="1" />
-                  <path d="M16 2v4M8 2v4M3 10h18" strokeLinecap="round" />
-                </svg>
-              </div>
-              <p className="display-font mt-5 text-[18px] font-[400] italic tracking-[-0.02em] text-saffron">
-                Choisis ta date
-              </p>
-              <p className="mt-2 text-[12px] text-ivory/40">dans le calendrier à gauche</p>
-            </div>
-
-            {/* CTA */}
-            <div className="mt-10 text-center">
-              <a
-                href="https://interface-digitaltimes.vercel.app/book/moi"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center bg-saffron px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.24em]"
-              >
-                Ouvrir l'agenda complet
-              </a>
-            </div>
-
-            {/* Footer */}
-            <div className="mt-16 text-center text-[10px] uppercase tracking-[0.28em] text-ivory/20">
-              Digital Times
-            </div>
-          </Reveal>
-        </div>
+        {/* Agenda mustard (secondary) */}
+        <Reveal delay={0.2}>
+          <AgendaCalendar />
+        </Reveal>
       </section>
 
       {/* ══════════════════════════════════════════
