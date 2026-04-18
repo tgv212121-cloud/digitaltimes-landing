@@ -36,7 +36,7 @@ function daysInMonth(year: number, month: number) {
   return new Date(year, month, 0).getDate();
 }
 
-const BOOKING_API_URL = "https://app.digitaltimes.fr/api/bookings";
+const BOOKING_API_URL = "https://interface-digitaltimes.vercel.app/api/bookings";
 
 type View = "picker" | "form" | "success" | "error";
 
