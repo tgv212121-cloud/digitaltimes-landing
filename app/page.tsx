@@ -127,9 +127,21 @@ export default function Home() {
                     <span className="mt-0.5 text-[16px] text-red-500">✕</span>
                     <p className="text-[15px] leading-[1.8] text-graphite/55">Si ça casse, tu te débrouilles</p>
                   </div>
-                  <div className="flex items-start gap-3 py-4">
+                  <div className="flex items-start gap-3 border-b border-[var(--line)] py-4">
                     <span className="mt-0.5 text-[16px] text-red-500">✕</span>
                     <p className="text-[15px] leading-[1.8] text-graphite/55">L'outil vieillit et personne ne le touche</p>
+                  </div>
+                  <div className="flex items-start gap-3 border-b border-[var(--line)] py-4">
+                    <span className="mt-0.5 text-[16px] text-red-500">✕</span>
+                    <p className="text-[15px] leading-[1.8] text-graphite/55">Un SaaS générique qui s'adapte à toutes les agences</p>
+                  </div>
+                  <div className="flex items-start gap-3 border-b border-[var(--line)] py-4">
+                    <span className="mt-0.5 text-[16px] text-red-500">✕</span>
+                    <p className="text-[15px] leading-[1.8] text-graphite/55">« Livré dans quelques semaines », sans engagement ferme</p>
+                  </div>
+                  <div className="flex items-start gap-3 py-4">
+                    <span className="mt-0.5 text-[16px] text-red-500">✕</span>
+                    <p className="text-[15px] leading-[1.8] text-graphite/55">Prix caché, devis final au-dessus du budget</p>
                   </div>
                 </div>
               </div>
@@ -160,9 +172,21 @@ export default function Home() {
                     <span className="mt-0.5 text-[16px] text-emerald-400">✓</span>
                     <p className="text-[15px] font-semibold leading-[1.8] text-ivory/85">Si ça casse, je le répare le jour même</p>
                   </div>
-                  <div className="flex items-start gap-3 py-4">
+                  <div className="flex items-start gap-3 border-b border-white/8 py-4">
                     <span className="mt-0.5 text-[16px] text-emerald-400">✓</span>
                     <p className="text-[15px] font-semibold leading-[1.8] text-ivory/85">L'outil évolue avec ton agence</p>
+                  </div>
+                  <div className="flex items-start gap-3 border-b border-white/8 py-4">
+                    <span className="mt-0.5 text-[16px] text-emerald-400">✓</span>
+                    <p className="text-[15px] font-semibold leading-[1.8] text-ivory/85">Conçu pour TON agence, pensé pour ton workflow</p>
+                  </div>
+                  <div className="flex items-start gap-3 border-b border-white/8 py-4">
+                    <span className="mt-0.5 text-[16px] text-emerald-400">✓</span>
+                    <p className="text-[15px] font-semibold leading-[1.8] text-ivory/85">V1 fonctionnelle en 7 jours. Utilisable dès le jour 1.</p>
+                  </div>
+                  <div className="flex items-start gap-3 py-4">
+                    <span className="mt-0.5 text-[16px] text-emerald-400">✓</span>
+                    <p className="text-[15px] font-semibold leading-[1.8] text-ivory/85">À partir de 200 €, setup payé à la signature. Zéro surprise.</p>
                   </div>
                 </div>
               </div>
