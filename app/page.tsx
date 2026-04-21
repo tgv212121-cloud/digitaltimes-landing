@@ -185,7 +185,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-start gap-3 py-4">
                     <span className="mt-0.5 text-[16px] text-emerald-400">✓</span>
-                    <p className="text-[15px] font-semibold leading-[1.8] text-ivory/85">À partir de 200 €, setup payé à la signature. Zéro surprise.</p>
+                    <p className="text-[15px] font-semibold leading-[1.8] text-ivory/85">À partir de 200 € + 20 €/mois. Transparent dès le brief.</p>
                   </div>
                 </div>
               </div>
