@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero";
 import { Reveal } from "@/components/reveal";
 import { OrbitingTools } from "@/components/orbiting-tools";
 import { PixelatedImage } from "@/components/pixelated-image";
-import { AgendaCalendar } from "@/components/agenda-calendar";
 import { ContactForm } from "@/components/contact-form";
 import { landingContent } from "@/content/landing-content";
 import { siteConfig } from "@/content/site-config";
@@ -317,44 +316,50 @@ export default function Home() {
           </Reveal>
 
           {/* Grid 2 colonnes : Formulaire gauche, Agenda droite */}
-          <div className="mt-14 grid gap-0 lg:grid-cols-2">
-            {/* Left : Form */}
-            <Reveal>
-              <div className="flex h-full flex-col border border-saffron/30 bg-black/30 p-8 sm:p-10">
-                <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.2em] text-saffron">
-                  Étape 1 · Recommandé
-                </p>
-                <p className="display-font mt-3 text-[clamp(1.6rem,3vw,2.2rem)] font-[800] leading-[1.05] tracking-[-0.04em] text-ivory">
-                  Remplis le<br />formulaire.
-                </p>
-                <p className="mt-4 mb-8 max-w-[36ch] text-[14px] leading-[1.7] text-ivory/60">
-                  Quelques questions pour comprendre ton besoin. Je te réponds avec une proposition concrète sous 24 h.
-                </p>
+          {/* Form centered */}
+          <Reveal>
+            <div className="mx-auto mt-14 max-w-2xl border border-saffron/30 bg-black/30 p-8 sm:p-10">
+              <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.2em] text-saffron">
+                Étape 1 · Recommandé
+              </p>
+              <p className="display-font mt-3 text-[clamp(1.6rem,3vw,2.2rem)] font-[800] leading-[1.05] tracking-[-0.04em] text-ivory">
+                Remplis le formulaire.
+              </p>
+              <p className="mt-4 mb-8 text-[14px] leading-[1.7] text-ivory/60">
+                Quelques questions pour comprendre ton besoin. Je te réponds avec une proposition concrète sous 24 h.
+              </p>
 
-                <ContactForm />
-              </div>
-            </Reveal>
+              <ContactForm />
+            </div>
+          </Reveal>
+        </div>
 
-            {/* Right : Agenda */}
-            <Reveal delay={0.1}>
-              <div className="flex h-full flex-col">
-                <div className="border border-white/10 border-b-0 bg-black/20 p-6 sm:p-8">
-                  <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.2em] text-ivory/40">
-                    Étape alternative
-                  </p>
-                  <p className="display-font mt-3 text-[clamp(1.3rem,2.5vw,1.8rem)] font-[400] italic leading-[1.2] tracking-[-0.02em] text-ivory">
-                    Ou prends un <span className="text-saffron">rendez-vous</span>.
-                  </p>
-                  <p className="mt-2 text-[13px] text-ivory/50">
-                    30 minutes. Europe/Paris.
-                  </p>
-                </div>
-                <div className="flex-1">
-                  <AgendaCalendar />
-                </div>
-              </div>
-            </Reveal>
-          </div>
+        {/* Booking iframe — étape alternative, full-width below form */}
+        <div className="mt-20 px-6">
+          <Reveal>
+            <div className="mx-auto mb-8 max-w-[1200px]">
+              <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-saffron/70">
+                Étape alternative
+              </p>
+              <h2 className="display-font mt-3 text-[clamp(2rem,5vw,3.5rem)] font-[400] italic leading-[1] tracking-[-0.03em] text-ivory">
+                Ou prends un <span className="text-saffron">rendez-vous.</span>
+              </h2>
+              <p className="mt-2 font-mono text-[12px] text-ivory/50">
+                30 minutes . Europe/Paris
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mx-auto max-w-[1200px]" style={{ background: "#D4A574" }}>
+              <iframe
+                src="https://app.digitaltimes.fr/book/site?embed=1"
+                title="Prendre rendez-vous avec Thomas Gildas"
+                loading="lazy"
+                className="block h-[1400px] w-full border-0 md:h-[900px]"
+                style={{ background: "#D4A574" }}
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
