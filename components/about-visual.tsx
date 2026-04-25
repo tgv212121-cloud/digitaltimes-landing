@@ -99,7 +99,7 @@ export function AboutVisual() {
         ))}
       </div>
 
-      {/* ── Pipeline — small centered boxes with traveling dots ── */}
+      {/* ── Pipeline (small centered boxes with traveling dots) ── */}
       <div className="mt-4 flex items-center gap-0 rounded-sm border border-white/8 bg-white/4 px-5 py-5">
         {STAGES.map((stage, i) => (
           <div key={stage.label} className={`flex items-center ${i < STAGES.length - 1 ? "flex-1" : ""}`}>
@@ -124,7 +124,7 @@ export function AboutVisual() {
         ))}
       </div>
 
-      {/* ── Activity feed — horizontal row ── */}
+      {/* ── Activity feed (horizontal row) ── */}
       <div className="mt-4">
         <p className="accent-font mb-3 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/60">
           Activité récente

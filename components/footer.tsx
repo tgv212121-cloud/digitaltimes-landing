@@ -28,7 +28,7 @@ export function Footer() {
     <footer className="bg-ivory">
       <div className="section-shell py-12 sm:py-16">
 
-        {/* Top — brand + socials */}
+        {/* Top : brand + socials */}
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <div className="flex select-none items-baseline gap-0">
@@ -68,7 +68,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[12px] text-graphite/30">
-            © {year} DigitalTimes — Thomas Gildas
+            © {year} DigitalTimes · Thomas Gildas
           </p>
           <nav className="flex flex-wrap gap-5">
             {LEGAL.map((l) => (

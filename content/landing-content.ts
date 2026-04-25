@@ -30,7 +30,7 @@ export const landingContent = {
       {
         title: "Lead magnet qui qualifie avant l'appel",
         description:
-          "Analyseur, estimateur ou audit interactif — pas un PDF que personne ne lit.",
+          "Analyseur, estimateur ou audit interactif, pas un PDF que personne ne lit.",
         tag: "Lead Gen",
       },
       {
@@ -204,7 +204,7 @@ export const landingContent = {
     cards: [
       {
         title: "Entrepreneur à 16 ans",
-        text: "Petits boulots, débrouille, envie de construire par mes propres moyens. Pas par obligation — par goût.",
+        text: "Petits boulots, débrouille, envie de construire par mes propres moyens. Pas par obligation. Par goût.",
       },
       {
         title: "Obsédé par l'optimisation",

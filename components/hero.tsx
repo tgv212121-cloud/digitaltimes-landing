@@ -10,7 +10,7 @@ export function Hero() {
       <div className="hero-grid absolute inset-0" aria-hidden="true" />
 
       <div className="section-shell relative z-10">
-        {/* ── Nav — minimal, border-bottom only ── */}
+        {/* ── Nav (minimal, border-bottom only) ── */}
         <header className="flex items-center justify-between border-b border-[var(--line)] pb-4">
           <div className="flex select-none items-baseline gap-0">
             <span className="display-font text-[20px] font-[600] leading-none tracking-[-0.03em] text-graphite">
@@ -23,7 +23,7 @@ export function Hero() {
           <CTAButton href="#contact" label={siteConfig.cta.shortLabel} />
         </header>
 
-        {/* ── Headline — starts lower, bleeds left optically ── */}
+        {/* ── Headline (starts lower, bleeds left optically) ── */}
         <div className="pb-6 pt-20 sm:pt-28 lg:pt-32">
           <div className="max-w-5xl" style={{ marginLeft: "-0.04em" }}>
             <h1 className="display-font text-[clamp(2.8rem,8vw,6.5rem)] font-[800] leading-[0.86] tracking-[-0.07em] text-graphite">

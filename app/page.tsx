@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
 
       {/* ══════════════════════════════════════════
-          TOUT AU MÊME ENDROIT — Orbiting tools
+          TOUT AU MÊME ENDROIT (Orbiting tools)
       ══════════════════════════════════════════ */}
       <section className="py-20 sm:py-32">
         <div className="section-shell">
@@ -211,7 +211,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* 4 étapes — horizontal grid with gap-px for 1px borders */}
+          {/* 4 étapes : horizontal grid with gap-px for 1px borders */}
           <div className="mt-14 grid gap-px bg-[var(--line)] sm:grid-cols-2 lg:grid-cols-4">
             {landingContent.timeline.steps.map((step, index) => (
               <Reveal key={step.title} delay={index * 0.06}>
@@ -254,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          CAS CLIENTS — Hero Parallax (3D scroll-driven)
+          CAS CLIENTS (Hero Parallax 3D scroll-driven)
       ══════════════════════════════════════════ */}
       <section id="cas-clients">
         <HeroParallax
@@ -282,7 +282,7 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          CTA FINAL — Formulaire gauche + Agenda droite
+          CTA FINAL : Formulaire gauche + Agenda droite
       ══════════════════════════════════════════ */}
       <section id="contact" className="bg-[#0e0c0a] py-20 text-ivory sm:py-24">
         <div className="section-shell">
@@ -290,7 +290,7 @@ export default function Home() {
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
               <p className="accent-font text-[10px] font-semibold uppercase tracking-[0.28em] text-saffron">
-                — {landingContent.finalCta.eyebrow} —
+                · {landingContent.finalCta.eyebrow} ·
               </p>
               <h2 className="display-font mt-5 text-[clamp(2rem,5vw,3.4rem)] font-[800] leading-[0.92] tracking-[-0.05em] text-ivory">
                 {landingContent.finalCta.title}
@@ -366,7 +366,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* Asymmetric grid: 55/45 — photo bleeds taller */}
+          {/* Asymmetric grid: 55/45, photo bleeds taller */}
           <div className="mt-14 grid gap-8 lg:grid-cols-[0.55fr_0.45fr]">
             <PixelatedImage
               src="/thomas.jpg.jpg"

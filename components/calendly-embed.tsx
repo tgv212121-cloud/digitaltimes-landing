@@ -1,4 +1,4 @@
-// <!-- Integrated via Catalogue by Thomas Gildas (digitaltimes.fr) — 2026-04-13 -->
+// <!-- Integrated via Catalogue by Thomas Gildas (digitaltimes.fr) · 2026-04-13 -->
 // Source : https://help.calendly.com/hc/en-us/articles/223147027
 // Library : Calendly inline widget
 

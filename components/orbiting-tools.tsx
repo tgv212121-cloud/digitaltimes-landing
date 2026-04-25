@@ -34,7 +34,7 @@ export function OrbitingTools() {
         style={{ width: ORBIT_RADIUS * 2, height: ORBIT_RADIUS * 2 }}
       />
 
-      {/* Center — DigitalTimes */}
+      {/* Center : DigitalTimes */}
       <div className="relative z-10 flex flex-col items-center">
         <div className="flex select-none items-baseline gap-0">
           <span className="display-font text-[28px] font-[600] leading-none tracking-[-0.03em] text-graphite">

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Footer } from "@/components/footer";
 
 export const metadata = {
-  title: "Conditions Générales de Vente — DigitalTimes",
+  title: "Conditions Générales de Vente · DigitalTimes",
   description: "Conditions générales de vente des prestations DigitalTimes.",
 };
 
@@ -29,7 +29,7 @@ export default function CGV() {
             <section>
               <h2 className="display-font text-2xl tracking-[-0.03em] text-graphite">1. Identification du prestataire</h2>
               <div className="mt-4 space-y-1">
-                <p><span className="font-semibold text-graphite">Nom :</span> Thomas Gildas — DigitalTimes</p>
+                <p><span className="font-semibold text-graphite">Nom :</span> Thomas Gildas · DigitalTimes</p>
                 <p><span className="font-semibold text-graphite">Statut :</span> Auto-entrepreneur</p>
                 <p><span className="font-semibold text-graphite">SIRET :</span> 951 880 590 00017</p>
                 <p><span className="font-semibold text-graphite">Adresse :</span> 293 rue Solferino, 59000 Lille, France</p>
@@ -57,7 +57,7 @@ export default function CGV() {
             <section>
               <h2 className="display-font text-2xl tracking-[-0.03em] text-graphite">4. Tarifs</h2>
               <p className="mt-4">
-                Les prix sont indiqués en euros hors taxes (HT). En tant qu'auto-entrepreneur bénéficiant de la franchise en base de TVA (article 293B du CGI), DigitalTimes ne collecte pas de TVA — mention portée sur les factures : « TVA non applicable, art. 293B du CGI ». Les tarifs communiqués dans les devis sont fermes pour une durée de 30 jours à compter de leur émission.
+                Les prix sont indiqués en euros hors taxes (HT). En tant qu'auto-entrepreneur bénéficiant de la franchise en base de TVA (article 293B du CGI), DigitalTimes ne collecte pas de TVA. Mention portée sur les factures : « TVA non applicable, art. 293B du CGI ». Les tarifs communiqués dans les devis sont fermes pour une durée de 30 jours à compter de leur émission.
               </p>
             </section>
 
@@ -66,7 +66,7 @@ export default function CGV() {
               <p className="mt-4">Les paiements s'effectuent par virement bancaire ou via les moyens convenus dans le devis. Sauf accord contraire :</p>
               <ul className="mt-4 list-disc space-y-2 pl-6">
                 <li>Le paiement est dû à la livraison de la V1, une fois le résultat escompté obtenu par le client</li>
-                <li>Aucun acompte n'est exigé — le client ne paie qu'à la réception du livrable</li>
+                <li>Aucun acompte n'est exigé : le client ne paie qu'à la réception du livrable</li>
                 <li>Les abonnements mensuels sont facturés tous les mois à compter de la date de la première facture (facturation à l'anniversaire, non en début de mois calendaire)</li>
               </ul>
               <p className="mt-4">

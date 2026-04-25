@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Footer } from "@/components/footer";
 
 export const metadata = {
-  title: "Mentions légales — DigitalTimes",
+  title: "Mentions légales · DigitalTimes",
   description: "Mentions légales du site DigitalTimes.",
 };
 

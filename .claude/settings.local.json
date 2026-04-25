@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(where npm:*)",
+      "Bash(command -v npm)",
+      "Bash(ls \"C:\\\\Contenus\\\\Automatisation Validé\\\\Digitaltimeslandingpage\\\\node_modules\\\\.bin\\\\next\"*)",
+      "Read(//e//**)",
+      "Bash(taskkill /PID 7868 /F)",
+      "Bash(cmd.exe /c \"taskkill /PID 7868 /F\")",
+      "Bash(powershell.exe -Command \"Stop-Process -Id 7868 -Force -ErrorAction SilentlyContinue; Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force\")"
+    ]
+  }
+}
