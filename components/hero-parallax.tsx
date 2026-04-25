@@ -97,16 +97,16 @@ function Card({
     <motion.div
       style={{ x: translate }}
       whileHover={{ y: -20 }}
-      className="group/product relative h-96 w-[30rem] shrink-0 cursor-pointer"
+      className="group/product relative h-72 w-[32rem] shrink-0 cursor-pointer overflow-hidden rounded-md bg-graphite shadow-[0_8px_24px_rgba(26,17,8,0.12)]"
       onClick={onClick}
     >
       <img
         src={product.thumbnail}
-        className="absolute inset-0 h-full w-full rounded-md object-cover object-left-top"
+        className="absolute inset-0 h-full w-full object-contain"
         alt={product.title}
         draggable={false}
       />
-      <div className="pointer-events-none absolute inset-0 h-full w-full rounded-md bg-graphite opacity-0 transition-opacity group-hover/product:opacity-80" />
+      <div className="pointer-events-none absolute inset-0 h-full w-full bg-graphite opacity-0 transition-opacity group-hover/product:opacity-80" />
       <h3 className="display-font absolute bottom-5 left-5 text-[20px] font-[700] tracking-[-0.02em] text-ivory opacity-0 transition-opacity group-hover/product:opacity-100">
         {product.title} →
       </h3>
