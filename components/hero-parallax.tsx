@@ -77,7 +77,7 @@ function Header() {
       <h2 className="display-font mt-3 text-[clamp(2rem,5vw,3.5rem)] font-[800] leading-[0.9] tracking-[-0.05em] text-graphite">
         Ce qu'ils ont maintenant.
       </h2>
-      <p className="mt-5 max-w-[55ch] text-[15px] leading-[1.8] text-graphite/65">
+      <p className="mt-5 max-w-[55ch] text-[15px] font-medium leading-[1.8] text-graphite/90">
         Aperçu des interfaces livrées. Clique sur une vignette pour voir la démo.
       </p>
     </div>
