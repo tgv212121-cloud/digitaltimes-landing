@@ -158,7 +158,7 @@ function VideoModal({ product, onClose }: { product: CasClient; onClose: () => v
             rel="noreferrer"
             className="link-underline mt-4 inline-block text-[13px] text-ivory/70 transition-colors hover:text-ivory"
           >
-            Visiter le projet →
+            {product.title} →
           </a>
         )}
       </div>
