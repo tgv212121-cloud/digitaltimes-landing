@@ -4,6 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { OrbitingTools } from "@/components/orbiting-tools";
 import { PixelatedImage } from "@/components/pixelated-image";
 import { ContactForm } from "@/components/contact-form";
+import { HeroParallax } from "@/components/hero-parallax";
 import { landingContent } from "@/content/landing-content";
 import { siteConfig } from "@/content/site-config";
 
@@ -253,46 +254,25 @@ export default function Home() {
       </section>
 
       {/* ══════════════════════════════════════════
-          CAS CLIENTS — Avant / Après
+          CAS CLIENTS — Hero Parallax (3D scroll-driven)
       ══════════════════════════════════════════ */}
-      <section id="cas-clients" className="py-20 sm:py-32">
-        <div className="section-shell">
-          <Reveal>
-            <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-petrol">Cas clients</p>
-            <h2 className="display-font mt-3 text-[clamp(2rem,5vw,3.5rem)] font-[800] leading-[0.9] tracking-[-0.05em] text-graphite">
-              Ce qu'ils avaient avant.<br />
-              Ce qu'ils ont maintenant.
-            </h2>
-          </Reveal>
-
-          {/* ── Visunyx ── */}
-          <div className="mt-16 border-t border-[var(--line)] pt-8">
-            <Reveal>
-              <div className="flex items-center gap-3">
-                <img src="/logos/visunyx-real.png" alt="Visunyx" className="h-7 w-7 object-contain" />
-                <p className="accent-font text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite/50">Visunyx</p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="mt-6 overflow-hidden">
-                <video className="w-full" autoPlay muted loop playsInline>
-                  <source src="/visunyx-apres.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </Reveal>
-            <Reveal>
-              <div className="pull-quote mt-8 max-w-[55ch]">
-                <p className="text-[17px] font-semibold leading-snug tracking-[-0.02em] text-graphite">
-                  30 minutes par client. Maintenant zéro.
-                </p>
-                <p className="mt-3 text-[15px] leading-[1.8] text-graphite/70">
-                  Créer un Drive, rédiger un brief, chercher un prompt, remplir un tableau. Tout ça, supprimé. Formulaire brandé → brief auto → interface client → dashboard designer.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-        </div>
+      <section id="cas-clients">
+        <HeroParallax
+          products={[
+            {
+              title: "Visunyx",
+              link: "https://visunyx.com",
+              thumbnail: "/cas-clients/visunyx-preview.png",
+              video: "/cas-clients/visunyx.mp4",
+            },
+            {
+              title: "DigitalTimes",
+              link: "https://digitaltimes.fr",
+              thumbnail: "/cas-clients/digitaltimes-preview.png",
+              video: "/cas-clients/digitaltimes.mp4",
+            },
+          ]}
+        />
       </section>
 
       {/* ══════════════════════════════════════════
