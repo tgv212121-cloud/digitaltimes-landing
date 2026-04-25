@@ -102,7 +102,7 @@ function Card({
     >
       <img
         src={product.thumbnail}
-        className="absolute inset-0 h-full w-full object-contain"
+        className="absolute inset-0 h-full w-full object-cover object-center"
         alt={product.title}
         draggable={false}
       />
