@@ -27,8 +27,8 @@ export function Hero() {
         <div className="pb-6 pt-20 sm:pt-28 lg:pt-32">
           <div className="max-w-5xl" style={{ marginLeft: "-0.04em" }}>
             <h1 className="display-font text-[clamp(2.8rem,8vw,6.5rem)] font-[800] leading-[0.86] tracking-[-0.07em] text-graphite">
-              Ton bordel d'outils.<br />
-              Rassemblé en <span className="accent-script">7 jours</span>.
+              L'interface de <span className="accent-script">ton agence</span>.<br />
+              Pas un SaaS de plus.
             </h1>
           </div>
 
