@@ -271,6 +271,12 @@ export default function Home() {
               thumbnail: "/cas-clients/digitaltimes-preview.png",
               video: "/cas-clients/digitaltimes.mp4",
             },
+            {
+              title: "Noir sur Blanc",
+              link: "https://www.linkedin.com/in/enzo-chabbi-bab113264/",
+              thumbnail: "/cas-clients/noir-sur-blanc-preview.png",
+              video: "/cas-clients/noir-sur-blanc.mov",
+            },
           ]}
         />
       </section>
