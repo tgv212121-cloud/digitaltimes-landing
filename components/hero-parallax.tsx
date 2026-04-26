@@ -8,6 +8,8 @@ export type CasClient = {
   link?: string;
   thumbnail: string;
   video: string;
+  testimonial?: string;
+  testimonialAuthor?: string;
 };
 
 export function HeroParallax({ products }: { products: CasClient[] }) {
@@ -132,7 +134,7 @@ function VideoModal({ product, onClose }: { product: CasClient; onClose: () => v
       onClick={onClose}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
     >
-      <div onClick={(e) => e.stopPropagation()} className="relative w-full max-w-5xl">
+      <div onClick={(e) => e.stopPropagation()} className="relative w-full max-w-6xl">
         <button
           onClick={onClose}
           className="absolute -top-10 right-0 text-[24px] text-ivory/70 transition-colors hover:text-ivory"
@@ -140,27 +142,47 @@ function VideoModal({ product, onClose }: { product: CasClient; onClose: () => v
         >
           ✕
         </button>
-        <p className="accent-font mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-saffron">
-          {product.title}
-        </p>
-        <video
-          key={product.video}
-          src={product.video}
-          autoPlay
-          controls
-          playsInline
-          className="w-full"
-        />
-        {product.link && (
-          <a
-            href={product.link}
-            target="_blank"
-            rel="noreferrer"
-            className="link-underline mt-4 inline-block text-[13px] text-ivory/70 transition-colors hover:text-ivory"
-          >
-            {product.title} →
-          </a>
-        )}
+
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+          {/* Left : testimonial */}
+          <div className="flex flex-col justify-center">
+            <p className="accent-font mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-saffron">
+              {product.title}
+            </p>
+            {product.testimonial && (
+              <blockquote className="display-font text-[clamp(1.2rem,2vw,1.6rem)] font-[400] italic leading-[1.4] tracking-[-0.02em] text-ivory">
+                « {product.testimonial} »
+              </blockquote>
+            )}
+            {product.testimonialAuthor && (
+              <p className="mt-5 text-[12px] uppercase tracking-[0.2em] text-ivory/55">
+                {product.testimonialAuthor}
+              </p>
+            )}
+            {product.link && (
+              <a
+                href={product.link}
+                target="_blank"
+                rel="noreferrer"
+                className="link-underline mt-6 inline-block self-start text-[13px] text-ivory/70 transition-colors hover:text-ivory"
+              >
+                {product.title} →
+              </a>
+            )}
+          </div>
+
+          {/* Right : video */}
+          <div className="flex items-center">
+            <video
+              key={product.video}
+              src={product.video}
+              autoPlay
+              controls
+              playsInline
+              className="w-full"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

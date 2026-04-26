@@ -264,18 +264,27 @@ export default function Home() {
               link: "https://visunyx.com",
               thumbnail: "/cas-clients/visunyx-preview.png",
               video: "/cas-clients/visunyx.mp4",
+              testimonial:
+                "Avant, je passais 30 minutes par client à créer un Drive, rédiger un brief, remplir un tableau. Maintenant tout est automatisé. Mes designers attaquent directement.",
+              testimonialAuthor: "Yas B., direction Visunyx",
             },
             {
               title: "DigitalTimes",
               link: "https://digitaltimes.fr",
               thumbnail: "/cas-clients/digitaltimes-preview.png",
               video: "/cas-clients/digitaltimes.mp4",
+              testimonial:
+                "Toute mon agence tourne sur cette interface : prospection, rendez-vous, leads, suivi. Plus besoin de jongler entre 6 SaaS.",
+              testimonialAuthor: "Thomas Gildas, fondateur DigitalTimes",
             },
             {
               title: "Noir sur Blanc",
               link: "https://www.linkedin.com/in/enzo-chabbi-bab113264/",
               thumbnail: "/cas-clients/noir-sur-blanc-preview.png",
               video: "/cas-clients/noir-sur-blanc.mov",
+              testimonial:
+                "On me proposait des templates Notion partagés. Thomas a livré une vraie interface à mon image. Mes clients voient mon agence, pas un outil tiers.",
+              testimonialAuthor: "Enzo Chabbi, fondateur Noir sur Blanc",
             },
           ]}
         />
