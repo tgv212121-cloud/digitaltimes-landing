@@ -262,6 +262,7 @@ export default function Home() {
             {
               title: "Visunyx",
               link: "https://visunyx.com",
+              demoLink: "https://visunyx-portaldemo.vercel.app/",
               thumbnail: "/cas-clients/visunyx-preview.png",
               video: "/cas-clients/visunyx.mp4",
               testimonial:
