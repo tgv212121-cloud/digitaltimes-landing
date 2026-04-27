@@ -6,6 +6,7 @@ import { useRef, useState, useEffect } from "react";
 export type CasClient = {
   title: string;
   link?: string;
+  demoLink?: string;
   thumbnail: string;
   video: string;
   testimonial?: string;
@@ -159,16 +160,28 @@ function VideoModal({ product, onClose }: { product: CasClient; onClose: () => v
                 {product.testimonialAuthor}
               </p>
             )}
-            {product.link && (
-              <a
-                href={product.link}
-                target="_blank"
-                rel="noreferrer"
-                className="link-underline mt-6 inline-block self-start text-[13px] text-ivory/70 transition-colors hover:text-ivory"
-              >
-                {product.title} →
-              </a>
-            )}
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
+              {product.demoLink && (
+                <a
+                  href={product.demoLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center bg-saffron px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.16em] text-graphite transition-[letter-spacing] duration-500 hover:tracking-[0.22em]"
+                >
+                  Voir la démo →
+                </a>
+              )}
+              {product.link && (
+                <a
+                  href={product.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-underline inline-block text-[13px] text-ivory/70 transition-colors hover:text-ivory"
+                >
+                  {product.title} →
+                </a>
+              )}
+            </div>
           </div>
 
           {/* Right : video */}

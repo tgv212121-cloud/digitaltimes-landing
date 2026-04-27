@@ -280,6 +280,7 @@ export default function Home() {
             {
               title: "Noir sur Blanc",
               link: "https://www.linkedin.com/in/enzo-chabbi-bab113264/",
+              demoLink: "https://noirsurblancdemo.vercel.app/demo",
               thumbnail: "/cas-clients/noir-sur-blanc-preview.png",
               video: "/cas-clients/noir-sur-blanc.mov",
               testimonial:
